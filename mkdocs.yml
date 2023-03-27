@@ -1,0 +1,41 @@
+site_name: ECE/MAE148
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+
+plugins:
+  - search
+  - multirepo:
+      # (optional) tells multirepo to cleanup the temporary directory after site is built.
+      cleanup: true
+      nav_repos:
+        - name: win23team3
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-3.git?branch=main
+          imports: [ /README.md, /images/* ]
+        # - name: win23team4
+        #   import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-4.git?branch=main
+        #   imports: [ /README.md, /images/* ]
+
+nav:
+  - Winter 23:
+      - Team 3: win23team3/README.md
+      - Team 4: win23team3/README.md
+      # - Integration: backstage/docs/integrations/index.md
+      # - Publishing: backstage/docs/publishing.md
+  # - FastAPI: fast-api/docs/en/docs/index.md
+  # # you can still use the !import statement
+  - Spring 23: win23team3/README.md
