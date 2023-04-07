@@ -16,26 +16,59 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
-
 plugins:
   - search
   - multirepo:
-      # (optional) tells multirepo to cleanup the temporary directory after site is built.
-      cleanup: true
+      cleanup: false
       nav_repos:
+        - name: win23team2
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-2.git?branch=main
+          imports: [ /README.md, /images/* ]
         - name: win23team3
           import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-3.git?branch=main
           imports: [ /README.md, /images/* ]
-        # - name: win23team4
-        #   import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-4.git?branch=main
-        #   imports: [ /README.md, /images/* ]
+        - name: win23team4
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-4.git?branch=main
+          imports: [ /README.md, /images/* ]
+        - name: win23team5
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-5.git?branch=main
+          imports: [ /README.md, /images/* ]
+        - name: win23team6
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-6.git?branch=main
+          imports: [ /README.md, /images/* ]
+        - name: win23team7
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-7.git?branch=main
+          imports: [ /README.md, /images/* ]
+        - name: win23team8
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-8.git?branch=main
+          imports: [ /README.md, /images/* ]
+        - name: win23team9
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-9.git?branch=main
+          imports: [ /README.md, /images/* ]
+        - name: win23team12
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-12.git?branch=main
+          imports: [ /README.md, /images/* ]
+        - name: win23team13
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-13.git?branch=main
+          imports: [ /README.md, /images/* ]
+        - name: win23team14
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-14.git?branch=main
+          imports: [ /README.md, /images/* ]
+        - name: win23team15
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-15.git?branch=main
+          imports: [ /README.md, /images/* ]
 
 nav:
   - Winter 23:
+      - Team 2: win23team2/README.md
       - Team 3: win23team3/README.md
-      - Team 4: win23team3/README.md
-      # - Integration: backstage/docs/integrations/index.md
-      # - Publishing: backstage/docs/publishing.md
-  # - FastAPI: fast-api/docs/en/docs/index.md
-  # # you can still use the !import statement
-  - Spring 23: win23team3/README.md
+      - Team 4: win23team4/README.md
+      - Team 5: win23team5/README.md
+      - Team 6: win23team6/README.md
+      - Team 7: win23team7/README.md
+      - Team 8: win23team8/README.md
+      - Team 9: win23team9/README.md
+      - Team 12: win23team12/README.md
+      - Team 13: win23team13/README.md
+      - Team 14: win23team14/README.md
+      - Team 15: win23team15/README.md
