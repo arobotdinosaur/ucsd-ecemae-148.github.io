@@ -22,7 +22,7 @@ plugins:
       cleanup: false
       nav_repos:
         - name: win23team1
-          importurl: https://github.com/UCSD-ECEMAE-148/winter-2023-fnal-project-team-1.git?branch=main
+          import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-fnal-project-team-1.git?branch=main
           imports: [ /README.md, /images/* ]
         - name: win23team2
           import_url: https://github.com/UCSD-ECEMAE-148/winter-2023-final-project-team-2.git?branch=main
