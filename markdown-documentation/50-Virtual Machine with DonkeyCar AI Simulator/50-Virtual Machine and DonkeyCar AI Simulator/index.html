@@ -542,13 +542,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#ros-2" class="md-nav__link">
-    ROS 2
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1209,13 +1202,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#ros-2" class="md-nav__link">
-    ROS 2
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1536,14 +1522,14 @@ cd d4_sim
 <h4 id="training-on-data">Training on Data</h4>
 <p>Once the data is transferred to the remote session, training a model on it is the same as on a local session.</p>
 <p>In the <strong>Remote Session</strong></p>
-<p>You can train multiple tubs at the same time with (the paths to the tubs must be separated by commas, <strong>no spaces</strong>).</p>
-<pre><code>python manage.py train --tub data/tub1,data/tub2 --model models/MODEL_NAME.h5 --type=linear
+<p>If you didn't use any tubs and just have your data in the data folder, this command should do the trick:</p>
+<pre><code>python train.py --model=models/yourmodelname.h5 --type=linear --tubs=data/
 </code></pre>
-<p>This should also has the same effect:</p>
-<pre><code>python train.py --tub data/tub1 --model models/MODEL_NAME.h5 --type=linear
+<p>You can train multiple tubs at the same time with (the paths to the tubs must be separated by commas, <strong>no spaces</strong>). </p>
+<pre><code>python train.py --tub=data/tub1,data/tub2 --model=models/MODEL_NAME.h5 --type=linear
 </code></pre>
 <p>To alter a previous model with new data:</p>
-<pre><code>python train.py --tub data/tub1 --model models/NEW_MODEL_NAME.h5 --transfer models/OLD_MODEL_NAME.h5
+<pre><code>python train.py --tub=data/tub1 --model=models/NEW_MODEL_NAME.h5 --transfer=models/OLD_MODEL_NAME.h5
 </code></pre>
 <p><strong>Note</strong> : If "imgaug" is not availible and Donkeysim generates an error, run </p>
 <pre><code>pip install imgaug
@@ -1566,7 +1552,6 @@ cd d4_sim
 <p>You can see the car on the livestream on</p>
 <p>https://www.twitch.tv/roboticists or https://www.twitch.tv/roboticists2</p>
 <p>The car should appear momentarily after you run the same command to start the car if you have configured the host properly.</p>
-<h2 id="ros-2">ROS 2</h2>
 
 
 
