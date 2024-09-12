@@ -65,11 +65,11 @@ plugins:
           imports: [ /Controller/*, /images/* ]
         - name: markdown-documentation
           import_url: https://github.com/UCSD-ECEMAE-148/Markdown-Instructions.git?branch=main
-          imports: [/main/*]
+          imports: [/Markdown-Instructions:main/*]
 
 nav:
   - Documentation:
-      - DonkeySimulator: markdown-documentation/main/50-Virtual Machine with DonkeyCar AI Simulator/50-Virtual Machine and DonkeyCar AI Simulator.md
+      - DonkeySimulator: markdown-documentation/50-Virtual Machine with DonkeyCar AI Simulator/50-Virtual Machine and DonkeyCar AI Simulator.md
       - Controller: documentation/Controller/UCSD Robocar Using BetaFPV LiteRadio 3 Pro.md
   - Winter 23:
       - Team 1: win23team1/README.md
