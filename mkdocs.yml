@@ -65,11 +65,13 @@ plugins:
           imports: [ /Controller/*, /images/* ]
         - name: markdown-documentation
           import_url: https://github.com/UCSD-ECEMAE-148/Markdown-Instructions.git?branch=main
-          imports: [ /50-Virtual Machine with DonkeyCar AI Simulator/* ]
+          imports: [ /50-Virtual Machine with DonkeyCar AI Simulator/*, /30-UCSD Robocar Jetson Nano Configuration/*, /100-UCSD Robocar Framework/*, /15-VESC Setup Instructions/* ]
 
 nav:
   - Documentation:
       - DonkeySimulator: markdown-documentation/50-Virtual Machine with DonkeyCar AI Simulator/50-Virtual Machine and DonkeyCar AI Simulator.md
+      - Jetson Initial Setup: markdown-documentation/30-UCSD Robocar Jetson Nano Configuration/30-UCSD Robocar Jetson Nano Configuration.md
+      - VESC Setup: markdown-documentation/15-VESC Setup Instructions/15-VESC Setup Instructions.md
       - Controller: documentation/Controller/UCSD Robocar Using BetaFPV LiteRadio 3 Pro.md
   - Winter 23:
       - Team 1: win23team1/README.md
