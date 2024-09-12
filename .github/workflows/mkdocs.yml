@@ -1,4 +1,4 @@
-name: Update Docs
+name: Update Docs Test
 on:
   schedule:
     - cron: '0 0 * * 0'
