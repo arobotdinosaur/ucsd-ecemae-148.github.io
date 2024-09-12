@@ -65,7 +65,7 @@ plugins:
           imports: [ /Controller/*, /images/* ]
         - name: markdown-documentation
           import_url: https://github.com/UCSD-ECEMAE-148/Markdown-Instructions.git?branch=main
-          imports: [ /root/* ]
+          imports: [ /50-Virtual Machine with DonkeyCar AI Simulator/* ]
 
 nav:
   - Documentation:
