@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../win23team4/">
+        <link rel="prev" href="../../30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/">
       
       
-        <link rel="next" href="../win23team6/">
+        <link rel="next" href="../../../documentation/Controller/UCSD%20Robocar%20Using%20BetaFPV%20LiteRadio%203%20Pro/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
     
     
       
-        <title>Team 5 - ECE/MAE148</title>
+        <title>VESC Setup - ECE/MAE148</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9f615399.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f615399.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.649f08f9.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.649f08f9.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#final-project-repository-for-team-5-of-the-2023-winter-class-mae-ece-148-at-ucsd" class="md-skip">
+        <a href="#ucsd-vesc-setup-instructions" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="ECE/MAE148" class="md-header__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
+    <a href="../../.." title="ECE/MAE148" class="md-header__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Team 5
+              VESC Setup
             
           </span>
         </div>
@@ -209,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="ECE/MAE148" class="md-nav__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
+    <a href="../../.." title="ECE/MAE148" class="md-nav__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -224,17 +224,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
@@ -247,7 +249,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -260,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/50-Virtual%20Machine%20with%20DonkeyCar%20AI%20Simulator/50-Virtual%20Machine%20and%20DonkeyCar%20AI%20Simulator/" class="md-nav__link">
+      <a href="../../50-Virtual%20Machine%20with%20DonkeyCar%20AI%20Simulator/50-Virtual%20Machine%20and%20DonkeyCar%20AI%20Simulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -280,174 +282,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/" class="md-nav__link">
+      <a href="../../30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Jetson Initial Setup
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../markdown-documentation/15-VESC%20Setup%20Instructions/15-VESC%20Setup%20Instructions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    VESC Setup
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../documentation/Controller/UCSD%20Robocar%20Using%20BetaFPV%20LiteRadio%203%20Pro/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Controller
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Winter 23
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Winter 23
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../win23team1/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Team 1
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../win23team2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Team 2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../win23team3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Team 3
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../win23team4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Team 4
   </span>
   
 
@@ -472,15 +311,86 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    VESC Setup
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Team 5
+    VESC Setup
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vesc-tools" class="md-nav__link">
+    VESC Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="VESC Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-firmware" class="md-nav__link">
+    Updating the firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-detection" class="md-nav__link">
+    Motor Detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-detection" class="md-nav__link">
+    Sensor Detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-servo-control-for-steering" class="md-nav__link">
+    Enable Servo Control for Steering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -493,7 +403,168 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team6/" class="md-nav__link">
+      <a href="../../../documentation/Controller/UCSD%20Robocar%20Using%20BetaFPV%20LiteRadio%203%20Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Winter 23
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Winter 23
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team7/" class="md-nav__link">
+      <a href="../../../win23team7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team8/" class="md-nav__link">
+      <a href="../../../win23team8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team9/" class="md-nav__link">
+      <a href="../../../win23team9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team12/" class="md-nav__link">
+      <a href="../../../win23team12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -593,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team13/" class="md-nav__link">
+      <a href="../../../win23team13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -613,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team14/" class="md-nav__link">
+      <a href="../../../win23team14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -633,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team15/" class="md-nav__link">
+      <a href="../../../win23team15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,6 +745,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vesc-tools" class="md-nav__link">
+    VESC Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="VESC Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-firmware" class="md-nav__link">
+    Updating the firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-detection" class="md-nav__link">
+    Motor Detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-detection" class="md-nav__link">
+    Sensor Detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-servo-control-for-steering" class="md-nav__link">
+    Enable Servo Control for Steering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -690,12 +810,72 @@
   
 
 
-<h1 id="final-project-repository-for-team-5-of-the-2023-winter-class-mae-ece-148-at-ucsd">Final Project Repository for Team 5 of the 2023 Winter Class MAE ECE 148 at UCSD</h1>
-<p>Our Final Project has one main objective, which is inspired by a pet dog that plays fetch. Our goal is to design a robot that can identify a green ball, like a tennis ball, locate it, move towards it, pick it up, and return back to its initial location. We achieved this using an OpenCV-based vision system to recognize the ball and Pyvesc to control the car's movements. We also designed a claw mechanism to pick up the ball when it's within range and a servo to move the ball into the claw.</p>
-<p>In summary, our project demonstrates the capabilities of an autonomous robot that can navigate an environment, recognize objects, and perform tasks like fetching. With further improvements, this type of robot could have many potential applications in various industries.</p>
-<p><img alt="" src="https://drive.google.com/uc?id=1zSepqrNG9TTo-bybwIIAmixFqNbqgQvu" />
-<img alt="" src="https://drive.google.com/uc?id=1q9iMI3RIqaUdNPy3lyUNbGH-V9U7HNE8" />
-<img alt="" src="https://drive.google.com/uc?id=1iI5HZV7hZtzYf84qdmvumIsn0Ikfakta" /></p>
+<h1 id="ucsd-vesc-setup-instructions">UCSD VESC Setup Instructions</h1>
+<p>Version 2.0 30 Dec 2022</p>
+<p>These instructions are for different versions of the VESC &mdash; pay attention to what version you have. Choosing incorrect firmware may harm the VESC.</p>
+<p>We will be using the VESC Tool software (<a href="https://drive.google.com/drive/folders/1m_gqcIWwaCzV3y3raU1FFiEpCyf3rYPi?usp=sharing">linked here</a>) to upgrade the firmware in the VESC and measure parameters from the brushless DC motor (BLDC).</p>
+<p><strong>PLACE THE CAR ON THE PROVIDED STAND WHEN WORKING WITH THE VESC AND ENSURE THAT THE WHEELS ARE CLEAR AND CAN SPIN FREELY</strong></p>
+<p>You will need the battery to power the VESC and a long micro USB cable to connect the VESC to your computer. See the instructor if you need a longer cable.</p>
+<p>If the VESC is connected to the SBC, disconnect them before connecting to the VESC.</p>
+<p><strong>AGAIN, THE WHEELS OF THE ROBOT WILL SPIN, PLEASE MAKE SURE THE WHEELS ARE CLEAR TO ROTATE.</strong></p>
+<h2 id="vesc-tools">VESC Tools</h2>
+<p>You can ignore prompts to update VESC Tools to the latest version if you are using the class-provided install.</p>
+<p><img alt="alt text" src="../image.png" /></p>
+<p>To start, connect the battery voltage checker to the LiPo battery BMS pins. Then connect the main battery terminals to the input for the VESC and a micro USB cable between the VESC and your computer.</p>
+<p>Select the VESC Tools connect icon:</p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<p>or </p>
+<p><img alt="alt text" src="../image-2.png" /></p>
+<p><strong>Note:</strong> When you connect the VESC to VESC Tools, it may warn you that there is a newer firmware version for the VESC.</p>
+<p>Feel free to update it on VESC 6.x versions. Do not upgrade VESC 4.x versions.</p>
+<h3 id="updating-the-firmware">Updating the firmware</h3>
+<p>As of 30 Dec, 2022, the VESC 6.x firmware to be used is version 6.00. <strong>You do not need to update it if the version is the same</strong>.</p>
+<p>Navigate to the <strong>Firmware</strong> tab on the left side in the VESC Tool.</p>
+<p><img alt="alt text" src="../image-3.png" /></p>
+<p>Select the arrow without the text "All" next to it. Hovering over it should display the text "Update firmware on the connected VESC"</p>
+<p><img alt="alt text" src="../image-4.png" /></p>
+<p><strong>Do not unplug the VESC while the firmware is updating, you may damage the VESC</strong>.</p>
+<h3 id="motor-detection">Motor Detection</h3>
+<p>Go to the <strong>Welcome and Wizards</strong> tab.</p>
+<p><img alt="alt text" src="../image-5.png" /></p>
+<p>In the menu at the bottom, select <code>Autoconnect</code>. Once the VESC is connected, select <code>Setup Motors FOC</code>. </p>
+<p><img alt="alt text" src="../image-6.png" /></p>
+<p>You will be prompted to load the default parameters. Select <code>Yes</code>. Then select <code>Generic</code> and  <code>Medium Outrunner</code> after that.</p>
+<p><img alt="alt text" src="../image-7.png" /></p>
+<p><img alt="alt text" src="../image-8.png" /></p>
+<p>Select <code>BATTERY_TYPE_LIION_3_0__4_2</code> as the battery type (3.0-4.2 is the voltage range of the cells).</p>
+<p><img alt="alt text" src="../image-9.png" /></p>
+<p>The batteries we are using currently have 4 cells in series; input that below with a capacity of 4500 mAh. When prompted to set current limits by going to the next section, just proceed without setting them.</p>
+<p>Now check the <code>Direct Drive</code> setting. The wheel diameter is 100.00mm and the motor is a 4 pole - 8 magnet setup.</p>
+<p><img alt="alt text" src="../image-10.png" /></p>
+<p>Then run the detection procedure.</p>
+<p><img alt="alt text" src="../image-11.png" /></p>
+<p>Now determine if your motor direction needs to be reversed.</p>
+<p><img alt="alt text" src="../image-12.png" /></p>
+<p>Once you are done, press finish at the bottom.</p>
+<p><strong>Now, write the motor configuration to the VESC using the button along the right side of the screen.</strong></p>
+<p><img alt="alt text" src="../image-13.png" /></p>
+<p><strong>Then write the app configuration.</strong></p>
+<p><img alt="alt text" src="../image-14.png" /></p>
+<h3 id="sensor-detection">Sensor Detection</h3>
+<p>We are now going to measure characteristic parameters of the motor.</p>
+<p><strong>Resistance and Inductance</strong></p>
+<p><img alt="alt text" src="../image-15.png" /></p>
+<p><strong>Motor Flux Linkage</strong></p>
+<p><img alt="alt text" src="../image-16.png" /></p>
+<p>Then press <code>Apply</code> at the right side of the window.</p>
+<p><img alt="alt text" src="../image-17.png" /></p>
+<p>Now check the Hall Sensor table under the <code>Hall Sensors</code> tab at the top. Your table should look something like this:</p>
+<p><img alt="alt text" src="../image-18.png" /></p>
+<p>Write the motor configuration and the app configuration:</p>
+<p><img alt="alt text" src="../image-19.png" /></p>
+<p><img alt="alt text" src="../image-20.png" /></p>
+<h3 id="enable-servo-control-for-steering">Enable Servo Control for Steering</h3>
+<p>We need to enable the VESC PWM output in order to control the servo for steering.</p>
+<p>In <code>General</code> under <code>App Settings</code>, set <code>Enable Servo Output</code> to <code>True</code> and write the app configuration.</p>
+<p><img alt="alt text" src="../image-21.png" /></p>
+<p><img alt="alt text" src="../image-22.png" /></p>
+<p><img alt="alt text" src="../image-23.png" /></p>
 
 
 
@@ -733,10 +913,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
       
     
   </body>

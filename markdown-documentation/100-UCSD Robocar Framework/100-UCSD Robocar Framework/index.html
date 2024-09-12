@@ -1,0 +1,1447 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>UCSD Robocar Framework - ECE/MAE148</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ucsd-robocar-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ECE/MAE148" class="md-header__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECE/MAE148
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UCSD Robocar Framework
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECE/MAE148" class="md-nav__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECE/MAE148
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../50-Virtual%20Machine%20with%20DonkeyCar%20AI%20Simulator/50-Virtual%20Machine%20and%20DonkeyCar%20AI%20Simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DonkeySimulator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jetson Initial Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-VESC%20Setup%20Instructions/15-VESC%20Setup%20Instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VESC Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../documentation/Controller/UCSD%20Robocar%20Using%20BetaFPV%20LiteRadio%203%20Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Winter 23
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Winter 23
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    1. Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ucsd-robocar-framework-breakdown" class="md-nav__link">
+    2. UCSD Robocar Framework Breakdown
+  </a>
+  
+    <nav class="md-nav" aria-label="2. UCSD Robocar Framework Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-packages" class="md-nav__link">
+    2.1 Packages
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-nav" class="md-nav__link">
+    2.1.1 Nav
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-lane-detection" class="md-nav__link">
+    2.1.2 Lane Detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-sensor" class="md-nav__link">
+    2.1.3 Sensor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-actuator" class="md-nav__link">
+    2.1.4 Actuator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-basics" class="md-nav__link">
+    2.1.7 Basics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-updating-all-packages" class="md-nav__link">
+    2.2 Updating All Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-launch-files" class="md-nav__link">
+    2.3 Launch Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-developer-tools" class="md-nav__link">
+    3. Developer Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Developer Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ros-guidebooks" class="md-nav__link">
+    3.1 ROS Guidebooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-gitlab" class="md-nav__link">
+    3.2 Gitlab
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Gitlab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-adding-new-submodules" class="md-nav__link">
+    3.2.1 Adding New Submodules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-updating-local-submodules-with-remote-submodules" class="md-nav__link">
+    3.2.2 Updating local submodules with remote submodules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-updating-remote-submodules-with-local-submodules" class="md-nav__link">
+    3.2.3 Updating remote submodules with local submodules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-removing-submodules" class="md-nav__link">
+    3.2.4 Removing submodules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-adding-an-existing-package-to-git" class="md-nav__link">
+    3.2.5 Adding an existing package to git
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-docker" class="md-nav__link">
+    3.3 Docker
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-pullingrunning" class="md-nav__link">
+    3.3.1 Pulling/Running
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-updatingcreatingsharing" class="md-nav__link">
+    3.3.2 Updating/Creating/Sharing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-listing" class="md-nav__link">
+    3.3.3 Listing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-deleting" class="md-nav__link">
+    3.3.4 Deleting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-accessing-docker-images" class="md-nav__link">
+    4. Accessing Docker Images
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Accessing Docker Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ucsd-robocar-image" class="md-nav__link">
+    4.1 UCSD Robocar Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-docker-setup" class="md-nav__link">
+    4.2 Docker Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Docker Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-enable-x_11-port-forwarding" class="md-nav__link">
+    4.2.1 Enable X_11 Port Forwarding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-update-docker-daemon" class="md-nav__link">
+    4.2.2 Update Docker Daemon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-running-a-container" class="md-nav__link">
+    4.2.3 Running a Container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-workspaces-in-docker-container" class="md-nav__link">
+    4.3 Workspaces in Docker Container
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Workspaces in Docker Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#432-ros2_ws" class="md-nav__link">
+    4.3.2 ros2_ws
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-sensor2_ws" class="md-nav__link">
+    4.3.3 sensor2_ws
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-ros-bridge" class="md-nav__link">
+    4.4 ROS Bridge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-utility-functions-in-bashrc" class="md-nav__link">
+    4.5 Utility functions in ~/.bashrc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-source-ros-version" class="md-nav__link">
+    5. Source ROS Version
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Source ROS Version">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-source-ros1" class="md-nav__link">
+    5.1 Source ROS1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-source-ros2" class="md-nav__link">
+    5.2 Source ROS2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-source-ros-bridge" class="md-nav__link">
+    5.3 Source ROS Bridge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-hardware-configuration" class="md-nav__link">
+    6. Hardware Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Hardware Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-ros1" class="md-nav__link">
+    6.1 ROS1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-ros2" class="md-nav__link">
+    6.2 ROS2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-node-configuration" class="md-nav__link">
+    7. Node Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Node Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#72-ros2" class="md-nav__link">
+    7.2 ROS2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-sensor-visualization" class="md-nav__link">
+    8. Sensor Visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-manual-control-of-robot-with-joystick" class="md-nav__link">
+    9. Manual Control of Robot with Joystick
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-integrating-new-packagescode-into-the-framework" class="md-nav__link">
+    10. Integrating New Packages/Code into the Framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-navigation" class="md-nav__link">
+    11. Navigation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-data-collection" class="md-nav__link">
+    12. Data Collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-f1-tenth-simulator" class="md-nav__link">
+    13. F1 Tenth Simulator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-troubleshooting" class="md-nav__link">
+    14. Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-frequently-used-linux-commands" class="md-nav__link">
+    15. Frequently Used Linux Commands
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="ucsd-robocar-framework">UCSD Robocar Framework</h1>
+<h2 id="1-introduction">1. Introduction</h2>
+<h2 id="2-ucsd-robocar-framework-breakdown">2. UCSD Robocar Framework Breakdown</h2>
+<p>The UCSD Robocar Framework is a collection of ROS 2 packages for each of the hardware components used on the robocar (e.g. the camera, VESC, LiDAR, etc.). The Nav package acts as the "brain" of the collection since it interacts with each of the other independent packages.</p>
+<p>Having standalone packages instead of one major package makes deployment more robust. Additionally, as the robot becomes more sophisticated, the number of associated packages would likely increase to achieve many different types of tasks depending on the application.</p>
+<p>So the idea is to develop a package that could in general be used on any car-like robot as well as being able to choose what packages your robot really needs without having to use the entire framework.</p>
+<p>For example, lets say another company developed their own similar sensor, actuator and nav packages but they have not researched into lane detection. Instead of using the entire UCSD Robocar framework, they could easily just deploy the lane detection package and have some interpreter in their framework read the messages from the lane detection package to suit their needs.</p>
+<p>Link to the official git repo: <a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_hub2"><strong>ROS 2</strong></a></p>
+<p>Note: The hub2 package is a <em>metapackage</em>. For specific details about any individual package, click on any of the packages in either hub to be taken to that packages' main repository.</p>
+<h3 id="21-packages">2.1 Packages</h3>
+<p>Each UCSD ROS package has a README.md that explains in detail what config, nodes, launch files it has as well as topic/message information. When troubleshooting, consider outlining what problem you are having and what package that most likely the cause of such an error. Then reference the README for that package.</p>
+<h4 id="211-nav">2.1.1 Nav</h4>
+<p>The navigation package (nav_pkg) is the "brain" of the UCSD Robocar framework because it keeps all the launch files in its package to launch any node/launch file from the other packages used in the framework. This makes using the framework easier because you only really have to remember the name of the nav_pkg and what launch file you want to use rather than having to remember all the other package names and their own unique launch files.</p>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_nav2_pkg/-/blob/master/README.md">NAV2 README</a></p>
+<h4 id="212-lane-detection">2.1.2 Lane Detection</h4>
+<p>The lane detection package is one method of navigating by identifying and tracking road markers. The basic principle behind this package is to detect road markers using openCV and then compute whats called the “cross-track-error” which is the difference between the center axis of the car and the centroid (center of “mass”) of the road mark which is then fed into a PID controller for tracking.</p>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_lane_detection2_pkg/-/blob/master/README.md">Lane Detection2 README</a></p>
+<h4 id="213-sensor">2.1.3 Sensor</h4>
+<p>The sensor package contains all the required nodes/launch files needed to use the sensors that are equipped to the car.</p>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_sensor2_pkg/-/blob/master/README.md">Sensor2 README</a></p>
+<h4 id="214-actuator">2.1.4 Actuator</h4>
+<p>The actuator package contains all the required nodes/launch files needed to use the actuators that are equipped to the car.</p>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_actuator2_pkg/-/blob/master/README.md">Actuator2 README</a></p>
+<h4 id="217-basics">2.1.7 Basics</h4>
+<p>The path package contains all the required nodes/launch files needed to subscribe/publish to the sensor/actuator messages within the framework for fast algorithm prototyping</p>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_basics2_pkg/-/blob/master/README.md">Basics2 README</a></p>
+<h3 id="22-updating-all-packages">2.2 Updating All Packages</h3>
+<p>A utility function was added to the <code>~/.bashrc</code> script that will automatically update all the packages in the framework and then rebuild and source it so it will be ready to start using ROS2!</p>
+<p>To do so, in your terminal:</p>
+<pre><code>upd_ucsd_robocar
+</code></pre>
+<h3 id="23-launch-files">2.3 Launch Files</h3>
+<p>The launch file diagrams below show the very general approach of how the packages communicate with one another. With ROS, it just comes down to a combination of starting launch files and sending messages (through topics) to nodes. For specific details about messages types, topics, services and launch files used, please go to the readme for the specific package of interest!</p>
+<p>The nav_pkg is at the base of each of the diagrams and rooting from it are the launch files it calls that will launch other nodes/launch files from all the other packages in the framework.</p>
+<p>In ROS2, a dynamically built launch file (at run-time) is used to launch all the different nodes/launch files for various purposes such as data collection, navigation algorithms and controllers. This new way of creating launch files has now been simplified by just adding an entry to a yaml file of where the launch file is and a separate yaml file to indicate to use that launch file or not. There is only one file to modify and all that needs to be changed is either putting a “0” or a “1” next to the list of nodes/launch files. To select the nodes that you want to use, put a “1” next to it otherwise put a “0” which means it will not activate. In the figures below, instead of including the entire ros2 launch command, you will only see the names of the launch files that need to be turned on in the node config file explained more in detail <a href="https://docs.google.com/document/d/1ygzU4uE3p38XZT8Rey_QmykXRS-VA-rtt_XBkC3gpCE/edit#heading=h.3ucils4zejvp">here</a></p>
+<p><img alt="alt text" src="../image.png" /></p>
+<p>ROS2-FOXY: <code>all_components.launch.py, sensor_vizualization.launch.py</code></p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<p>ROS2-FOXY: <code>all_components.launch.py, teleop_joy_vesc_launch.launch.py</code></p>
+<p><img alt="alt text" src="../image-2.png" /></p>
+<p>ROS2-FOXY: <code>all_components.launch.py, camera_nav_calibration.launch.py</code></p>
+<h2 id="3-developer-tools">3. Developer Tools</h2>
+<h3 id="31-ros-guidebooks">3.1 ROS Guidebooks</h3>
+<p>Links provided below are guides for ROS and ROS2 which include many examples, terminal commands and general concept explanations of the various features in ROS and ROS2.</p>
+<ul>
+<li><a href="https://docs.google.com/document/d/1u7XS7B-Rl_emK3kVKEfc0MxHtwXGYHf5HfLlnX8Ydiw/edit">UCSD ROS Guidebook</a></li>
+<li><a href="https://docs.google.com/document/d/1DJgVLnu_vN-IXKD3QrQVF3W-JC6RiQPVugHeFAioB58/edit?usp=sharing">UCSD ROS2 Guidebook</a></li>
+</ul>
+<h3 id="32-gitlab">3.2 Gitlab</h3>
+<p>Since the framework uses a meta package (a package that contains multiple packages) we refer to individual packages as submodules.</p>
+<h4 id="321-adding-new-submodules">3.2.1 Adding New Submodules</h4>
+<ol>
+<li><code>git submodule add &lt;remote_url&gt;</code></li>
+<li><code>git commit -m "message"</code></li>
+<li><code>git push</code></li>
+</ol>
+<h4 id="322-updating-local-submodules-with-remote-submodules">3.2.2 Updating local submodules with remote submodules</h4>
+<h4 id="323-updating-remote-submodules-with-local-submodules">3.2.3 Updating remote submodules with local submodules</h4>
+<h4 id="324-removing-submodules">3.2.4 Removing submodules</h4>
+<h4 id="325-adding-an-existing-package-to-git">3.2.5 Adding an existing package to git</h4>
+<h3 id="33-docker">3.3 Docker</h3>
+<p>Below is a go-to list of docker commands that can be used with the framework:</p>
+<p>Some new lingo:
+* Container name: <strong>NAMES</strong></p>
+<ul>
+<li>
+<p>Image name: <strong>REPOSITORY</strong></p>
+</li>
+<li>
+<p>Image tag ID (comparable to branches in git): <strong>TAG</strong></p>
+</li>
+</ul>
+<h4 id="331-pullingrunning">3.3.1 Pulling/Running</h4>
+<ul>
+<li>
+<p>pulling image from docker hub: <code>docker pull REPOSITORY:TAG</code></p>
+</li>
+<li>
+<p>starting a stopped container: <code>docker start NAMES</code></p>
+</li>
+<li>
+<p>stopping a container: docker stop NAMES</p>
+</li>
+<li>
+<p>Using multiple terminals for a single docker container: <code>docker exec -it NAMES bash</code></p>
+</li>
+<li>
+<p>build docker image and git it a new name and tag: <code>docker build -t REPOSITORY:TAG .</code></p>
+</li>
+</ul>
+<h4 id="332-updatingcreatingsharing">3.3.2 Updating/Creating/Sharing</h4>
+<ul>
+<li>
+<p>Saving changes made while in a container to the original image (change tag to create a new image): <code>docker commit name_of_container REPOSITORY:TAG</code></p>
+</li>
+<li>
+<p>Create a new image from a container: <code>docker tag NAMES REPOSITORY:TAG</code></p>
+</li>
+<li>
+<p>Pushing an image to Dockerhub: <code>docker push REPOSITORY:TAG</code></p>
+</li>
+<li>
+<p>Share files between host and Docker container:</p>
+</li>
+<li>From <strong>host</strong> to docker container: <code>docker cp foo.txt container_id:/foo.txt</code></li>
+<li>From <strong>docker container</strong> to host: <code>docker cp container_id:/foo.txt foo.txt</code></li>
+</ul>
+<h4 id="333-listing">3.3.3 Listing</h4>
+<ul>
+<li>
+<p>list all images: <code>docker images</code></p>
+</li>
+<li>
+<p>list all running containers: <code>docker ps</code></p>
+</li>
+<li>
+<p>list all containers (including stopped): <code>docker ps -a</code></p>
+</li>
+</ul>
+<h4 id="334-deleting">3.3.4 Deleting</h4>
+<ul>
+<li>
+<p>delete specific container: <code>docker rm NAMES</code></p>
+</li>
+<li>
+<p>delete specific image: <code>docker rmi REPOSITORY:TAG</code></p>
+</li>
+<li>
+<p>delete ALL containers: <code>docker rm -f $(docker ps -a -q)</code></p>
+</li>
+<li>
+<p>delete ALL images: <code>docker rmi -f $(docker images -q)</code></p>
+</li>
+</ul>
+<h2 id="4-accessing-docker-images">4. Accessing Docker Images</h2>
+<h3 id="41-ucsd-robocar-image">4.1 UCSD Robocar Image</h3>
+<p>Link to image on Docker Hub: <a href="https://hub.docker.com/r/djnighti/ucsd_robocar">Docker Image</a></p>
+<p><strong>Computer Architecture: ARM (Jetson)</strong></p>
+<p>To pull the image from a terminal:</p>
+<pre><code>docker pull djnighti/ucsd_robocar:latest
+</code></pre>
+<h3 id="42-docker-setup">4.2 Docker Setup</h3>
+<p>The exact "recipe" to build this image can be found <a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_hub2/-/blob/master/docker_setup/docker_files/Dockerfile">here</a></p>
+<p>If using the virtual machine, this has already been done for you.</p>
+<h4 id="421-enable-x_11-port-forwarding">4.2.1 Enable X_11 Port Forwarding</h4>
+<ol>
+<li>On your HOST machine (not the Jetson) enter these commands (Will have to enter every time)</li>
+</ol>
+<pre><code>xhost +
+ssh -X jetson@ip_address
+</code></pre>
+<ol>
+<li>Now on the Jetson, run the following commands to obtain sudo access for docker commands (only needs to be ran once)</li>
+</ol>
+<pre><code>sudo usermod -aG docker ${USER}
+su ${USER}
+</code></pre>
+<ol>
+<li>Now check that if X_11 forwarding is working:</li>
+</ol>
+<pre><code>xeyes
+</code></pre>
+<p>If some googly eyes pop up, X_11 is ready to go. IF X_11 PORT FORWARDING IS NOT SETUP, follow steps <a href="https://gitlab.com/djnighti/ucsd_robo_car_simple_ros/-/blob/master/x11_forwarding_steps.txt">here</a> to get it set up. Then come back here to continue the steps below.</p>
+<h4 id="422-update-docker-daemon">4.2.2 Update Docker Daemon</h4>
+<ol>
+<li>Now modify the Docker <code>daemon.json</code> file (just delete the previous version, then create a new one)</li>
+</ol>
+<pre><code>sudo rm /etc/docker/daemon.json 
+sudo nano /etc/docker/daemon.json
+</code></pre>
+<ol>
+<li>Within the empty <code>daemon.json</code> file, add:</li>
+</ol>
+<pre><code>{
+    &quot;runtimes&quot;: {
+        &quot;nvidia&quot;: {
+            &quot;path&quot;: &quot;nvidia-container-runtime&quot;,
+            &quot;runtimeArgs&quot;: []
+        }
+    },
+    &quot;default-runtime&quot;: &quot;nvidia&quot;
+}
+
+</code></pre>
+<ol>
+<li>Save changes to the file and reboot the Jetson:</li>
+</ol>
+<pre><code>sudo reboot now
+</code></pre>
+<h4 id="423-running-a-container">4.2.3 Running a Container</h4>
+<ol>
+<li>SSH back into the Jetson with the -X flag which enables X_11 Forwarding</li>
+</ol>
+<pre><code>ssh -X jetson@ip_address
+</code></pre>
+<ol>
+<li>Create a new function in the ~/.bashrc file with command line arguments to easily run a container</li>
+</ol>
+<pre><code>gedit ~/.bashrc
+</code></pre>
+<p>or </p>
+<pre><code>nano ~/.bashrc
+</code></pre>
+<ol>
+<li>Copy this into the bottom of the .bashrc:</li>
+</ol>
+<pre><code>robocar_docker ()
+{
+    docker run \
+    --name ${1}\
+    -it \
+    --privileged \
+    --net=host \
+    -e DISPLAY=$DISPLAY \
+    -v /dev/bus/usb:/dev/bus/usb \
+    --device-cgroup-rule='c 189:* rmw' \
+    --device /dev/video0 \
+    --volume=&quot;$HOME/.Xauthority:/root/.Xauthority:rw&quot; \
+    djnighti/ucsd_robocar:${2:-devel}
+}
+
+</code></pre>
+<p><strong>Notice the two arguments we have made for the bash command:</strong></p>
+<p>\${1}: This will be the name of the container, ex. Name_this_container</p>
+<p>\${2:devel}: This is the tag id of the image you want to launch a container from. If nothing is specified when calling at the command line (example shown below), the “devel” tag will be run. </p>
+<p>Don't modify the bash function &mdash; the arguments are intentional and are not meant to be hard-coded.</p>
+<ol>
+<li>Source the ~/.bashrc script so the current terminal can see the new function we just added</li>
+</ol>
+<pre><code>source ~/.bashrc
+</code></pre>
+<ol>
+<li>Run the following command to enter the docker container</li>
+</ol>
+<pre><code>robocar_docker &lt;CONTAINER_NAME&gt;
+</code></pre>
+<ol>
+<li>To access the <strong>same</strong> docker container from another terminal (do this for as many terminals you want)</li>
+</ol>
+<pre><code>docker exec -it &lt;CONTAINER_NAME&gt; bash
+</code></pre>
+<p>At this point the docker setup is complete but don't forget to refer to the useful docker commands sections which includes deleting, creating and updating images locally and remotely.</p>
+<h3 id="43-workspaces-in-docker-container">4.3 Workspaces in Docker Container</h3>
+<h4 id="432-ros2_ws">4.3.2 ros2_ws</h4>
+<p>ROS version: ROS2-FOXY</p>
+<p>This workspace contains source compiled packages from <a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_hub2">ucsd_robocar_hub2</a></p>
+<h4 id="433-sensor2_ws">4.3.3 sensor2_ws</h4>
+<p>ROS version: ROS2-FOXY</p>
+<p>This workspace contains source compiled packages for various sensors in our inventory.</p>
+<h3 id="44-ros-bridge">4.4 ROS Bridge</h3>
+<h3 id="45-utility-functions-in-bashrc">4.5 Utility functions in <code>~/.bashrc</code></h3>
+<ul>
+<li><a href="https://docs.google.com/document/d/1ygzU4uE3p38XZT8Rey_QmykXRS-VA-rtt_XBkC3gpCE/edit#heading=h.dydr21q8ok61">Updating all packaging in the ucsd_robocar framework from gitlab:</a> <code>upd_ucsd_robocar</code></li>
+<li><a href="https://docs.google.com/document/d/1ygzU4uE3p38XZT8Rey_QmykXRS-VA-rtt_XBkC3gpCE/edit#heading=h.kh752plifc0s">Source Noetic and ALL ROS packages and start roscore:</a> <code>source_ros1_init</code></li>
+<li><a href="https://docs.google.com/document/d/1ygzU4uE3p38XZT8Rey_QmykXRS-VA-rtt_XBkC3gpCE/edit#heading=h.kh752plifc0s">Source Noetic and ALL ROS packages</a> <code>source_ros1_pkg</code></li>
+<li><a href="https://docs.google.com/document/d/1ygzU4uE3p38XZT8Rey_QmykXRS-VA-rtt_XBkC3gpCE/edit#heading=h.kh752plifc0s">Source Noetic and ALL ROS packages and put user in ros1_ws:</a> <code>source_ros1</code></li>
+<li><a href="https://docs.google.com/document/d/1ygzU4uE3p38XZT8Rey_QmykXRS-VA-rtt_XBkC3gpCE/edit#heading=h.hmc07r1l07ue">Source foxy and ALL ROS2 packages:</a> <code>source_ros2_pkg</code></li>
+<li><a href="https://docs.google.com/document/d/1ygzU4uE3p38XZT8Rey_QmykXRS-VA-rtt_XBkC3gpCE/edit#heading=h.hmc07r1l07ue">Source foxy and ALL ROS2 packages and put user in ros2_ws:</a> <code>source_ros2</code></li>
+<li><a href="https://docs.google.com/document/d/1ygzU4uE3p38XZT8Rey_QmykXRS-VA-rtt_XBkC3gpCE/edit#heading=h.hmc07r1l07ue">Build all packages in ucsd_robocar:</a> <code>build_ros2</code></li>
+<li><a href="https://docs.google.com/document/d/1ygzU4uE3p38XZT8Rey_QmykXRS-VA-rtt_XBkC3gpCE/edit#heading=h.4r55s7fis99g">Source ROS bridge:</a> <code>source_ros_bridge</code></li>
+</ul>
+<h2 id="5-source-ros-version">5. Source ROS Version</h2>
+<h3 id="51-source-ros1">5.1 Source ROS1</h3>
+<h3 id="52-source-ros2">5.2 Source ROS2</h3>
+<p>We need to source ROS Foxy and the ros2_ws, below is an alias command that will do that automatically. The alias will also place you in the ros2_ws. This command needs to be run in every new terminal you want to use ROS2 in.  </p>
+<p>From the terminal:</p>
+<pre><code>source_ros2
+</code></pre>
+<p>Another alias was made to rebuild the package if any changes were made to the source code. It will put you in the ros2_ws, then perform a colcon build and then source install/setup.bash to reflect the changes made.</p>
+<p>From the terminal (This is only needs to be ran in 1 terminal, the changes will be reflected everywhere):</p>
+<pre><code>build_ros2
+</code></pre>
+<h3 id="53-source-ros-bridge">5.3 Source ROS Bridge</h3>
+<h2 id="6-hardware-configuration">6. Hardware Configuration</h2>
+<p>Not all robots have the same hardware especially when it comes to their sensors and motors and motor controllers. This quick section shows how to select the hardware that is on your robot. There are differences between ROS1 and ROS2 on how this configuration works so please read accordingly. This configuration is only necessary for the UCSD Robocar Image and NOT UCSD Robocar Simple ROS Image.</p>
+<h3 id="61-ros1">6.1 ROS1</h3>
+<h3 id="62-ros2">6.2 ROS2</h3>
+<p>In ROS2, the hardware configuration is as simple as flipping a switch. Since the launch files in ROS2 are now in python, we can dynamically build launch files! This means no more need to have several different “car configs” that may have different hardware on them and instead have a single launch file that is capable of launching any component you need by changing a single number (that number is explained below)! There is only one file to modify and all that needs to be changed is either putting a “0” or a “1” next to the list of hardware in the file. To select the hardware that your robot has and that you want to use, put a “1” next to it otherwise put a “0” which means it will not activate.</p>
+<p>In the <code>car_config.yaml</code> file, there is a list of actuator and sensor packages that can be used with the car. Set the corresponding funtionality for each component according to the direction above &mdash; once that is done, you must build the packages again:</p>
+<p>From a terminal:</p>
+<pre><code>source_ros2
+nano src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/car_config.yaml
+build_ros2
+</code></pre>
+<h2 id="7-node-configuration">7. Node Configuration</h2>
+<p>This quick section shows how to select the nodes/launch files that are on your robot. There are differences between ROS1 and ROS2 on how this configuration works so please read accordingly. This configuration is only necessary for the UCSD Robocar Image and NOT UCSD Robocar Simple ROS Image.</p>
+<h3 id="72-ros2">7.2 ROS2</h3>
+<h2 id="8-sensor-visualization">8. Sensor Visualization</h2>
+<h2 id="9-manual-control-of-robot-with-joystick">9. Manual Control of Robot with Joystick</h2>
+<h2 id="10-integrating-new-packagescode-into-the-framework">10. Integrating New Packages/Code into the Framework</h2>
+<h2 id="11-navigation">11. Navigation</h2>
+<h2 id="12-data-collection">12. Data Collection</h2>
+<h2 id="13-f1-tenth-simulator">13. F1 Tenth Simulator</h2>
+<h2 id="14-troubleshooting">14. Troubleshooting</h2>
+<h2 id="15-frequently-used-linux-commands">15. Frequently Used Linux Commands</h2>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>
