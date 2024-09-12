@@ -1,0 +1,1157 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../win23team12/">
+      
+      
+        <link rel="next" href="../win23team14/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Team 13 - ECE/MAE148</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#final-project-robot-mapping" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ECE/MAE148" class="md-header__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECE/MAE148
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Team 13
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ECE/MAE148" class="md-nav__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECE/MAE148
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation/Controller/UCSD%20Robocar%20Using%20BetaFPV%20LiteRadio%203%20Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Winter 23
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Winter 23
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Team 13
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Team 13
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#team-13-girish-muhammad-andy-and-van" class="md-nav__link">
+    Team 13: Girish, Muhammad, Andy, and Van
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ece-mae-148-winter-2023" class="md-nav__link">
+    ECE MAE 148, Winter 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-team" class="md-nav__link">
+    The Team
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-project-abstract" class="md-nav__link">
+    Final Project Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-setup" class="md-nav__link">
+    Hardware Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-plate" class="md-nav__link">
+    Base Plate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-mount" class="md-nav__link">
+    Camera Mount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jetson-nano-case" class="md-nav__link">
+    Jetson Nano Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electronics-circuit-diagram" class="md-nav__link">
+    Electronics Circuit Diagram
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-documentation" class="md-nav__link">
+    Software Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autonomous-laps" class="md-nav__link">
+    Autonomous Laps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    Acknowledgements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credit-and-references" class="md-nav__link">
+    Credit and References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#team-13-girish-muhammad-andy-and-van" class="md-nav__link">
+    Team 13: Girish, Muhammad, Andy, and Van
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ece-mae-148-winter-2023" class="md-nav__link">
+    ECE MAE 148, Winter 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-team" class="md-nav__link">
+    The Team
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-project-abstract" class="md-nav__link">
+    Final Project Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-setup" class="md-nav__link">
+    Hardware Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-plate" class="md-nav__link">
+    Base Plate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-mount" class="md-nav__link">
+    Camera Mount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jetson-nano-case" class="md-nav__link">
+    Jetson Nano Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electronics-circuit-diagram" class="md-nav__link">
+    Electronics Circuit Diagram
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-documentation" class="md-nav__link">
+    Software Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autonomous-laps" class="md-nav__link">
+    Autonomous Laps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    Acknowledgements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credit-and-references" class="md-nav__link">
+    Credit and References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p><img alt="" src="/images/ucsdlogo.png" /></p>
+<h1 id="final-project-robot-mapping">Final Project: Robot Mapping</h1>
+<h5 id="team-13-girish-muhammad-andy-and-van">Team 13: Girish, Muhammad, Andy, and Van</h5>
+<h5 id="ece-mae-148-winter-2023">ECE MAE 148, Winter 2023</h5>
+<p>Welcome to the project report for Team 13! This page contains a report of all the progress we made throughout this busy and fun quarter, including our final project.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="/images/car.jpg" /></th>
+<th><img alt="" src="/images/car2.jpg" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Team 13's assembled RC Car with the lidar placed at the front.</em></p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#final-project-robot-mapping">Final Project: Robot Mapping</a>
+        - <a href="#team-13-girish-muhammad-andy-and-van">Team 13: Girish, Muhammad, Andy, and Van</a>
+        - <a href="#ece-mae-148-winter-2023">ECE MAE 148, Winter 2023</a></li>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#the-team">The Team</a></li>
+<li><a href="#final-project-abstract">Final Project Abstract</a></li>
+<li><a href="#hardware-setup">Hardware Setup</a><ul>
+<li><a href="#base-plate">Base Plate</a></li>
+<li><a href="#camera-mount">Camera Mount</a></li>
+<li><a href="#jetson-nano-case">Jetson Nano Case</a></li>
+<li><a href="#electronics-circuit-diagram">Electronics Circuit Diagram</a></li>
+</ul>
+</li>
+<li><a href="#software-documentation">Software Documentation</a></li>
+<li><a href="#autonomous-laps">Autonomous Laps</a></li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+<li><a href="#credit-and-references">Credit and References</a></li>
+</ul>
+<h2 id="the-team">The Team</h2>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="/images/girish.jpeg" /></th>
+<th><img alt="" src="/images/muhammad.png" /></th>
+<th><img alt="" src="images/andy.png" /></th>
+<th><img alt="" src="/images/van.jpeg" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Girish Krishnan</strong> [<a href="https://linkedin.com/in/girk">LinkedIn</a>]</td>
+<td><strong>Muhammad Bintang Gemilang</strong></td>
+<td><strong>Andy Zhang</strong></td>
+<td><strong>Zhengyu (Van) Huang</strong></td>
+</tr>
+<tr>
+<td>Electrical Engineering</td>
+<td>Mechanical Engineering</td>
+<td>Electrical Engineering</td>
+<td>Computer Engineering</td>
+</tr>
+</tbody>
+</table>
+<h2 id="final-project-abstract">Final Project Abstract</h2>
+<p>Our final project was themed around <strong>mapping an unknown environment</strong>. Our project involved the following tasks.</p>
+<p><strong>What we promised</strong></p>
+<ul>
+<li>[✔] To implement SLAM (Simultaneous Localization and Mapping) using a lidar. This effectively creates a map of the environment around the robot, showing the locations of all objects present.</li>
+<li>[✔] To display the map generated from SLAM in real-time using a web application.</li>
+</ul>
+<p>The <strong>challenges faced</strong> during the project were:</p>
+<ul>
+<li>Integrating the web application for live previewing (HTML/CSS/JS) with the Python code needed to run SLAM.</li>
+<li>Avoiding delays in the updating map.</li>
+</ul>
+<p>The <strong>accomplishments</strong> of the project were:</p>
+<ul>
+<li>We were able to achieve a decent visualization that updates over time as the robot is driven around</li>
+<li>The visualization/map can be saved easily for tasks such as path planning.</li>
+</ul>
+<p><strong>Final Presentation</strong></p>
+<ul>
+<li>
+<p><em><a href="https://docs.google.com/presentation/d/1ybNZCItvh3Inb4xyIm9jMdvE7QkdUHSAgcw-_27GDpM/edit?usp=sharing">Link to Final Presentation</a></em></p>
+</li>
+<li>
+<p><em><a href="https://youtu.be/89NYezgTyDc">Link to video showing real-time mapping</a></em></p>
+</li>
+</ul>
+<p><strong>Weekly Update Presentations</strong></p>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1BA-ZTRFRMCwjRi_ehfDn4Fll8nvdWeSgA-vcFacIhXk/edit?usp=sharing">Project Proposal</a></li>
+<li><a href="https://docs.google.com/presentation/d/1aqbrDsI9-qD3Cdtn5Y08WQpj--RP-w43sHdjfP7Nmr0/edit?usp=sharing">Week 8</a></li>
+<li><a href="https://docs.google.com/presentation/d/1mEIa4phqNgUHyFd5yaW6FJG1RRwc04al4UiSqWt_TiU/edit?usp=sharing">Week 9</a></li>
+<li><a href="https://docs.google.com/presentation/d/1PwtRmnkmlwk-wUWYZGFs0CjX7lSMBmuzCTyH2MfmV7g/edit?usp=sharing">Week 10</a></li>
+</ul>
+<p><strong>Gantt Chart</strong></p>
+<p><img alt="" src="/images/gantt.png" /></p>
+<h2 id="hardware-setup">Hardware Setup</h2>
+<ul>
+<li><strong>3D Printing:</strong> Camera Mount, Jetson Nano Case, GPS (GNSS) Case.</li>
+<li><strong>Laser Cutting:</strong> Base plate to mount electronics and other components.</li>
+</ul>
+<p><strong>Parts List</strong></p>
+<ul>
+<li>Traxxas Chassis with steering servo and sensored brushless DC motor</li>
+<li>Jetson Nano</li>
+<li>WiFi adapter</li>
+<li>64 GB Micro SD Card</li>
+<li>Adapter/reader for Micro SD Card</li>
+<li>Logitech F710 controller</li>
+<li>OAK-D Lite Camera</li>
+<li>LD06 Lidar</li>
+<li>VESC</li>
+<li>Anti-spark switch with power switch</li>
+<li>DC-DC Converter</li>
+<li>4-cell LiPo battery</li>
+<li>Battery voltage checker/alarm</li>
+<li>DC Barrel Connector</li>
+<li>XT60, XT30, MR60 connectors</li>
+</ul>
+<p><em>Additional Parts used for testing/debugging</em></p>
+<ul>
+<li>Car stand</li>
+<li>USB-C to USB-A cable</li>
+<li>Micro USB to USB cable</li>
+<li>5V, 4A power supply for Jetson Nano</li>
+</ul>
+<h4 id="base-plate">Base Plate</h4>
+<p><img alt="" src="/images/base_plate.png" /></p>
+<p><em>All measurements shown above are in millimeters (mm)</em></p>
+<p>Our base plate was laser cut on a thick acrylic sheet. The circular hole at the end of the base plate is meant to hold the power on/off button. The long holes in the side of the plate are meant for wires to easily pass to and from the bottom of the plate.</p>
+<h4 id="camera-mount">Camera Mount</h4>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="/images/camera_mount.png" /></th>
+<th><img alt="" src="/images/camera_mount_base.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Camera Holder</td>
+<td>Base for attachment to base plate</td>
+</tr>
+</tbody>
+</table>
+<p>The two parts of the camera mount shown above were screwed together. The angle of the camera was carefully chosen (facing downward approximately 10 degrees from the vertical) so that the road ahead is clearly visible. This is essential for accurate results in OpenCV/ROS2 autonomous laps.</p>
+<p>One of our older camera mount designs is shown below.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="/images/camera_mount_rotate.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>This camera mount consists of three parts: one base for attachment to the base plate, one middle piece to connect the base and the camera, and the camera holder. This camera mount design allows you to rotate the camera up and down. However, it is important that the rotating hinge is screwed securely so that the hinge doesn't wobble out while the robot does autonomous laps!</p>
+<h4 id="jetson-nano-case">Jetson Nano Case</h4>
+<p><em>Credit to flyattack from Thingiverse, see: https://www.thingiverse.com/thing:3532828</em></p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="/images/jetson_case.jpeg" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>This case is excellent because it is robust and doesn't break easily, unlike most common Jetson Nano cases.</p>
+<h4 id="electronics-circuit-diagram">Electronics Circuit Diagram</h4>
+<p><img alt="" src="/images/schematic.png" />
+<img alt="" src="/images/circuit.png" /></p>
+<p><em>Note: some of these components and connections will vary depending on the exact components you have - check the component specifications carefully.</em></p>
+<h2 id="software-documentation">Software Documentation</h2>
+<p>To install all the necessary Python modules needed, run the following on the Jetson Nano.</p>
+<pre><code class="language-bash">pip install -r requirements.txt
+</code></pre>
+<p>For our final project, we implemented a real-time visualization system for the Hector SLAM algorithm implemented using the lidar sensor. The base code for the SLAM algorithm is accessible in the Docker container provided to us in class, and the code for the real-time implementation is present in the <strong>slam_gui</strong> folder of this repository.</p>
+<p>The SLAM real-time visualization GUI that we built has the following features:</p>
+<ul>
+<li>A web application whose routes are made using FastAPI in Python. Uvicorn is used to run the web server.</li>
+<li>HTML and JS to update the map in real-time</li>
+<li>The HTML and JS is interfaced with Python, ROS1, ROS2 and ROSBridge, so that the data collected is displayed on the web app.</li>
+<li>The interfacing process is difficult to implement directly in Python, so we use <em>subprocessing</em> to call relevant bash scripts that handle the processes in ROS1 and ROS2. These subprocesses are made to run in parallel using <em>threading</em> in Python.</li>
+</ul>
+<p>To run the visualizer, first open up a docker container containing the ucsd_robocar ROS packages.</p>
+<p>Run the following:</p>
+<pre><code class="language-bash">cd slam_gui
+python slam_map.py
+</code></pre>
+<p>This sets up the web app running on the Jetson Nano (although the app could potentially be run on any device, provided it can communicate with the Jetson Nano using the relevant ROS topics).</p>
+<p>Opening up the web app on <strong>http://localhost:8000</strong> reveals the GUI showing the results of SLAM in real-time. The code in <em>slam_map.py</em> can be adjusted to fine-tune the time-delay that occurs as the map updates.</p>
+<p><img alt="" src="/images/project_prev.png" /></p>
+<p><strong>Additional Scope for the Final Project</strong></p>
+<p>Although SLAM is useful for mapping an unknown environment, it can be useful to integrate GPS data with SLAM to provide better location accuracy. To implement this in Python, we created the folder <strong>gps_slam</strong> that contains starter code with lidar, PyVESC, and GPS implementation and a basic SLAM algorithm with the Kalman filter (implemented using the filterpy library in Python). This additional, nice-to-have part of the project hasn't been tested out yet, but we plan to get it working soon.</p>
+<h2 id="autonomous-laps">Autonomous Laps</h2>
+<p>As part of the class deliverables and as preparation for the final project, here are our autonomous laps videos:</p>
+<p><strong>Donkey Sim</strong></p>
+<ul>
+<li>Local Computer: https://youtu.be/lXEStSEVikQ</li>
+<li>GPU training: https://youtu.be/4_BzKP9-XAQ</li>
+<li>External Server: https://youtu.be/Yvo1yqRJhX4</li>
+</ul>
+<p><strong>Physical Robot</strong></p>
+<ul>
+<li>DonkeyCar: https://youtu.be/bPUSS2g0Ves</li>
+<li>Lane detection using OpenCV + ROS2: https://youtu.be/omcDCBSrl2I</li>
+<li>Inner lane: https://youtu.be/9hN8HUlGcas</li>
+<li>Outer lane: https://youtu.be/nXZNPscVlX0</li>
+<li>GPS: https://youtu.be/Y3I9AWW1R6o</li>
+</ul>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Thanks Prof. Jack Silberman and TAs Moises Lopez and Kishore Nukala for an awesome quarter! See you in DSC 178 next quarter, professor Jack ;)</p>
+<h2 id="credit-and-references">Credit and References</h2>
+<ul>
+<li>
+<p>Jetson Nano Case Design: https://www.thingiverse.com/thing:3532828</p>
+</li>
+<li>
+<p>Lidar (LD06) Python Tutorial: https://github.com/henjin0/LIDAR_LD06_python_loder</p>
+</li>
+<li>PyVESC: https://github.com/LiamBindle/PyVESC</li>
+<li>SLAM tutorial, Dominic Nightingale. https://gitlab.com/ucsd_robocar/ucsd_robocar_nav1_pkg/-/tree/master/</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

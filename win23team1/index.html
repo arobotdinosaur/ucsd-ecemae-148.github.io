@@ -1,0 +1,1064 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../documentation/Controller/UCSD%20Robocar%20Using%20BetaFPV%20LiteRadio%203%20Pro/">
+      
+      
+        <link rel="next" href="../win23team2/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Team 1 - ECE/MAE148</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#team-members" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ECE/MAE148" class="md-header__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECE/MAE148
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Team 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ECE/MAE148" class="md-nav__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECE/MAE148
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation/Controller/UCSD%20Robocar%20Using%20BetaFPV%20LiteRadio%203%20Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Winter 23
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Winter 23
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Team 1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Team 1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#team-members" class="md-nav__link">
+    Team Members
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-project" class="md-nav__link">
+    Final Project
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-goals" class="md-nav__link">
+    Primary Goals:
+  </a>
+  
+    <nav class="md-nav" aria-label="Primary Goals:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goal-red-yellow-and-green-stoplights" class="md-nav__link">
+    Goal : Red, Yellow and Green stoplights
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goal-person-following" class="md-nav__link">
+    Goal : Person Following
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stretch-goal-street-sign-detection" class="md-nav__link">
+    Stretch Goal: Street Sign Detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-project-documentation" class="md-nav__link">
+    Final Project Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#early-quarter" class="md-nav__link">
+    Early Quarter
+  </a>
+  
+    <nav class="md-nav" aria-label="Early Quarter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mechanical-design" class="md-nav__link">
+    Mechanical Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electronic-hardware" class="md-nav__link">
+    Electronic Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autonomous-laps" class="md-nav__link">
+    Autonomous Laps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgments" class="md-nav__link">
+    Acknowledgments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    Contact
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../win23team15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#team-members" class="md-nav__link">
+    Team Members
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-project" class="md-nav__link">
+    Final Project
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-goals" class="md-nav__link">
+    Primary Goals:
+  </a>
+  
+    <nav class="md-nav" aria-label="Primary Goals:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goal-red-yellow-and-green-stoplights" class="md-nav__link">
+    Goal : Red, Yellow and Green stoplights
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goal-person-following" class="md-nav__link">
+    Goal : Person Following
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stretch-goal-street-sign-detection" class="md-nav__link">
+    Stretch Goal: Street Sign Detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-project-documentation" class="md-nav__link">
+    Final Project Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#early-quarter" class="md-nav__link">
+    Early Quarter
+  </a>
+  
+    <nav class="md-nav" aria-label="Early Quarter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mechanical-design" class="md-nav__link">
+    Mechanical Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electronic-hardware" class="md-nav__link">
+    Electronic Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autonomous-laps" class="md-nav__link">
+    Autonomous Laps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgments" class="md-nav__link">
+    Acknowledgments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    Contact
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div id="top"></div>
+
+<h1 align="center">Stoplight, Streetsign and Person Detection </h1>
+
+<!-- PROJECT LOGO -->
+<p><br /></p>
+<div align="center">
+  <a href="https://github.com/ECE148-WI-23-Team-1/CV-Sign-and-Person-Detection">
+    <img src="images\UCSDLogo_JSOE_BlueGold.png" alt="Logo" width="400" height="100">
+  </a>
+<h3>MAE-ECE 148 Final Project</h3>
+<p>
+Team 1 Winter 2023
+</p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#team-members">Team Members</a>
+    </li>
+    <li><a href="#final-project">Final Project</a></li>
+      <ul>
+        <li><a href="#primary-goals">Primary goals</a></li>
+        <li><a href="#final-project-documentation">Final Project Documentation</a></li>
+      </ul>
+    <li><a href="#early-quarter">Early Quarter</a></li>
+      <ul>
+        <li><a href="#mechanical-design">Mechanical Design</a></li>
+        <li><a href="#electronic-hardware">Electronic Hardware</a></li>
+        <li><a href="autonomous-laps">Autonomous Laps</a></li>
+      </ul>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+<!-- TEAM MEMBERS -->
+<h2 id="team-members">Team Members</h2>
+<div align="center">
+    <img src="images\Team.jpg" alt="Logo" width="500" height=400">
+    <p align = "center">Arturo Amaya (Left), Arjun Naageshwaran (Middle), Hariz Megat Zariman (Right)</p>
+</div>
+
+<h4>Team Member Major and Class </h4>
+<ul>
+  <li>Arturo Amaya - Computer Engineering (EC26) - Class of 2023</li>
+  <li>Arjun Naageshwaran - MAE Ctrls & Robotics (MC34) - Class of 2024</li>
+  <li>Hariz Megat Zariman - Computer Engineering (EC26) - Class of 2024</li>
+</ul>
+
+<!-- Final Project -->
+<h2 id="final-project">Final Project</h2>
+<p>The goal of this project was a three-fold application of computer vision. Using the OAKD Lite camera, we aimed to recognize stoplights, traffic signs and people and use those visual inputs to change the state of our car.</p>
+<h3 id="primary-goals">Primary Goals:</h3>
+<p>1) Red, yellow and green stoplights would make the car stop, slow down, and go
+2) (Stretch goal) Stop signs, speed limit signs, and right turn signs would be recognized and make the car perform their designated function
+3) Individuals could be recognized and followed by the car with dynamic throttle and steering, while the car simultaneously recognized and performed stoplight and streetsign functions</p>
+<h4 id="goal-red-yellow-and-green-stoplights">Goal : Red, Yellow and Green stoplights</h4>
+<p><a href="https://drive.google.com/file/d/14FbdGz32Ei6No-sINCMqQw-Jw_kPOdvK/view?resourcekey"><img src="images\video1.png" width="50%"></a></p>
+<p>The car was able to detect red and green images succesfully. When shown red, the car completely stopped, and would only move forward when a green light was shown. Due to time constraints and inconsistent lighting conditions, the car was not able to detect a yellow light consistently but would be able to reduce throttle on detection.</p>
+<h4 id="goal-person-following">Goal : Person Following</h4>
+<p><a href="https://drive.google.com/file/d/1g3es-dhcG1CYK04iPISBUkA-pttMvrR2/view?usp=sharing"><img src="images\video2.png" width="50%"></a></p>
+<p>The car was able to identify person objects using the OAKD camera. By doing so, it was then capable of following a person by adjusting steering values based on how far the person strayed from the center of the camera's FOV. Furthermore, the car adjusted its throttle such that the further away a person is, the faster it goes and stops when approaching to near.</p>
+<h4 id="stretch-goal-street-sign-detection">Stretch Goal: Street Sign Detection</h4>
+<p>Our team was able to obtain obtain the <a href="https://www.mapillary.com/datasets">Mapillary Dataset</a> (containing many real-world street signs) and extract the relevant files and labels which were useful to our project (such as the U-turn and stop sign). Unfortunately, due to time constraints, unlabeled images and issues with training the dataset (slow locally, incorrect format for GPU cluster and many others), we were unable to reach this goal on time. However, we were able to implement the movement methods for the car object if it were to identify these signs,</p>
+<p>See <code>car.py</code> for these methods.</p>
+<h4 id="final-project-documentation">Final Project Documentation</h4>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1L6HpuwWUmZLbMku8TCtcsEmM94I_hfhxsWjQbXQdzuE/edit?usp=sharing">Final Project Proposal</a></li>
+<li><a href="https://docs.google.com/presentation/d/1BISDQ7yGsB8-tLKdeL1EcyHW_yMoLfHj2Dz4SmyfpQE/edit?usp=sharing">Final Project Update 3/7</a></li>
+<li><a href="https://docs.google.com/presentation/d/1zqu6FiV0MjfVvI7DA6E69afZh3yocjg3Kdn-TJ9l8VI/edit?usp=sharing">Final Project Update 3/14</a></li>
+<li><a href="https://docs.google.com/presentation/d/1aP5Ie4-TewuoKRB5DMtaJnovhVHyDWWn3jxtnVYqBNU/edit?usp=sharing">Final Project Presentation</a></li>
+</ul>
+<!-- Early Quarter -->
+<h2 id="early-quarter">Early Quarter</h2>
+<h4 id="mechanical-design">Mechanical Design</h4>
+<p>Prefabricated parts of the car were given to us, but parts like the base plate, dual camera mount, LIDAR stand, and cases for sensitive electronics (VESC, GNSS, Servo PWM, etc.) were either 3D printer or laser cut. These are a few of the models compared to their real-life, 3D printed counterparts.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Top Camera Mount</th>
+<th style="text-align: center;">Bottom Camera Mount</th>
+<th style="text-align: center;">LIDAR Mount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://github.com/ECE148-WI-23-Team-1/CV-Sign-and-Person-Detection/blob/main/images/Top_camera_mount.PNG"><img src="images\Top_camera_mount.PNG"></a></td>
+<td style="text-align: center;"><a href="https://github.com/ECE148-WI-23-Team-1/CV-Sign-and-Person-Detection/blob/main/images/Bottom_camera_mount.PNG"><img src="images\Bottom_camera_mount.PNG"></a></td>
+<td style="text-align: center;"><a href="https://github.com/ECE148-WI-23-Team-1/CV-Sign-and-Person-Detection/blob/main/images/LIDAR_Mount.PNG"><img src="images\LIDAR_Mount.PNG"></a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Camera Mount (Physical)</th>
+<th style="text-align: center;">LIDAR Mount (Physical)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://github.com/ECE148-WI-23-Team-1/CV-Sign-and-Person-Detection/blob/main/images/20230324_163531.jpg"><img src="images\20230324_163531.jpg" width = "300" height="500"></a></td>
+<td style="text-align: center;"><a href="https://github.com/ECE148-WI-23-Team-1/CV-Sign-and-Person-Detection/blob/main/images/20230324_163548.jpg"><img src="images\20230324_163548.jpg" width = "300" height="500"></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="electronic-hardware">Electronic Hardware</h4>
+<p>Our team used only the electronic components given to us. In particular, we focused primarily on the OAK-D camera, Jetson NANO and the GNSS board (only used for the 3 GPS Autonomous Laps). When assembling the circuit, we used the following circuit diagram (given by the TAs of the class):</p>
+<div align="center">
+    <img src="images\Circuit Diagram.png">
+</div>
+
+<h4 id="autonomous-laps">Autonomous Laps</h4>
+<p>Below is a youtube playlist of the car completing 3 autonomous laps using the DonkeyCar framework under different conditions. </p>
+<p><a href="https://www.youtube.com/watch?v=IvP6Bl-0CmE&amp;list=PLhr_F_bR8N4bZ2Y7_KSgR6yGpgRoOXpH-"><img src="images\playlist1.png"></a></p>
+<!-- ACKNOWLEDGMENTS -->
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p><strong>Credited Code Examples:</strong>
+* <a href="https://github.com/HevLfreis/TrafficLight-Detector/blob/master/src/main.py">Traffic light example Git</a>
+* <a href="https://github.com/luxonis/depthai">DepthAI Git</a>
+* <a href="https://drive.google.com/drive/folders/1SBzChXK2ebzPHgZBP_AIhVXJOekVc0r3">VESC Object Drive Folder</a>
+* <a href="https://docs.donkeycar.com/guide/host_pc/setup_windows/">DonkeyCar Framework</a></p>
+<p><em>Special thanks to Professor Jack Silberman, and TAs Kishore Nukala and Moises Lopez (WI23), and to all our amazing classmates of Winter 2023</em></p>
+<!-- CONTACT -->
+<h2 id="contact">Contact</h2>
+<ul>
+<li>Hariz Megat Zariman - hzariman@gmail.com | mqmegatz@ucsd.edu</li>
+<li>Arjun Naageshwaran - arjnaagesh@gmail.com | anaagesh@ucsd.edu</li>
+<li>Arturo Amaya - a1amaya@ucsd.edu | aramaya@ucsd.edu</li>
+</ul>
+<!-- MARKDOWN TEMPLATE INFORMATION -->
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>
