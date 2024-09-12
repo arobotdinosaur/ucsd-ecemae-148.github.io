@@ -352,16 +352,17 @@
     MobaXterm Installation
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="MobaXterm Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#powering-jetson-nano" class="md-nav__link">
     Powering Jetson Nano
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#jetson-nano-ssh-configuration" class="md-nav__link">
     Jetson Nano SSH Configuration
   </a>
@@ -408,11 +409,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#fan-configuration" class="md-nav__link">
     Fan Configuration
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -436,6 +442,26 @@
   
   <span class="md-ellipsis">
     VESC Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100-UCSD%20Robocar%20Framework/100-UCSD%20Robocar%20Framework/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UCSD Robocar Framework
   </span>
   
 
@@ -824,16 +850,17 @@
     MobaXterm Installation
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="MobaXterm Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#powering-jetson-nano" class="md-nav__link">
     Powering Jetson Nano
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#jetson-nano-ssh-configuration" class="md-nav__link">
     Jetson Nano SSH Configuration
   </a>
@@ -880,11 +907,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#fan-configuration" class="md-nav__link">
     Fan Configuration
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -911,15 +943,17 @@
 <h3 id="flashing-image">Flashing Image</h3>
 <p>A Jetson Nano runs off of a externally mounted microSD card, which will first need an image flashed onto it. A custom UCSD Jetson Nano Developer Kit image with some pre-configured settings and files can be downloaded here: <a href="https://drive.google.com/file/d/1Ikdat_BaP3IqEYoYfjfMQJGgmAC-UGNK/view?usp=sharing">UCSD Image</a>. You will need to install a program to flash this download onto your microSD card, we recommend Etcher: <a href="https://www.balena.io/etcher/">Etcher Download</a>. </p>
 <h4 id="using-etcher-to-write-ucsd-image">Using Etcher to Write UCSD Image</h4>
-<p>1) Using an adapter, plug your mircoSD card into a computer with the zipped image file downloaded
-2) Open Etcher, select the zipped file under "Flash from file" and the microSD card under "Select target", and click "Flash!" to write the image to the microSD card
-3) After flashing is complete, eject the microSD card from your computer and plug it into the back of the Jetson Nano. NOTE: this is a push-in-to-lock and push-in-to-unlock the uSD card. Please do not pull the uSD card out of the slot before unlocking it, otherwise you may damage your JTN and or the uSD card</p>
-<h3 id="mobaxterm-installation">MobaXterm Installation</h3>
-<p>A good tool for windows machines when doing embedded programming is MobaXterm, which offers more robust ssh communication with single board computers. <a href="https://mobaxterm.mobatek.net/download-home-edition.html">Here</a> you can find the download link.</p>
-<p>1) Click on the green "MobaXterm Home Edition v24.2 (Installer Edition)" to download a zip file
-2) Extract the zip file and launch the installer from the file explorer (not the .dat file)
-3) Follow the instructions in the installer
-4) When installation is complete, launch MobaXterm and select "Start new terminal" to be placed on the command line</p>
+<p>1) Using an adapter, plug your mircoSD card into a computer with the zipped image file downloaded<br />
+2) Open Etcher, select the zipped file under "Flash from file" and the microSD card under "Select target", and click "Flash!" to write the image to the microSD card<br />
+3) After flashing is complete, eject the microSD card from your computer and plug it into the back of the Jetson Nano. NOTE: this is a push-in-to-lock and push-in-to-unlock the uSD card. Please do not pull the uSD card out of the slot before unlocking it, otherwise you may damage your JTN and or the uSD card  </p>
+<h2 id="mobaxterm-installation">MobaXterm Installation</h2>
+<p>A good tool for Windows machines when doing embedded programming is MobaXterm, which offers more robust SSH communication with single board computers. <a href="https://mobaxterm.mobatek.net/download-home-edition.html">Here</a> you can find the download link.</p>
+<ol>
+<li>Click on the green "MobaXterm Home Edition v24.2 (Installer Edition)" to download a zip file.</li>
+<li>Extract the zip file and launch the installer from the file explorer (not the .dat file).</li>
+<li>Follow the instructions in the installer.</li>
+<li>When installation is complete, launch MobaXterm and select "Start new terminal" to be placed on the command line.</li>
+</ol>
 <h3 id="powering-jetson-nano">Powering Jetson Nano</h3>
 <p>To power the Jetson Nano you can use the provided 5V 4A power supply. This plugs into the barrel jack port to the left of the USB ports. The Jetson is recieving power and on if there is a green LED near the microUSB port. However, you may need to give it a minute or two to boot and load software. The fan will NOT turn on until you follow the documentation below to install the proper software. If you wish to power the Jetson through a microUSB connection, remove the jumper on the J48 pins near the barrel jack port. Please keep track of the jumper by leaving in connected to only one of the J48 pins.</p>
 <h3 id="jetson-nano-ssh-configuration">Jetson Nano SSH Configuration</h3>
