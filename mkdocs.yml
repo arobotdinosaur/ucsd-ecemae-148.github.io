@@ -69,7 +69,7 @@ plugins:
 
 nav:
   - Documentation:
-      - DonkeySimulator: markdown-documentation/50-Virtual Machine with DonkeyCar AI Simulator/50-Virtual Machine and DonkeyCar AI Simulator.md
+      - DonkeySimulator: markdown-documentation/main/50-Virtual Machine with DonkeyCar AI Simulator/50-Virtual Machine and DonkeyCar AI Simulator.md
       - Controller: documentation/Controller/UCSD Robocar Using BetaFPV LiteRadio 3 Pro.md
   - Winter 23:
       - Team 1: win23team1/README.md
