@@ -72,6 +72,7 @@ nav:
       - DonkeySimulator: markdown-documentation/50-Virtual Machine with DonkeyCar AI Simulator/50-Virtual Machine and DonkeyCar AI Simulator.md
       - Jetson Initial Setup: markdown-documentation/30-UCSD Robocar Jetson Nano Configuration/30-UCSD Robocar Jetson Nano Configuration.md
       - OpenCV With CUDA Acceleration: markdown-documentation/60-OpenCV CUDA Accelerated/60docfinal.md
+      - OpenCV With CUDA Acceleration: markdown-documentation/60-OpenCV Cuda Accelerated/60doccommonmark.md
       - VESC Setup: markdown-documentation/15-VESC Setup Instructions/15-VESC Setup Instructions.md
       - DonkeyCar Installation: markdown-documentation/10-UCSD Robocar ECE & MAE 148/10doc.md
       - DonkeyCar Installation: markdown-documentation/10-UCSD Robocar ECE & MAE 148/10docfinal.md
