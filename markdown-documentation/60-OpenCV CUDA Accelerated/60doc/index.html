@@ -1,0 +1,1120 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>60doc - ECE/MAE148</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#checking-opencv-build-information" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ECE/MAE148" class="md-header__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECE/MAE148
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              60doc
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECE/MAE148" class="md-nav__button md-logo" aria-label="ECE/MAE148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECE/MAE148
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../50-Virtual%20Machine%20with%20DonkeyCar%20AI%20Simulator/50-Virtual%20Machine%20and%20DonkeyCar%20AI%20Simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DonkeySimulator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jetson Initial Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../60doc.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenCV With CUDA Acceleration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-VESC%20Setup%20Instructions/15-VESC%20Setup%20Instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VESC Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-UCSD%20Robocar%20ECE%20%26%20MAE%20148/10-UCSD%20Robocar%20ECE%20%26%20MAE%20148/10UCSDRobocarECEMAE148.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Robocar Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100-UCSD%20Robocar%20Framework/100-UCSD%20Robocar%20Framework/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UCSD Robocar Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROS2_Guide_Book.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS2 Guidebook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../documentation/Controller/UCSD%20Robocar%20Using%20BetaFPV%20LiteRadio%203%20Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Winter 23
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Winter 23
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p>Version 1.8 - 26Nov2022</p>
+<p>Prepared by</p>
+<p>Dr. Jack Silberman</p>
+<p>Department of Electrical and Computer Engineering</p>
+<p>and</p>
+<p>Dominic Nightingale</p>
+<p>Department of Mechanical and Aerospace Engineering</p>
+<p>University of California, San Diego</p>
+<p>9500 Gilman Dr, La Jolla, CA 92093</p>
+<p><img alt="" src="../60images/media/image17.png" />{width="3.1313626421697287in"
+height="0.7398272090988627in"}</p>
+<p><img alt="" src="../60images/media/image2.png" />{width="1.4010422134733158in"
+height="1.4010422134733158in"}</p>
+<p><img alt="" src="../60images/media/image10.png" />{width="3.1548917322834646in"
+height="0.6718755468066492in"}</p>
+<p># Installing an Open Source Computer Vision (OpenCV) package with CUDA
+Support</p>
+<p># As of Jan 2020, NVIDIA is not providing OpenCV optimized to use CUDA
+(GPU acceleration).</p>
+<p># Search the web if you are curious why.</p>
+<p>#
+<a href="https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902">[https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902]{.underline}</a></p>
+<p>"</p>
+<p><em>Hi,</em></p>
+<p><em>Replied your question inline:</em></p>
+<p><em>Jetson Nano GPU does not support OpenCV acceleration (through opencl)
+with Python</em></p>
+<p><em>Our default OpenCV does support GPU acceleration.</em></p>
+<p><em>The common issue is there are some features that have not been
+enabled.</em></p>
+<p><em>(This feature often requires third-party library installation)</em></p>
+<p>"</p>
+<p><a href="https://www.youtube.com/watch?v=art0-99fFa8">[https://www.youtube.com/watch?v=art0-99fFa8]{.underline}</a></p>
+<h1 id="checking-opencv-build-information">Checking openCV build information</h1>
+<p># ssh to the Single Board Computer (SBC)</p>
+<p># Check to see if OpenCV for CUDA is available, search on the terminal
+output for CUDA),</p>
+<p># if not, we build OpenCV from source to use CUDA Acceleration</p>
+<p># From a terminal:</p>
+<p>python</p>
+<p>&gt;&gt;import cv2</p>
+<p>&gt;&gt;print cv2.getBuildInformation()</p>
+<p>&gt;&gt;exit ()</p>
+<p># ex:</p>
+<p>NVIDIA CUDA: YES (ver 10.2, CUFFT CUBLAS FAST_MATH)</p>
+<p>NVIDIA GPU arch: 53 62 72</p>
+<p>NVIDIA PTX archs:</p>
+<p>cuDNN: YES (ver 8.0)</p>
+<p>OpenCL: YES (no extra features)</p>
+<p>Include path: /tmp/build_opencv/opencv/3rdparty/include/opencl/1.2</p>
+<p>Link libraries: Dynamic load</p>
+<p>You can also use jtop to check if OpenCV was compiled with CUDA.</p>
+<p>jtop</p>
+<p>6</p>
+<p><img alt="" src="../60images/media/image15.png" />{width="4.536458880139983in"
+height="2.590980971128609in"}</p>
+<p># If OpenCV is not using CUDA acceleration, let\'s build and install
+the latest OpenCV optimized</p>
+<p># for CUDA</p>
+<p># As of 03Apr2022, I have not seen NVIDIA supplying OpenCV GPU
+accelerated on their</p>
+<p># JetPack. We need to compile it from source. If you ask me, nice
+experience for you.</p>
+<p># Let's do this</p>
+<h1 id="_1"></h1>
+<h1 id="installing-opencv-with-cuda">Installing openCV with CUDA</h1>
+<p><strong># This step may take several hours</strong> <strong>to compile and build OpenCV in
+a SBC such as the</strong></p>
+<p><strong># Jetson Nano (JTN) or Jetson Xavier NX (JNX). It took my JTN four
+hours to complete.</strong></p>
+<p><strong># For the JTN, please make sure the fan is installed including
+software to enable high</strong></p>
+<p><strong># CPU power mode</strong></p>
+<p># Better do it overnight. Be patient, please keep in mind that you are
+using a low power</p>
+<p># single board computer (SBC)</p>
+<p># Make sure you are using the external power supply to power the
+jetson, not a USB cable.</p>
+<p>#
+<a href="https://devtalk.nvidia.com/default/topic/1054949/process-to-install-opencv-4-1-on-nano/">[https://devtalk.nvidia.com/default/topic/1054949/process-to-install-opencv-4-1-on-nano/]{.underline}</a></p>
+<p>#
+<a href="https://github.com/mdegans/nano_build_opencv">[https://github.com/mdegans/nano_build_opencv]{.underline}</a></p>
+<p># Please make sure your computer will not sleep so you maintain an
+active ssh connection</p>
+<p># while you are building OpenCV because you will need to type the user
+jetson password</p>
+<p># again to complete the install.</p>
+<p># Reconnecting on the same ssh session is not trivial</p>
+<p><img alt="" src="../60images/media/image11.png" />{width="6.5in"
+height="1.7222222222222223in"}</p>
+<h2 id="using-a-linux-host-use-screen"># Using a Linux Host? Use Screen</h2>
+<p># You should consider using
+<a href="https://ma.ttias.be/screen-a-must-for-ssh/">[screen]{.underline}</a> to
+enable you to reconnect to a previous ssh session.</p>
+<p># Do you need to install screen?</p>
+<p>sudo apt-get install screen</p>
+<p># From a terminal on Linux host or on your VM:</p>
+<p>screen</p>
+<p># ssh jetson@ name of IP address of your machine</p>
+<p>ssh jetson@ucsdrobocar-xxx-yy.local</p>
+<p># If you get disconnected, open a terminal again on your computer then
+type</p>
+<p>screen -r</p>
+<p># screen -r should reconnect to the previous ssh session that was open</p>
+<p># Here is some more detailed information on using screen</p>
+<p><a href="https://www.howtogeek.com/howto/ubuntu/keep-your-ssh-session-running-when-you-disconnect">[https://www.howtogeek.com/howto/ubuntu/keep-your-ssh-session-running-when-you-disconnect]{.underline}</a></p>
+<p><em># if not installed in your host</em></p>
+<p><em>sudo apt-get install screen</em></p>
+<p><em>Now you can start a new screen session by just typing screen at the
+command line. You'll be shown some information about screen. Hit enter,
+and you'll be at a normal prompt.</em></p>
+<p><em>To disconnect (but leave the session running)</em></p>
+<p><em>Hit Ctrl + A and then Ctrl + D in immediate succession. You will see
+the message [detached]</em></p>
+<p><em>To reconnect to an already running session</em></p>
+<p><em>screen -r</em></p>
+<p><em>To reconnect to an existing session, or create a new one if none
+exists</em></p>
+<p><em>screen -D -r</em></p>
+<p># More info on using screen</p>
+<p><a href="https://ma.ttias.be/screen-a-must-for-ssh/">[https://ma.ttias.be/screen-a-must-for-ssh/]{.underline}</a></p>
+<p><em>screen -ls</em></p>
+<p><em>There are screens on:</em></p>
+<p><em>27111.screen_untarring (Detached)</em></p>
+<p><em>27097.screen_disking (Detached)</em></p>
+<p><em>2 Sockets in /var/run/screen/S-root.</em></p>
+<p><em>This will show a list of all running screen-sessions at any given time.
+You can pick up a previous screen-session, by typing</em></p>
+<p><em>screen -r \&lt;name_of_session&gt;</em></p>
+<p><em>screen -r</em></p>
+<h2 id="_2"></h2>
+<p># Since your SBC will be busy, how can you see it is working for you?</p>
+<p>#</p>
+<p># Besides htop or top, there is another cool utility called
+<a href="https://github.com/rbonghi/jetson_stats">[jetson_stats]{.underline}</a></p>
+<p>sudo apt-get install python3-pip</p>
+<p>sudo -H pip3 install -U jetson-stats</p>
+<p># reboot</p>
+<p>sudo reboot now</p>
+<p># Then you can run</p>
+<p>jtop</p>
+<p>4</p>
+<p>You can use jtop to add more swap space using the left and right keys
+and clicking the plus button</p>
+<p><img alt="" src="../60images/media/image8.png" />{width="4.005208880139983in"
+height="1.776890857392826in"}</p>
+<p>Add 4G of swap and press \&lt;S&gt; to enable it.</p>
+<p><img alt="" src="../60images/media/image5.png" />{width="3.0156255468066493in"
+height="2.161738845144357in"}</p>
+<h2 id="removing-old-version-of-opencv">Removing old version of OpenCV</h2>
+<p># First lets remove the current OpenCV version and reboot the JTN</p>
+<p>sudo sudo apt-get purge *libopencv*</p>
+<p>sudo reboot now</p>
+<h2 id="compiling-opencv-from-source">Compiling OpenCV from source</h2>
+<p># screen then ssh back to the SBC</p>
+<p># If needed, create the \~/projects directory</p>
+<p>cd\~</p>
+<p>mkdir projects</p>
+<p>cd projects</p>
+<p># For Jetson Nano</p>
+<p>git clone
+<a href="https://github.com/mdegans/nano_build_opencv.git">[https://github.com/mdegans/nano_build_opencv.git]{.underline}</a></p>
+<p>cd nano_build_opencv</p>
+<p># For the Jetson Nano, lets modify the script to use 2 CPU cores vs. 1.</p>
+<p># Note: for the TX2 and Xaviers the script automatically uses more CPU
+cores.</p>
+<p># Need to modify the configuration for the CUDNN we are using</p>
+<p># First see what you have installed using jtop use option INFO press 7</p>
+<p><img alt="" src="../60images/media/image13.png" />{width="4.294622703412074in"
+height="3.0062357830271216in"}</p>
+<p><img alt="" src="../60images/media/image4.png" />{width="4.84745406824147in"
+height="3.2258858267716537in"}</p>
+<h1 id="remove-the-87-from-the-cuda_arch_bin-version-it-causes-a">Remove the 8.7 from the CUDA_ARCH_BIN version, it causes a</h1>
+<p>compatibility issue</p>
+<h1 id="also-make-sure-the-cudnn_version80-it-will-fail-otherwise">Also, make sure the CUDNN_VERSION='8.0', it will fail otherwise</h1>
+<p>nano build_opencv.sh</p>
+<p># modify this line to have JOBS=2</p>
+<p>else</p>
+<p>JOBS=1 # you can set this to 4 if you have a swap file</p>
+<p>JOBS=2</p>
+<p># save the file / exit nano</p>
+<p>#
+<a href="https://opencv.org/releases/">[https://opencv.org/releases/]{.underline}</a></p>
+<p># look for the latest version</p>
+<p><img alt="" src="../60images/media/image3.png" />{width="3.8030096237970255in"
+height="2.6568252405949258in"}</p>
+<p># As of 24Nov23, <strong>4.8.0</strong> is the latest version</p>
+<p># You can use jtop to have Jetson Clocks enabled to improve the
+performance of the Jetson</p>
+<p># 6 CTRL and then press s</p>
+<p># To make it enabled at boot too, press e</p>
+<p><img alt="" src="../60images/media/image14.png" />{width="3.965906605424322in"
+height="2.9303641732283463in"}</p>
+<p># From a terminal</p>
+<p>./build_opencv.sh <strong>4.8.0</strong></p>
+<p># Again, this will take a good while. You may consider doing this at
+night before you go to bed. It is really boring</p>
+<p># after a while (hours) looking that the SBC compile and build OpenCV
+from source</p>
+<p># Please make sure the computer you are using to SSH, disable sleep,
+and if using a notebook computer</p>
+<p># have in connected to the charger</p>
+<p># Preferable you use screen before ssh to be able to reconnect in</p>
+<p># case your computer lose the SSH connection.</p>
+<p># If you wish, you can see that the SBC cores of the CPU are</p>
+<p># busy by opening another terminal or a new tab on the same terminal
+window then</p>
+<p># ssh to the SBC and run the command top</p>
+<p># I like better jtop (if needed, install htop or jtop).</p>
+<p>#</p>
+<p># ex:</p>
+<p><img alt="" src="../60images/media/image7.png" />{width="3.9427088801399823in"
+height="2.58424321959755in"}</p>
+<p># After a few hours you see that you need to enter a little information
+to finish the build. That is when we have</p>
+<p># problems if you get disconnected from your SSH</p>
+<p># You can leave the temporary builds in place</p>
+<p>Do you wish to remove temporary build files in /tmp/build_opencv ?</p>
+<p>(Doing so may make running tests on the build later impossible)</p>
+<p>Y/N <strong>y</strong></p>
+<p><strong># Enter y</strong></p>
+<p># save some space on disc</p>
+<h1 id="checking-the-install">Checking the Install</h1>
+<p># When the installation is complete, let\'s check the version of OpenCV
+that was installed</p>
+<p># First reboot SBC</p>
+<p>sudo reboot now</p>
+<p># ssh back to the SBC</p>
+<h1 id="using-jtop-to-confirm-the-opencv-gpu-cuda-compiled">Using jtop to confirm the OpenCV GPU (CUDA) compiled</h1>
+<p>jtop</p>
+<p>7 INFO</p>
+<p># look for the OpenCV version and that it was compiled with CUDA</p>
+<p><img alt="" src="../60images/media/image12.png" />{width="4.613286307961505in"
+height="3.35744750656168in"}</p>
+<p><img alt="" src="../60images/media/image9.png" />{width="7.5in" height="0.375in"}</p>
+<h2 id="lets-make-sure-python3-finds-opencv-cv2"># Let's make sure Python3 finds OpenCV (CV2)</h2>
+<p># Need to adapt this for the python and OpenCV versions that you are
+using</p>
+<blockquote>
+<p>python3 -c \'import cv2 as cv; print(cv.__version__)\'</p>
+<h1 id="traceback-most-recent-call-last">Traceback (most recent call last):</h1>
+<h1 id="file-string-line-1-in-module">File \"\&lt;string&gt;\", line 1, in \&lt;module&gt;</h1>
+<h1 id="modulenotfounderror-no-module-named-cv2">ModuleNotFoundError: No module named \'cv2\'</h1>
+</blockquote>
+<p># If you don't see the version of the OpenCV that you built listed, it
+is because you forgot to delete the previous</p>
+<p># OpenCV version that was installed, go back to this document "Removing
+old version of OpenCV" and then</p>
+<p># build and install OpenCV again.</p>
+<p># What version of python3 do you have?</p>
+<p>python3</p>
+<h1 id="python-3810-default-may-26-2023-140508">Python 3.8.10 (default, May 26 2023, 14:05:08)</h1>
+<h1 id="gcc-940-on-linux">[GCC 9.4.0] on linux</h1>
+<h1 id="type-help-copyright-credits-or-license-for-more">Type \"help\", \"copyright\", \"credits\" or \"license\" for more</h1>
+<p>information.</p>
+<p>&gt;&gt;&gt; exit()</p>
+<p>ex:</p>
+<p>cd /usr/local/lib/python3.6/site-packages/cv2/python-3.6</p>
+<p># or</p>
+<p>cd /usr/local/lib/python3.8/site-packages/cv2/python-3.8</p>
+<p># remove the previous cv2.so in case it is still there.</p>
+<p>sudo rm -rf cv2.so</p>
+<blockquote>
+<p># mv cv2.cpython-36m-[xxx]{.mark}-linux-gnu.so cv2.so</p>
+</blockquote>
+<p>ls cv2.*</p>
+<p># cv2.cpython-38-aarch64-linux-gnu.so</p>
+<p>ln -s
+/usr/local/lib/python3.8/site-packages/cv2/python-3.8cv2.cpython-38-aarch64-linux-gnu.so
+cv2.so cv2.so</p>
+<p>sudo cp cv2.cpython-36m-aarch64-linux-gnu.so cv2.so</p>
+<p># or</p>
+<p>sudo cp cv2.cpython-38-aarch64-linux-gnu.so cv2.so</p>
+<p># Alternatively you could just rename the file</p>
+<p># sudo mv cv2.cpython-36m-aarch64-linux-gnu.so cv2.so</p>
+<p># sudo cp cv2.cpython-38-aarch64-linux-gnu.so cv2.so</p>
+<p># Lets create a link at the home directory for cv2</p>
+<p>cd \~</p>
+<p>sudo rm -rf cv2.so</p>
+<p>ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so
+cv2.so</p>
+<p># or</p>
+<p>ln -s /usr/local/lib/python3.8/site-packages/cv2/python-3.8/cv2.so
+cv2.so</p>
+<p>Checking install for python3</p>
+<p>python3</p>
+<p>import cv2</p>
+<p>cv2.__version__</p>
+<p>exit ()</p>
+<p># Resulting on something similar to this</p>
+<p><strong>jetson@ucsdrobocar-xxx-yy</strong>:<strong>\~</strong>\$ python3</p>
+<p>Python 3.6.9 (default, Jun 29 2022, 11:45:57)</p>
+<p>[GCC 8.4.0] on linux</p>
+<p>Type \"help\", \"copyright\", \"credits\" or \"license\" for more
+information.</p>
+<p>&gt;&gt;&gt; import cv2</p>
+<p>&gt;&gt;&gt; cv2.__version__</p>
+<p>\'4.6.0\'</p>
+<p>&gt;&gt;&gt; exit()</p>
+<p><strong>jetson@ucsdrobocar-xxx-yy</strong>:<strong>\~</strong>\$</p>
+<blockquote>
+<p>Python 3.8.10 (default, May 26 2023, 14:05:08)</p>
+<p>[GCC 9.4.0] on linux</p>
+<p>Type \"help\", \"copyright\", \"credits\" or \"license\" for more
+information.</p>
+<p>&gt;&gt;&gt; import cv2</p>
+<p>&gt;&gt;&gt; cv2.__version__</p>
+<p>\'4.8.0\'</p>
+<p>&gt;&gt;&gt; exit ()</p>
+</blockquote>
+<p># Here is quicker way to test cv2 on Python 3</p>
+<p>python3 -c \'import cv2 as cv; print(cv.__version__)\'</p>
+<blockquote>
+<p>4.6.0</p>
+<p># or</p>
+<p>4.8.0</p>
+</blockquote>
+<p><strong>end of Installing an Open Source Computer Vision (OpenCV) package with
+CUDA Support</strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>
