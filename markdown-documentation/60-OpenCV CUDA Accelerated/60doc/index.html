@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#checking-opencv-build-information" class="md-skip">
+        <a href="#installing-an-open-source-computer-vision-opencv-package-with-cuda" class="md-skip">
           Skip to content
         </a>
       
@@ -810,50 +810,30 @@
   
 
 
-<p>Version 1.8 - 26Nov2022</p>
-<p>Prepared by</p>
-<p>Dr. Jack Silberman</p>
-<p>Department of Electrical and Computer Engineering</p>
-<p>and</p>
-<p>Dominic Nightingale</p>
-<p>Department of Mechanical and Aerospace Engineering</p>
-<p>University of California, San Diego</p>
-<p>9500 Gilman Dr, La Jolla, CA 92093</p>
-<p><img alt="" src="../60images/media/image17.png" />{width="3.1313626421697287in"
-height="0.7398272090988627in"}</p>
-<p><img alt="" src="../60images/media/image2.png" />{width="1.4010422134733158in"
-height="1.4010422134733158in"}</p>
-<p><img alt="" src="../60images/media/image10.png" />{width="3.1548917322834646in"
-height="0.6718755468066492in"}</p>
-<p># Installing an Open Source Computer Vision (OpenCV) package with CUDA
-Support</p>
+<h1 id="installing-an-open-source-computer-vision-opencv-package-with-cuda">Installing an Open Source Computer Vision (OpenCV) package with CUDA</h1>
+<p>Support</p>
 <p># As of Jan 2020, NVIDIA is not providing OpenCV optimized to use CUDA
 (GPU acceleration).</p>
 <p># Search the web if you are curious why.</p>
 <p>#
 <a href="https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902">[https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902]{.underline}</a></p>
-<p>"</p>
-<p><em>Hi,</em></p>
-<p><em>Replied your question inline:</em></p>
-<p><em>Jetson Nano GPU does not support OpenCV acceleration (through opencl)
-with Python</em></p>
-<p><em>Our default OpenCV does support GPU acceleration.</em></p>
-<p><em>The common issue is there are some features that have not been
-enabled.</em></p>
-<p><em>(This feature often requires third-party library installation)</em></p>
-<p>"</p>
-<p><a href="https://www.youtube.com/watch?v=art0-99fFa8">[https://www.youtube.com/watch?v=art0-99fFa8]{.underline}</a></p>
+<p>Youtube Video about the process:
+<a href="https://www.youtube.com/watch?v=art0-99fFa8">https://www.youtube.com/watch?v=art0-99fFa8</a></p>
 <h1 id="checking-opencv-build-information">Checking openCV build information</h1>
-<p># ssh to the Single Board Computer (SBC)</p>
-<p># Check to see if OpenCV for CUDA is available, search on the terminal
+<p>ssh to the Single Board Computer (SBC)</p>
+<p>Check to see if OpenCV for CUDA is available, search on the terminal
 output for CUDA),</p>
-<p># if not, we build OpenCV from source to use CUDA Acceleration</p>
-<p># From a terminal:</p>
-<p>python</p>
-<p>&gt;&gt;import cv2</p>
-<p>&gt;&gt;print cv2.getBuildInformation()</p>
-<p>&gt;&gt;exit ()</p>
-<p># ex:</p>
+<p>if not, we build OpenCV from source to use CUDA Acceleration</p>
+<p>From a terminal:</p>
+<pre><code>python
+
+\&gt;\&gt;import cv2
+
+\&gt;\&gt;print cv2.getBuildInformation()
+
+\&gt;\&gt;exit ()
+</code></pre>
+<p>ex:</p>
 <p>NVIDIA CUDA: YES (ver 10.2, CUFFT CUBLAS FAST_MATH)</p>
 <p>NVIDIA GPU arch: 53 62 72</p>
 <p>NVIDIA PTX archs:</p>
@@ -864,9 +844,8 @@ output for CUDA),</p>
 <p>You can also use jtop to check if OpenCV was compiled with CUDA.</p>
 <p>jtop</p>
 <p>6</p>
-<p><img alt="" src="../60images/media/image15.png" />{width="4.536458880139983in"
-height="2.590980971128609in"}</p>
-<p># If OpenCV is not using CUDA acceleration, let\'s build and install
+<p><img alt="" src="../60images/media/image15.png" />
+# If OpenCV is not using CUDA acceleration, let\'s build and install
 the latest OpenCV optimized</p>
 <p># for CUDA</p>
 <p># As of 03Apr2022, I have not seen NVIDIA supplying OpenCV GPU
@@ -881,11 +860,9 @@ a SBC such as the</strong></p>
 <p><strong># Jetson Nano (JTN) or Jetson Xavier NX (JNX). It took my JTN four
 hours to complete.</strong></p>
 <p><strong># For the JTN, please make sure the fan is installed including
-software to enable high</strong></p>
-<p><strong># CPU power mode</strong></p>
+software to enable high CPU power mode</strong></p>
 <p># Better do it overnight. Be patient, please keep in mind that you are
-using a low power</p>
-<p># single board computer (SBC)</p>
+using a low power single board computer (SBC)</p>
 <p># Make sure you are using the external power supply to power the
 jetson, not a USB cable.</p>
 <p>#
@@ -898,11 +875,10 @@ active ssh connection</p>
 jetson password</p>
 <p># again to complete the install.</p>
 <p># Reconnecting on the same ssh session is not trivial</p>
-<p><img alt="" src="../60images/media/image11.png" />{width="6.5in"
-height="1.7222222222222223in"}</p>
+<p><img alt="" src="../60images/media/image11.png" /></p>
 <h2 id="using-a-linux-host-use-screen"># Using a Linux Host? Use Screen</h2>
 <p># You should consider using
-<a href="https://ma.ttias.be/screen-a-must-for-ssh/">[screen]{.underline}</a> to
+<a href="https://ma.ttias.be/screen-a-must-for-ssh/">screen</a> to
 enable you to reconnect to a previous ssh session.</p>
 <p># Do you need to install screen?</p>
 <p>sudo apt-get install screen</p>
@@ -944,7 +920,7 @@ You can pick up a previous screen-session, by typing</em></p>
 <p># Since your SBC will be busy, how can you see it is working for you?</p>
 <p>#</p>
 <p># Besides htop or top, there is another cool utility called
-<a href="https://github.com/rbonghi/jetson_stats">[jetson_stats]{.underline}</a></p>
+<a href="https://github.com/rbonghi/jetson_stats">jetson_stats</a></p>
 <p>sudo apt-get install python3-pip</p>
 <p>sudo -H pip3 install -U jetson-stats</p>
 <p># reboot</p>
@@ -954,11 +930,9 @@ You can pick up a previous screen-session, by typing</em></p>
 <p>4</p>
 <p>You can use jtop to add more swap space using the left and right keys
 and clicking the plus button</p>
-<p><img alt="" src="../60images/media/image8.png" />{width="4.005208880139983in"
-height="1.776890857392826in"}</p>
+<p><img alt="" src="../60images/media/image8.png" /></p>
 <p>Add 4G of swap and press \&lt;S&gt; to enable it.</p>
-<p><img alt="" src="../60images/media/image5.png" />{width="3.0156255468066493in"
-height="2.161738845144357in"}</p>
+<p><img alt="" src="../60images/media/image5.png" /></p>
 <h2 id="removing-old-version-of-opencv">Removing old version of OpenCV</h2>
 <p># First lets remove the current OpenCV version and reboot the JTN</p>
 <p>sudo sudo apt-get purge *libopencv*</p>
@@ -971,17 +945,15 @@ height="2.161738845144357in"}</p>
 <p>cd projects</p>
 <p># For Jetson Nano</p>
 <p>git clone
-<a href="https://github.com/mdegans/nano_build_opencv.git">[https://github.com/mdegans/nano_build_opencv.git]{.underline}</a></p>
+<a href="https://github.com/mdegans/nano_build_opencv.git">https://github.com/mdegans/nano_build_opencv.git</a></p>
 <p>cd nano_build_opencv</p>
 <p># For the Jetson Nano, lets modify the script to use 2 CPU cores vs. 1.</p>
 <p># Note: for the TX2 and Xaviers the script automatically uses more CPU
 cores.</p>
 <p># Need to modify the configuration for the CUDNN we are using</p>
 <p># First see what you have installed using jtop use option INFO press 7</p>
-<p><img alt="" src="../60images/media/image13.png" />{width="4.294622703412074in"
-height="3.0062357830271216in"}</p>
-<p><img alt="" src="../60images/media/image4.png" />{width="4.84745406824147in"
-height="3.2258858267716537in"}</p>
+<p><img alt="" src="../60images/media/image13.png" /></p>
+<p><img alt="" src="../60images/media/image4.png" /></p>
 <h1 id="remove-the-87-from-the-cuda_arch_bin-version-it-causes-a">Remove the 8.7 from the CUDA_ARCH_BIN version, it causes a</h1>
 <p>compatibility issue</p>
 <h1 id="also-make-sure-the-cudnn_version80-it-will-fail-otherwise">Also, make sure the CUDNN_VERSION='8.0', it will fail otherwise</h1>
@@ -992,19 +964,18 @@ height="3.2258858267716537in"}</p>
 <p>JOBS=2</p>
 <p># save the file / exit nano</p>
 <p>#
-<a href="https://opencv.org/releases/">[https://opencv.org/releases/]{.underline}</a></p>
+<a href="https://opencv.org/releases/">https://opencv.org/releases/</a></p>
 <p># look for the latest version</p>
-<p><img alt="" src="../60images/media/image3.png" />{width="3.8030096237970255in"
-height="2.6568252405949258in"}</p>
+<p><img alt="" src="../60images/media/image3.png" /></p>
 <p># As of 24Nov23, <strong>4.8.0</strong> is the latest version</p>
 <p># You can use jtop to have Jetson Clocks enabled to improve the
 performance of the Jetson</p>
 <p># 6 CTRL and then press s</p>
 <p># To make it enabled at boot too, press e</p>
-<p><img alt="" src="../60images/media/image14.png" />{width="3.965906605424322in"
-height="2.9303641732283463in"}</p>
+<p><img alt="" src="../60images/media/image14.png" /></p>
 <p># From a terminal</p>
-<p>./build_opencv.sh <strong>4.8.0</strong></p>
+<pre><code>./build_opencv.sh **4.8.0**
+</code></pre>
 <p># Again, this will take a good while. You may consider doing this at
 night before you go to bed. It is really boring</p>
 <p># after a while (hours) looking that the SBC compile and build OpenCV
@@ -1021,8 +992,7 @@ window then</p>
 <p># I like better jtop (if needed, install htop or jtop).</p>
 <p>#</p>
 <p># ex:</p>
-<p><img alt="" src="../60images/media/image7.png" />{width="3.9427088801399823in"
-height="2.58424321959755in"}</p>
+<p><img alt="" src="../60images/media/image7.png" /></p>
 <p># After a few hours you see that you need to enter a little information
 to finish the build. That is when we have</p>
 <p># problems if you get disconnected from your SSH</p>
@@ -1042,9 +1012,8 @@ that was installed</p>
 <p>jtop</p>
 <p>7 INFO</p>
 <p># look for the OpenCV version and that it was compiled with CUDA</p>
-<p><img alt="" src="../60images/media/image12.png" />{width="4.613286307961505in"
-height="3.35744750656168in"}</p>
-<p><img alt="" src="../60images/media/image9.png" />{width="7.5in" height="0.375in"}</p>
+<p><img alt="" src="../60images/media/image12.png" /></p>
+<p><img alt="" src="../60images/media/image9.png" />{</p>
 <h2 id="lets-make-sure-python3-finds-opencv-cv2"># Let's make sure Python3 finds OpenCV (CV2)</h2>
 <p># Need to adapt this for the python and OpenCV versions that you are
 using</p>
@@ -1055,10 +1024,8 @@ using</p>
 <h1 id="modulenotfounderror-no-module-named-cv2">ModuleNotFoundError: No module named \'cv2\'</h1>
 </blockquote>
 <p># If you don't see the version of the OpenCV that you built listed, it
-is because you forgot to delete the previous</p>
-<p># OpenCV version that was installed, go back to this document "Removing
-old version of OpenCV" and then</p>
-<p># build and install OpenCV again.</p>
+might be because you forgot to delete the previous OpenCV version that was installed, go back to this document "Removing
+old version of OpenCV" and then build and install OpenCV again. If OpenCV shows up in jtop then disregard this, there is some other issue preventing it from showing up.</p>
 <p># What version of python3 do you have?</p>
 <p>python3</p>
 <h1 id="python-3810-default-may-26-2023-140508">Python 3.8.10 (default, May 26 2023, 14:05:08)</h1>
@@ -1067,38 +1034,55 @@ old version of OpenCV" and then</p>
 <p>information.</p>
 <p>&gt;&gt;&gt; exit()</p>
 <p>ex:</p>
-<p>cd /usr/local/lib/python3.6/site-packages/cv2/python-3.6</p>
+<pre><code>cd /usr/local/lib/python3.6/site-packages/cv2/python-3.6
+</code></pre>
 <p># or</p>
-<p>cd /usr/local/lib/python3.8/site-packages/cv2/python-3.8</p>
+<pre><code>cd /usr/local/lib/python3.8/site-packages/cv2/python-3.8
+</code></pre>
 <p># remove the previous cv2.so in case it is still there.</p>
-<p>sudo rm -rf cv2.so</p>
-<blockquote>
-<p># mv cv2.cpython-36m-[xxx]{.mark}-linux-gnu.so cv2.so</p>
-</blockquote>
-<p>ls cv2.*</p>
-<p># cv2.cpython-38-aarch64-linux-gnu.so</p>
-<p>ln -s
+<pre><code>sudo rm -rf cv2.so
+</code></pre>
+<pre><code>mv cv2.cpython-36m-[xxx]-linux-gnu.so cv2.so
+</code></pre>
+<pre><code>ls cv2.\*
+</code></pre>
+<pre><code>cv2.cpython-38-aarch64-linux-gnu.so
+</code></pre>
+<pre><code>ln -s
 /usr/local/lib/python3.8/site-packages/cv2/python-3.8cv2.cpython-38-aarch64-linux-gnu.so
-cv2.so cv2.so</p>
-<p>sudo cp cv2.cpython-36m-aarch64-linux-gnu.so cv2.so</p>
+cv2.so cv2.so
+</code></pre>
+<pre><code>sudo cp cv2.cpython-36m-aarch64-linux-gnu.so cv2.so
+</code></pre>
 <p># or</p>
-<p>sudo cp cv2.cpython-38-aarch64-linux-gnu.so cv2.so</p>
+<pre><code>sudo cp cv2.cpython-38-aarch64-linux-gnu.so cv2.so
+</code></pre>
 <p># Alternatively you could just rename the file</p>
-<p># sudo mv cv2.cpython-36m-aarch64-linux-gnu.so cv2.so</p>
-<p># sudo cp cv2.cpython-38-aarch64-linux-gnu.so cv2.so</p>
+<pre><code>sudo mv cv2.cpython-36m-aarch64-linux-gnu.so cv2.so
+</code></pre>
+<pre><code>sudo cp cv2.cpython-38-aarch64-linux-gnu.so cv2.so
+</code></pre>
 <p># Lets create a link at the home directory for cv2</p>
-<p>cd \~</p>
-<p>sudo rm -rf cv2.so</p>
-<p>ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so
-cv2.so</p>
+<pre><code>cd \~
+</code></pre>
+<pre><code>sudo rm -rf cv2.so
+</code></pre>
+<pre><code>ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so
+cv2.so
+</code></pre>
 <p># or</p>
-<p>ln -s /usr/local/lib/python3.8/site-packages/cv2/python-3.8/cv2.so
-cv2.so</p>
+<pre><code>ln -s /usr/local/lib/python3.8/site-packages/cv2/python-3.8/cv2.so
+cv2.so
+</code></pre>
 <p>Checking install for python3</p>
-<p>python3</p>
-<p>import cv2</p>
-<p>cv2.__version__</p>
-<p>exit ()</p>
+<pre><code>python3
+
+import cv2
+
+cv2.\_\_version\_\_
+
+exit ()
+</code></pre>
 <p># Resulting on something similar to this</p>
 <p><strong>jetson@ucsdrobocar-xxx-yy</strong>:<strong>\~</strong>\$ python3</p>
 <p>Python 3.6.9 (default, Jun 29 2022, 11:45:57)</p>
@@ -1121,7 +1105,8 @@ information.</p>
 <p>&gt;&gt;&gt; exit ()</p>
 </blockquote>
 <p># Here is quicker way to test cv2 on Python 3</p>
-<p>python3 -c \'import cv2 as cv; print(cv.__version__)\'</p>
+<pre><code>python3 -c \'import cv2 as cv; print(cv.\_\_version\_\_)\'
+</code></pre>
 <blockquote>
 <p>4.6.0</p>
 <p># or</p>

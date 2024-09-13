@@ -963,7 +963,7 @@ scooters, and robotics.</p>
 <p>based on the sensors on brushless motors (sensored) or to some extent,
 specially using the latest VESCs and firmware, it is also available with
 brushless motors without sensors (sensorless).</p>
-<p>[https://vesc-project.com/(https://vesc-project.com/)</p>
+<p><a href="https://vesc-project.com/">https://vesc-project.com/</a></p>
 <p><a href="https://docs.google.com/document/d/1Y5DdvWdtFjbeyGIVJyWAb8Wrq6M1MkCkMPiDgT4LoQY/edit?usp=sharing">VESC Setup
 Instructions</a></p>
 <h2 id="logitech-f710-controller">Logitech F710 controller</h2>
@@ -982,263 +982,27 @@ devices again</p>
 <p>JoyStick Controllers - either the Logitech F-10 or PS4</p>
 <p>Make sure your myconfig.py on your car directory reflects your
 controller</p>
-<p><strong>At the SBC</strong></p>
 <p>Connecting the LogiTech Controller is as easy as plugging in the USB
 dongle at the SBC.</p>
-<p>Or if you have a PS4 controller</p>
-<p>Connecting a PS4 Controller - Bluetooth</p>
-<p>Deactivate the virtual environment if you are using one</p>
-<p>deactivate</p>
-<p>sudo apt-get install bluetooth libbluetooth3 libusb-dev</p>
-<p>sudo systemctl enable bluetooth.service</p>
-<blockquote>
-<p>[Need these for XBox Controller, skip for PS4]{.mark}</p>
-<p>[sudo apt install sysfsutils]{.mark}</p>
-<p>[sudo nano /etc/sysfs.conf]{.mark}</p>
-<p>[add this line at the end of the file:]{.mark}</p>
-<p>[/module/bluetooth/parameters/disable_ertm=1]{.mark}</p>
-<p>[Reboot your SBC and see if ertm was disabled.]{.mark}</p>
-<p>[cat /sys/module/bluetooth/parameters/disable_ertm]{.mark}</p>
-<p>[The result should print Y]{.mark}</p>
-</blockquote>
-<p><strong>[At the PS4 controller]{.mark}</strong></p>
-<p>[Press the Share and PS buttons at the same time.]{.mark}</p>
-<p>[The controller light will flash like a strobe light. That means it is
-in the pairing mode]{.mark}</p>
-<p>[If the SBC is not seeing the PS4, you should try a mUSB cable between
-the SBC and the]{.mark}</p>
-<p>[PS4 controller.]{.mark}</p>
-<p><strong>[At the SBC]{.mark}</strong></p>
-<p>sudo bluetoothctl</p>
-<p>agent on</p>
-<p>default-agent</p>
-<p>scan on</p>
-<p>[If your controller is off, Press Share/PlayStation]{.mark}</p>
-<p>[example of a PS4 controller mac address]{.mark}</p>
-<blockquote>
-<p>[Device A6:15:66:D1:46:1B Alias: Wireless Controller]{.mark}</p>
-</blockquote>
-<p>connect YOUR_MAC_ADDRESS</p>
-<p>trust YOUR_MAC_ADDRESS</p>
-<p>quit</p>
-<p>[If your ps4 turns off, turn it on again by pressing PS]{.mark}</p>
-<p>[If you want to check controller was connected]{.mark}</p>
+<p>[If you want to check controller was connected]</p>
 <p>ls /dev/input</p>
-<p>[and see if js0 is listed.]{.mark}</p>
-<p>[Lets test the joystick in a linux machine]{.mark}</p>
+<p>[and see if js0 is listed.]</p>
+<p>[Lets test the joystick in a linux machine]</p>
 <p>sudo apt-get update</p>
 <p>sudo apt-get install -y jstest-gtk</p>
 <p>jstest /dev/input/js0</p>
-<p>[Turn off your PS4 controller by pressing and holding PS]{.mark}</p>
 <p>To remove a device, let\'s say another JoyStick that you don't use
 anymore</p>
 <p>bluetoothctl</p>
 <p>paired-devices</p>
 <p>remove THE_CONTROLLER_MAC_ADDRESS</p>
-<p>I had to try the method above twice, I rebooted the SBC in between</p>
-<h2 id="_3"></h2>
 <h2 id="ld06-lidar">LD06 Lidar</h2>
 <p>Datasheet for LD06 lidar:
 <a href="https://drive.google.com/file/d/1t0CkEEd9fYG_eIq_DL8eqy4NywQQDrjg/view?usp=sharing">[datasheet]{.underline}</a></p>
 <h3 id="laser-map">Laser Map</h3>
-<p><img alt="" src="../10images/media/image9.png" />{width="3.4479166666666665in"
-height="2.9040201224846895in"}</p>
+<p><img alt="" src="../10images/media/image9.png" /></p>
 <h3 id="mechanical-drawing">Mechanical drawing</h3>
-<p><img alt="" src="../10images/media/image6.png" />{width="4.705857392825897in"
-height="3.932292213473316in"}</p>
-<h1 id="previous-versions-of-hardware">Previous Versions of Hardware</h1>
-<p>Skip the PWM Controller and EMO starting in 2022 Summer II. Left here
-for people using these as low cost alternative robot.</p>
-<h2 id="pwm-controller">PWM Controller</h2>
-<blockquote>
-<p><em>If you are using a VESC, we don't use the PWM board, you can skip
-this part.</em></p>
-<p><em>These PWM controllers are used only if one has a regular ESC (not the
-cool VESC).</em></p>
-<p><em>[We are following the standard from RC CAR world, Channel 1 for
-Steering, Channel 2 for Throttle]{.mark}</em></p>
-<p><em>Note:The default DonkeyCar build uses Channels 0 and 1</em></p>
-<p><em>The UCSDRoboCar has at least two actuators. A steering servo and the
-DC motor connected to an Electronics Speed Controller (ESC). These are
-controlled by PWM (Pulse Width Modulation).</em></p>
-<p><em>We use PWM Controller to generate the PWM signals, a device similar
-to the one in the picture below</em></p>
-<p><img alt="" src="../10images/media/image5.png" />{width="3.0268350831146105in"
-height="2.1093755468066493in"}</p>
-<p>Shutdown the JTN if it is on by typing this command</p>
-<p>sudo shutdown -h now</p>
-<p>Connect the Steering Servo to the Channel 1</p>
-<p>Connect the Throttle (Electronic Speed Controller ESC) to Channel 2</p>
-<p>Observe the orientation of the 3 wires connector coming from the
-Steering Servo and ESC. Look for a the black or brown wire, that is
-the GND (-).</p>
-<p>Lets install the PWM Controller</p>
-<p><a href="https://www.jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout/">[https://www.jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout/]{.underline}</a></p>
-</blockquote>
-<h3 id="wiring-adafruit-board">Wiring adafruit board</h3>
-<blockquote>
-<p><em>You need to connect the following pins between the JTN and the PWM
-board:</em></p>
-<p><em>Disconnect the power to the JTN</em></p>
-<p><em>+3.3v, the two I2C pins (SDA and SCL) and ground</em></p>
-<p><strong><em>The 3.3V from the JTN goes to the VCC at the PWM board</em></strong></p>
-<p><em>Note: for the ground connection you need to skip one pin (skip pin
-7)</em></p>
-</blockquote>
-<ul>
-<li>
-<p><em>3.3V - pin 1</em></p>
-</li>
-<li>
-<p><em>SDA - pin 3</em></p>
-</li>
-<li>
-<p><em>SCL- pin 5</em></p>
-</li>
-<li>
-<p><em>No_Connect (Skip) - pin 7</em></p>
-</li>
-<li>
-<p><em>Ground - pin 9</em></p>
-</li>
-</ul>
-<blockquote>
-<p><img alt="" src="../10images/media/image40.jpg" />{width="2.115685695538058in"
-height="2.8177088801399823in"}<img alt="" src="../10images/media/image42.jpg" />{width="2.021828521434821in"
-height="2.6927088801399823in"}<img alt="" src="../10images/media/image41.jpg" />{width="2.2616382327209097in"
-height="3.0364588801399823in"}</p>
-</blockquote>
-<h3 id="_4"></h3>
-<h3 id="detecting-the-pwm-controller">Detecting the PWM controller</h3>
-<blockquote>
-<p>Lets detect the PWM controller</p>
-<p>sudo i2cdetect -r -y 1</p>
-<p><em>0 1 2 3 4 5 6 7 8 9 a b c d e f</em></p>
-<p><em>00: -- -- -- -- -- -- -- -- -- -- -- -- --</em></p>
-<p><em>10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --</em></p>
-<p><em>20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --</em></p>
-<p><em>30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --</em></p>
-<p><em>40: [40]{.mark} -- -- -- -- -- -- -- -- -- -- -- -- --
--- --</em></p>
-<p><em>50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --</em></p>
-<p><em>60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --</em></p>
-<p><em>70: [70]{.mark} -- -- -- -- -- -- --</em></p>
-<p>If you see the 40 and 70 above, the JTN is communicating with the PWM
-board</p>
-<p>If you want to save some typing everytime you log into the JTN, add it
-to the end of .bashrc</p>
-<p>nano \~/.bashrc</p>
-<p>source /projects/envs/donkey/bin/activate</p>
-<p>cd \~/projects/d3</p>
-<p>Test is with a reboot</p>
-<p>sudo reboot now</p>
-</blockquote>
-<h2 id="_5"></h2>
-<h2 id="emergency-stop-relay">Emergency stop - Relay</h2>
-<blockquote>
-<p>If using an ESC vs. VESC follow this, with VESC skip</p>
-<p>Connecting the Emergency Stop Circuit and Batteries into the Robot</p>
-<p>For this part of your robot, you will have to do some hacking. That is
-part of the class.</p>
-<p>The instructor will discuss the principle of the circuit and how to
-implement it with the component in your robot kit.</p>
-<p>Long story short, the PWM Controller we use has a disable pin. If the
-correct logic is applied to it for example Logic 1 or 0 (3.3V or 0V)
-it will disable the PWM signals and the UCSDRoboCar will stop.</p>
-<p>Think why one needs a separate EMO circuit vs. relying on the
-software, operating system and computer communicating with the PWM
-controller that then send PWM pulses to the actuators (steering servo
-and driving DC motor by the electronics speed controller)</p>
-<p>First search on the web and read the datasheet of the emergency stop
-switch (EMO) components provided with the robot kit and discuss with
-your teammates how the EMO will work. You got two main components to
-build the WireLess EMO switch:</p>
-</blockquote>
-<p>a)  A Wireless Relay with wireless remote controls</p>
-<p>b)  A Red/Blue high power LED. This is to help the user know if the car
-    is disable (Red) or Enabled (Blue).</p>
-<blockquote>
-<p>Do some discussion with your Team and pay attention to the Lecture
-explanations:</p>
-</blockquote>
-<ul>
-<li>
-<p>What is the disable pin of the PWM controller?</p>
-</li>
-<li>
-<p>Does it disable logic 1 or 0?</p>
-</li>
-<li>
-<p>How to wire the wireless relay to provide the logic you need to
-    disable the PWM controller? (1 or 0)</p>
-</li>
-<li>
-<p>What pin at the Single Board Computer (SBC) can provide the logic
-    you need to disable the PWM controller</p>
-</li>
-<li>
-<p>How to connect the LEDs (Blue and Red) to indicate (BLUE - enabled),
-    (RED - power is on / robot is disabled).</p>
-</li>
-<li>
-<p>What is the fail safe situation, using the normally closed or
-    normally open pins of the wireless relay to disable the PWM
-    controller?</p>
-</li>
-<li>
-<p>Note: The power to the PWM controller, that powers the LEDs, comes
-    from ESC (Electronics Speed Controller). Therefore, you have to
-    connect the robot batteries to the ESC and the ESC to the PWM
-    controller. <strong>We are using channel 2 for the ESC</strong>. <strong>Channel 1 for
-    the Steering. Then you need to power the ESC for the circuit to work
-    ...</strong></p>
-</li>
-</ul>
-<blockquote>
-<p>After you see that the EMO is working, i.e. wireless remote control
-disables the PWM, and the LEDs light up as planned, then you need to
-document your work. Please use a schematic software such as Fritzing
-(<a href="http://fritzing.org/home/">[http://fritzing.org/home/]{.underline}</a>)
-to document your electrical schematic.</p>
-<p>It may seem we did the opposite way; document after your build. In our
-case, you learned by looking at components information, thinking about
-the logic, and experimenting. Since you are an engineer you need to
-document even if it was a hack / test try first...</p>
-<p>Working in a company you may do fast prototyping first then document
-your work when the risk is low. On larger projects you design, make
-schematics, diagrams, drawings, work instructions, then build it. Keep
-that in mind!</p>
-<p>Now you can go drive your robot to collect data. Make sure to keep the</p>
-<p>EMO handy and used when needed!</p>
-<p>Also keep in mind that \&lt;X&gt; on your controller is like an emergency
-break.</p>
-<p>When you run Donkey it will display the functions associated with the
-joystick buttons.</p>
-<p>Read and remember them</p>
-</blockquote>
-<h1 id="_6"></h1>
-<h1 id="_7"></h1>
-<h1 id="install-opencv-from-source">Install OpenCV from Source</h1>
-<blockquote>
-<p># Installing an Open Source Computer Vision (OpenCV) package with
-CUDA Support</p>
-<p># As of Jan 2020, NVIDIA is not providing OpenCV optimized to use
-CUDA (GPU acceleration).</p>
-<p># Search the web if you are curious why.</p>
-<p>#
-<a href="https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902">[https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902]{.underline}</a></p>
-</blockquote>
-<p>#<a href="https://docs.google.com/document/d/1HX2zmjbVsyLnliEQ8wp97Y453g5qNAYHWtFQiKQ0elA/edit?usp=sharing">[Here are the instructions to build OpenCV from
-source]{.underline}</a></p>
-<p>It will take an approximate 4 hrs to install opencv</p>
-<p>1. jtop</p>
-<p>2. 4</p>
-<p>3. Add 6 GB of swap space and enable</p>
-<p>4. cd \~</p>
-<p>5. nano install_opencv.sh</p>
-<p>6. Copy the entire contents of the attached
-<a href="https://drive.google.com/file/d/1jhsqzTNFHFMHxnDKIspjKlVHD1rL0izi/view?usp=share_link">[file]{.underline}</a></p>
-<p>7. bash install_opencv.sh</p>
+<p><img alt="" src="../10images/media/image6.png" /></p>
 <h1 id="donkeycar-ai-framework">DonkeyCar AI Framework</h1>
 <h2 id="setting-up-the-donkeycar-ai-framework">Setting up the DonkeyCar AI Framework</h2>
 <p>Reference
@@ -1364,7 +1128,7 @@ folder</p>
 <p>cd \~/projects/envs/donkey/lib/python3.6/site-packages/</p>
 <p>ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so
 cv2.so</p>
-<h3 id="_8"></h3>
+<h3 id="_3"></h3>
 <h3 id="confirm-that-opencv-built-from-previous-steps-is-working-on-the-virtual-environment-donkey">Confirm that OpenCV built from previous steps is working on the virtual environment Donkey</h3>
 <p># Testing to see if OpenCV is installed in the virtual env.</p>
 <p>python3 -c \'import cv2 as cv; print(cv.__version__)\'</p>
@@ -1562,7 +1326,7 @@ acceleration</p>
 <p>Requires: dataclasses, typing-extensions, numpy</p>
 <p>Required-by: torchvision</p>
 </blockquote>
-<h3 id="_9"></h3>
+<h3 id="_4"></h3>
 <h2 id="as-of-summer-ii-2022-we-are-using-a-new-stereo-camera-from-luxonis">As of Summer II 2022, we are using a new Stereo Camera from Luxonis</h2>
 <h2 id="configuring-oakd-lite">Configuring OAKD Lite</h2>
 <p>Open a terminal window and run the following commands:</p>
@@ -1622,7 +1386,7 @@ the terminal on a NoMachine session</p>
 <p>cd ColorCamera</p>
 <p>python3 rgb_preview.py</p>
 <p>You should be able to see preview video on the No machine desktop</p>
-<h3 id="_10"></h3>
+<h3 id="_5"></h3>
 <h3 id="installing-donkeycar-ai-framework">Installing Donkeycar AI Framework</h3>
 <p>Lets Install the Donkeycar AI Framework</p>
 <p>If you are upgrading from Donkey3 then save the values from your
@@ -1698,22 +1462,13 @@ let\'s say using a docker container</p>
 ssh to the SBC</p>
 <p>and run the command top or htop or jtop from another terminal/tab</p>
 <p>Grab a coffee, go study something ...</p>
-<h3 id="_11"></h3>
+<h3 id="_6"></h3>
 <h3 id="create-a-car">Create a Car</h3>
 <p>Let's create a car on the path \~/project/d4</p>
 <p>cd \~/projects/donkeycar</p>
 <p>donkey createcar --path \~/projects/d4</p>
 <p>If complains about old version of numpy and the install fails</p>
 <p>pip install numpy --upgrade</p>
-<p>________ ______ _________</p>
-<p>___ __ \_______________ /___________
-__ __ ____/_____ ________</p>
-<p>__ / / / __ \_ __ \_ //_/ _ \_ / / / _ / _ __ `/_
-___/</p>
-<p>_ /_/ // /_/ / / / / ,\&lt; / __/ /_/ / / /___ / /_/ /_ /</p>
-<p>/_____/ \____//_/ /_//_/|_| \___/_\__, /
-\____/ \__,_/ /_/</p>
-<p>/____/</p>
 <p>using donkey v4.3.22 ...</p>
 <p>Creating car folder: /home/jetson/projects/d4</p>
 <p>making dir /home/jetson/projects/d4</p>
@@ -1724,7 +1479,7 @@ DonkeyCar (5.x) does not work at the Jetson Nano yet.</p>
 <p>You spent several hours on this configuration right?! Please make a
 backup of your uSD card - "<a href="https://docs.google.com/document/d/1TF1uGAFeDARNwbPkgg9xg4NvWPJvrsHW2I_IN9dWQH0/edit#heading=h.mwv009fkh5ax">[Backup of the uSD
 Card]{.underline}</a>"</p>
-<h1 id="_12"></h1>
+<h1 id="_7"></h1>
 <h1 id="if-you-are-using-a-pwm-board-with-a-esc-vs-a-vesc">If you are using a PWM board with a ESC vs. a VESC</h1>
 <h3 id="starting-on-fall22-we-use-a-vesc-for-controlling-the-bldc-motor-skip-setting-the-pwm-board-we-left-here-for-people-that-may-want-to-use-it-on-their-own-robot"><strong>Starting on FALL'22, we use a VESC for controlling the BLDC motor. Skip setting the PWM board. We left here for people that may want to use it on their own robot</strong></h3>
 <h3 id="again-if-you-using-an-esc-skip-the-pwm-board-setup">Again, if you using an ESC skip the PWM board setup</h3>
@@ -1755,7 +1510,7 @@ test your Donkey installation</p>
 </blockquote>
 <p>CAMERA_TYPE = \"MOCK\"</p>
 <p>USE_JOYSTICK_AS_DEFAULT = False</p>
-<h3 id="_13"></h3>
+<h3 id="_8"></h3>
 <h3 id="quick-test">Quick Test</h3>
 <p>Lets test the Donkey AI framework install</p>
 <p>python manage.py drive</p>
@@ -1847,159 +1602,7 @@ here]{.underline}</a></p>
 <p>Connect the battery(ries) <strong>and batteries monitor/alarm</strong></p>
 <p>Please do not use the batteries without the batteries monitor/alarms</p>
 <p><strong>If you discharge a LiPO batteries below a threshold lets say 3.0</strong></p>
-<h1 id="_14"></h1>
-<h2 id="calibration-of-the-throttle-and-steering">Calibration of the Throttle and Steering</h2>
-<p>Before you develop code or you can use someone\'s code to control a
-robot, we need to calibrate the actuator/mechanism to find out its range
-of motion compared to the control / command a computer will send to the
-controller of the actuator/mechanism.</p>
-<p>The calibration is car specific. If you use the same platform, the
-numbers should be really close. Otherwise, you will need to calibrate
-your car.</p>
-<p>[MAKE SURE THE ROBOT IS ON THE RC CAR STAND]{.mark}</p>
-<p>[MAKE SURE THE ROBOT IS ON THE RC CAR STAND]{.mark}</p>
-<p>[MAKE SURE THE ROBOT IS ON THE RC CAR STAND]{.mark}</p>
-<p>[MAKE SURE THE ROBOT IS ON THE RC CAR STAND]{.mark}</p>
-<p>[MAKE SURE THE ROBOT IS ON THE RC CAR STAND]{.mark}</p>
-<p>Follow the safety guidelines provided in person in the class.</p>
-<p>If something does not sound right, don't do it. Safety first.</p>
-<p>Power the JTN</p>
-<p>Power the Electronic Speed Controller (ESC)</p>
-<p>Lets run a Python command to calibrate Steering and Throttle</p>
-<p>The donkey commands need to be run from the directory you created for
-your car, i.e., \~/projects/[d4]{.mark}</p>
-<p>If you have not done so, SSH into the JTN</p>
-<p>If needed, change directory to d4</p>
-<p>cd \~/projects/d4</p>
-<h2 id="_15"></h2>
-<h3 id="begin-calibration">Begin Calibration</h3>
-<p>donkey calibrate [--channel 1]{.mark} --bus 1</p>
-<p><strong>Please make sure that when you are trying the steering values you do
-not keep the steering</strong></p>
-<p><strong>servo max out</strong>.</p>
-<p>Please reduce go back 10 or 15 values when you notice the servo motor is
-not moving or making a</p>
-<p>constant noise. If you leave the servo motor max-out you will most
-likely burn it.</p>
-<p><strong>If by any chance your software locks-up, please turn off the ESC
-immediately.</strong></p>
-<p>Then once you run the calibrate again, issue the center value before
-turning in the ESC again</p>
-<p>Note that after 10 values or so the calibration may time out. Just run
-it again.</p>
-<p>Try some values around 390 to center the steering</p>
-<blockquote>
-<p>Enter a PWM setting to test(100-600)370</p>
-<p>Enter a PWM setting to test(100-600)380</p>
-<p>Enter a PWM setting to test(100-600)390</p>
-<p>Enter a PWM setting to test(100-600)400</p>
-</blockquote>
-<p>[In my case]{.mark}, 390 seems to center the steering</p>
-<p>Take note of the left max and right max value. We will be able to adjust
-these after we try driving the</p>
-<p>car so it goes straight.</p>
-<p>ex:</p>
-<p>390 - Center</p>
-<p>[290]{.mark} - Steering left max</p>
-<p>[490]{.mark} - Steering right max</p>
-<p>Note: If the donkey calibration times-out, just run it again.</p>
-<p>You can end the calibration by typing CTRL-C</p>
-<p>[MAKE SURE THE ROBOT IS ON THE RC CAR STAND]{.mark}</p>
-<p>[MAKE SURE THE ROBOT IS ON THE RC CAR STAND]{.mark}</p>
-<p>[MAKE SURE THE ROBOT IS ON THE RC CAR STAND]{.mark}</p>
-<p>[MAKE SURE THE ROBOT IS ON THE RC CAR STAND]{.mark}</p>
-<p>[MAKE SURE THE ROBOT IS ON THE RC CAR STAND]{.mark}</p>
-<p>Now to calibrate the Throttle Electronic Speed Controller ESC (THROTTLE)</p>
-<p>Following the standard for R/C cars. Throttle goes on channel [2]{.mark}</p>
-<p>donkey calibrate [--channel 2 --bus 1]{.mark}</p>
-<blockquote>
-<p>Enter a PWM setting to test(100-600)370</p>
-<p>Enter a PWM setting to test(100-600)[380]{.mark} (neutral)</p>
-<p>Enter a PWM setting to test(100-600)390</p>
-</blockquote>
-<p>On my case, 380 when I power up the ESC seems to be the middle point
-(neutral),</p>
-<p>I will use 380. Your case may vaires. 370 seems a common value</p>
-<p>Neutral when power the ESC - [380]{.mark}</p>
-<p>[Make sure the car is balanced over the car stand]{.mark}</p>
-<p>Then go in increments of 10 until you can no longer hear an increase on
-the speed</p>
-<p>of the car. Don't worry much about the max speed since we won't drive
-that fast autonomously</p>
-<p>and during training the speed will be limited.</p>
-<p>Max speed forward - [490]{.mark}</p>
-<p>Reverse on RC cars is a little tricky because the ESC needs to receive</p>
-<p>a reverse pulse, zero pulse, and again reverse pulse to start to go
-backwards.</p>
-<p>Use the same technique as above set the PWM setting to your zero
-throttle</p>
-<p>(lets say 380 or 370).</p>
-<blockquote>
-<p>[Enter the reverse value]{.mark}, then the [zero throttle (e.g.,
-370)]{.mark} value, then a [reverse value again]{.mark}.</p>
-<p>Enter values +/- 10 of the reverse value to find a reasonable reverse
-speed. Remember this reverse PWM value.</p>
-<p>(dk)<strong>pi@jackrpi02</strong>:<strong>\~/projects/d3 \$</strong></p>
-<p>donkey calibrate [--channel 2 --bus 1]{.mark}</p>
-<p>Enter a PWM setting to test(100-600)360</p>
-<p>Enter a PWM setting to test(100-600)[370]{.mark}</p>
-<p>Enter a PWM setting to test(100-600)360</p>
-<p>Enter a PWM setting to test(100-600)350</p>
-<p>Enter a PWM setting to test(100-600)340</p>
-<p>Enter a PWM setting to test(100-600)330</p>
-<p>Enter a PWM setting to test(100-600)320</p>
-</blockquote>
-<p>I got for Throttle</p>
-<p>[490]{.mark} - Max speed forward</p>
-<p>[380]{.mark} - Neutral</p>
-<p>[300]{.mark} - Max speed backwards</p>
-<p>---</p>
-<p>For my robocar I have:</p>
-<p>Steering</p>
-<p>[290]{.mark} - Steering left max</p>
-<p>[490]{.mark} - Steering right max</p>
-<p>Throttle</p>
-<p>[490]{.mark} - Max speed forward</p>
-<p>[380]{.mark} - Neutral</p>
-<p>[300]{.mark} - Max speed backwards</p>
-<h3 id="saving-car-configuration-file">Saving car configuration file</h3>
-<p>Now let\'s write these values into the car configuration file</p>
-<p>Edit the file my config.py</p>
-<p>nano myconfig.py</p>
-<p>Change these values according to YOUR [calibration values]{.mark} and
-[where you have the Steering Servo and ESC]{.mark} connected</p>
-<p>...</p>
-<p>STEERING</p>
-<p>STEERING_CHANNEL = 1 channel on the 9685 pwm board 0-15</p>
-<p>STEERING_LEFT_PWM = 290 pwm value for full left steering</p>
-<p>STEERING_RIGHT_PWM = 490 pwm value for full right steering</p>
-<p>THROTTLE</p>
-<p>THROTTLE_CHANNEL = 2 channel on the 9685 pwm board 0-15</p>
-<p>THROTTLE_FORWARD_PWM = 490 pwm value for max forward throttle</p>
-<p>THROTTLE_STOPPED_PWM = 380 pwm value for no movement</p>
-<p>THROTTLE_REVERSE_PWM = 300 pwm value for max reverse throttle</p>
-<p>Also, change these</p>
-<p>CAMERA</p>
-<p>CAMERA_TYPE = \"WEBCAM\" (PICAM|WEBCAM|CVCAM|CSIC|V4L|MOCK)</p>
-<p>9865, overrides only if needed, ie. TX2..</p>
-<p>PCA9685_I2C_ADDR = 0x40 I2C address, use i2cdetect to validate this
-numb\$</p>
-<p>PCA9685_I2C_BUSNUM = 1 None will auto detect, which is fine on the pi.
-\$</p>
-<p>JOYSTICK</p>
-<p>USE_JOYSTICK_AS_DEFAULT = True when starting the manage.py, when True,
-wil\$</p>
-<p>and if needed to zero the joystick</p>
-<p>JOYSTICK_DEADZONE = 0.01 when non zero, this is the smallest thro\$</p>
-<p>Note: When driving the robot, if you robot has too much power or not
-enough power</p>
-<p>you can adjust the max_throttle</p>
-<p>JOYSTICK_MAX_THROTTLE = 0.5</p>
-<p>This also will be your starting power setting when using the constant
-throttle autopilot.</p>
-<p>You can test driving your robot by issuing</p>
-<p>python manage.py drive</p>
-<h1 id="if-you-are-using-the-vesc-and-oakd-camera-on-the-physical-car">If you are using the VESC and OAKD camera on the physical car</h1>
+<h1 id="_9"></h1>
 <h2 id="vesc_1">VESC</h2>
 <p>Ensure that you have already configured the VESC device using the VESC
 Tool Software</p>
