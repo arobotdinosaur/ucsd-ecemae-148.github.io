@@ -819,20 +819,20 @@
 <p>Department of Mechanical and Aerospace Engineering</p>
 <p>University of California, San Diego</p>
 <p>9500 Gilman Dr, La Jolla, CA 92093</p>
-<p><img alt="" src="../60images/media/image17.png" />{width="3.1313626421697287in"
-height="0.7398272090988627in"}</p>
-<p><img alt="" src="../60images/media/image2.png" />{width="1.4010422134733158in"
-height="1.4010422134733158in"}</p>
-<p><img alt="" src="../60images/media/image10.png" />{width="3.1548917322834646in"
-height="0.6718755468066492in"}</p>
+<p><img src="./60imagesfinal/media/image17.png"
+style="width:3.13136in;height:0.73983in" /></p>
+<p><img src="./60imagesfinal/media/image2.png"
+style="width:1.40104in;height:1.40104in" /></p>
+<p><img src="./60imagesfinal/media/image10.png"
+style="width:3.15489in;height:0.67188in" /></p>
 <p># Installing an Open Source Computer Vision (OpenCV) package with CUDA
 Support</p>
 <p># As of Jan 2020, NVIDIA is not providing OpenCV optimized to use CUDA
 (GPU acceleration).</p>
 <p># Search the web if you are curious why.</p>
 <p>#
-<a href="https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902">[https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902]{.underline}</a></p>
-<p>"</p>
+<a href="https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902"><u>https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902</u></a></p>
+<p>“</p>
 <p><em>Hi,</em></p>
 <p><em>Replied your question inline:</em></p>
 <p><em>Jetson Nano GPU does not support OpenCV acceleration (through opencl)
@@ -841,8 +841,8 @@ with Python</em></p>
 <p><em>The common issue is there are some features that have not been
 enabled.</em></p>
 <p><em>(This feature often requires third-party library installation)</em></p>
-<p>"</p>
-<p><a href="https://www.youtube.com/watch?v=art0-99fFa8">[https://www.youtube.com/watch?v=art0-99fFa8]{.underline}</a></p>
+<p>“</p>
+<p><a href="https://www.youtube.com/watch?v=art0-99fFa8"><u>https://www.youtube.com/watch?v=art0-99fFa8</u></a></p>
 <h1 id="checking-opencv-build-information">Checking openCV build information</h1>
 <p># ssh to the Single Board Computer (SBC)</p>
 <p># Check to see if OpenCV for CUDA is available, search on the terminal
@@ -864,16 +864,16 @@ output for CUDA),</p>
 <p>You can also use jtop to check if OpenCV was compiled with CUDA.</p>
 <p>jtop</p>
 <p>6</p>
-<p><img alt="" src="../60images/media/image15.png" />{width="4.536458880139983in"
-height="2.590980971128609in"}</p>
-<p># If OpenCV is not using CUDA acceleration, let\'s build and install
-the latest OpenCV optimized</p>
+<p><img src="./60imagesfinal/media/image15.png"
+style="width:4.53646in;height:2.59098in" /></p>
+<p># If OpenCV is not using CUDA acceleration, let's build and install the
+latest OpenCV optimized</p>
 <p># for CUDA</p>
 <p># As of 03Apr2022, I have not seen NVIDIA supplying OpenCV GPU
 accelerated on their</p>
 <p># JetPack. We need to compile it from source. If you ask me, nice
 experience for you.</p>
-<p># Let's do this</p>
+<p># Let’s do this</p>
 <h1 id="_1"></h1>
 <h1 id="installing-opencv-with-cuda">Installing openCV with CUDA</h1>
 <p><strong># This step may take several hours</strong> <strong>to compile and build OpenCV in
@@ -889,21 +889,21 @@ using a low power</p>
 <p># Make sure you are using the external power supply to power the
 jetson, not a USB cable.</p>
 <p>#
-<a href="https://devtalk.nvidia.com/default/topic/1054949/process-to-install-opencv-4-1-on-nano/">[https://devtalk.nvidia.com/default/topic/1054949/process-to-install-opencv-4-1-on-nano/]{.underline}</a></p>
+<a href="https://devtalk.nvidia.com/default/topic/1054949/process-to-install-opencv-4-1-on-nano/"><u>https://devtalk.nvidia.com/default/topic/1054949/process-to-install-opencv-4-1-on-nano/</u></a></p>
 <p>#
-<a href="https://github.com/mdegans/nano_build_opencv">[https://github.com/mdegans/nano_build_opencv]{.underline}</a></p>
+<a href="https://github.com/mdegans/nano_build_opencv"><u>https://github.com/mdegans/nano_build_opencv</u></a></p>
 <p># Please make sure your computer will not sleep so you maintain an
 active ssh connection</p>
 <p># while you are building OpenCV because you will need to type the user
 jetson password</p>
 <p># again to complete the install.</p>
 <p># Reconnecting on the same ssh session is not trivial</p>
-<p><img alt="" src="../60images/media/image11.png" />{width="6.5in"
-height="1.7222222222222223in"}</p>
+<p><img src="./60imagesfinal/media/image11.png"
+style="width:6.5in;height:1.72222in" /></p>
 <h2 id="using-a-linux-host-use-screen"># Using a Linux Host? Use Screen</h2>
 <p># You should consider using
-<a href="https://ma.ttias.be/screen-a-must-for-ssh/">[screen]{.underline}</a> to
-enable you to reconnect to a previous ssh session.</p>
+<a href="https://ma.ttias.be/screen-a-must-for-ssh/"><u>screen</u></a> to enable
+you to reconnect to a previous ssh session.</p>
 <p># Do you need to install screen?</p>
 <p>sudo apt-get install screen</p>
 <p># From a terminal on Linux host or on your VM:</p>
@@ -915,12 +915,12 @@ type</p>
 <p>screen -r</p>
 <p># screen -r should reconnect to the previous ssh session that was open</p>
 <p># Here is some more detailed information on using screen</p>
-<p><a href="https://www.howtogeek.com/howto/ubuntu/keep-your-ssh-session-running-when-you-disconnect">[https://www.howtogeek.com/howto/ubuntu/keep-your-ssh-session-running-when-you-disconnect]{.underline}</a></p>
+<p><a href="https://www.howtogeek.com/howto/ubuntu/keep-your-ssh-session-running-when-you-disconnect"><u>https://www.howtogeek.com/howto/ubuntu/keep-your-ssh-session-running-when-you-disconnect</u></a></p>
 <p><em># if not installed in your host</em></p>
 <p><em>sudo apt-get install screen</em></p>
 <p><em>Now you can start a new screen session by just typing screen at the
-command line. You'll be shown some information about screen. Hit enter,
-and you'll be at a normal prompt.</em></p>
+command line. You’ll be shown some information about screen. Hit enter,
+and you’ll be at a normal prompt.</em></p>
 <p><em>To disconnect (but leave the session running)</em></p>
 <p><em>Hit Ctrl + A and then Ctrl + D in immediate succession. You will see
 the message [detached]</em></p>
@@ -930,7 +930,7 @@ the message [detached]</em></p>
 exists</em></p>
 <p><em>screen -D -r</em></p>
 <p># More info on using screen</p>
-<p><a href="https://ma.ttias.be/screen-a-must-for-ssh/">[https://ma.ttias.be/screen-a-must-for-ssh/]{.underline}</a></p>
+<p><a href="https://ma.ttias.be/screen-a-must-for-ssh/"><u>https://ma.ttias.be/screen-a-must-for-ssh/</u></a></p>
 <p><em>screen -ls</em></p>
 <p><em>There are screens on:</em></p>
 <p><em>27111.screen_untarring (Detached)</em></p>
@@ -944,7 +944,7 @@ You can pick up a previous screen-session, by typing</em></p>
 <p># Since your SBC will be busy, how can you see it is working for you?</p>
 <p>#</p>
 <p># Besides htop or top, there is another cool utility called
-<a href="https://github.com/rbonghi/jetson_stats">[jetson_stats]{.underline}</a></p>
+<a href="https://github.com/rbonghi/jetson_stats"><u>jetson_stats</u></a></p>
 <p>sudo apt-get install python3-pip</p>
 <p>sudo -H pip3 install -U jetson-stats</p>
 <p># reboot</p>
@@ -954,55 +954,54 @@ You can pick up a previous screen-session, by typing</em></p>
 <p>4</p>
 <p>You can use jtop to add more swap space using the left and right keys
 and clicking the plus button</p>
-<p><img alt="" src="../60images/media/image8.png" />{width="4.005208880139983in"
-height="1.776890857392826in"}</p>
+<p><img src="./60imagesfinal/media/image8.png"
+style="width:4.00521in;height:1.77689in" /></p>
 <p>Add 4G of swap and press \&lt;S&gt; to enable it.</p>
-<p><img alt="" src="../60images/media/image5.png" />{width="3.0156255468066493in"
-height="2.161738845144357in"}</p>
+<p><img src="./60imagesfinal/media/image5.png"
+style="width:3.01563in;height:2.16174in" /></p>
 <h2 id="removing-old-version-of-opencv">Removing old version of OpenCV</h2>
 <p># First lets remove the current OpenCV version and reboot the JTN</p>
 <p>sudo sudo apt-get purge *libopencv*</p>
 <p>sudo reboot now</p>
 <h2 id="compiling-opencv-from-source">Compiling OpenCV from source</h2>
 <p># screen then ssh back to the SBC</p>
-<p># If needed, create the \~/projects directory</p>
-<p>cd\~</p>
+<p># If needed, create the ~/projects directory</p>
+<p>cd~</p>
 <p>mkdir projects</p>
 <p>cd projects</p>
 <p># For Jetson Nano</p>
 <p>git clone
-<a href="https://github.com/mdegans/nano_build_opencv.git">[https://github.com/mdegans/nano_build_opencv.git]{.underline}</a></p>
+<a href="https://github.com/mdegans/nano_build_opencv.git"><u>https://github.com/mdegans/nano_build_opencv.git</u></a></p>
 <p>cd nano_build_opencv</p>
 <p># For the Jetson Nano, lets modify the script to use 2 CPU cores vs. 1.</p>
 <p># Note: for the TX2 and Xaviers the script automatically uses more CPU
 cores.</p>
 <p># Need to modify the configuration for the CUDNN we are using</p>
 <p># First see what you have installed using jtop use option INFO press 7</p>
-<p><img alt="" src="../60images/media/image13.png" />{width="4.294622703412074in"
-height="3.0062357830271216in"}</p>
-<p><img alt="" src="../60images/media/image4.png" />{width="4.84745406824147in"
-height="3.2258858267716537in"}</p>
-<h1 id="remove-the-87-from-the-cuda_arch_bin-version-it-causes-a">Remove the 8.7 from the CUDA_ARCH_BIN version, it causes a</h1>
-<p>compatibility issue</p>
-<h1 id="also-make-sure-the-cudnn_version80-it-will-fail-otherwise">Also, make sure the CUDNN_VERSION='8.0', it will fail otherwise</h1>
+<p><img src="./60imagesfinal/media/image13.png"
+style="width:4.29462in;height:3.00624in" /></p>
+<p><img src="./60imagesfinal/media/image4.png"
+style="width:4.84745in;height:3.22589in" /></p>
+<p>#Remove the 8.7 from the CUDA_ARCH_BIN version, it causes a
+compatibility issue</p>
+<p>#Also, make sure the CUDNN_VERSION=’8.0’, it will fail otherwise</p>
 <p>nano build_opencv.sh</p>
 <p># modify this line to have JOBS=2</p>
 <p>else</p>
 <p>JOBS=1 # you can set this to 4 if you have a swap file</p>
 <p>JOBS=2</p>
 <p># save the file / exit nano</p>
-<p>#
-<a href="https://opencv.org/releases/">[https://opencv.org/releases/]{.underline}</a></p>
+<p># <a href="https://opencv.org/releases/"><u>https://opencv.org/releases/</u></a></p>
 <p># look for the latest version</p>
-<p><img alt="" src="../60images/media/image3.png" />{width="3.8030096237970255in"
-height="2.6568252405949258in"}</p>
+<p><img src="./60imagesfinal/media/image3.png"
+style="width:3.80301in;height:2.65683in" /></p>
 <p># As of 24Nov23, <strong>4.8.0</strong> is the latest version</p>
 <p># You can use jtop to have Jetson Clocks enabled to improve the
 performance of the Jetson</p>
 <p># 6 CTRL and then press s</p>
 <p># To make it enabled at boot too, press e</p>
-<p><img alt="" src="../60images/media/image14.png" />{width="3.965906605424322in"
-height="2.9303641732283463in"}</p>
+<p><img src="./60imagesfinal/media/image14.png"
+style="width:3.96591in;height:2.93036in" /></p>
 <p># From a terminal</p>
 <p>./build_opencv.sh <strong>4.8.0</strong></p>
 <p># Again, this will take a good while. You may consider doing this at
@@ -1021,8 +1020,8 @@ window then</p>
 <p># I like better jtop (if needed, install htop or jtop).</p>
 <p>#</p>
 <p># ex:</p>
-<p><img alt="" src="../60images/media/image7.png" />{width="3.9427088801399823in"
-height="2.58424321959755in"}</p>
+<p><img src="./60imagesfinal/media/image7.png"
+style="width:3.94271in;height:2.58424in" /></p>
 <p># After a few hours you see that you need to enter a little information
 to finish the build. That is when we have</p>
 <p># problems if you get disconnected from your SSH</p>
@@ -1033,38 +1032,38 @@ to finish the build. That is when we have</p>
 <p><strong># Enter y</strong></p>
 <p># save some space on disc</p>
 <h1 id="checking-the-install">Checking the Install</h1>
-<p># When the installation is complete, let\'s check the version of OpenCV
+<p># When the installation is complete, let's check the version of OpenCV
 that was installed</p>
 <p># First reboot SBC</p>
 <p>sudo reboot now</p>
 <p># ssh back to the SBC</p>
-<h1 id="using-jtop-to-confirm-the-opencv-gpu-cuda-compiled">Using jtop to confirm the OpenCV GPU (CUDA) compiled</h1>
+<p>#Using jtop to confirm the OpenCV GPU (CUDA) compiled</p>
 <p>jtop</p>
 <p>7 INFO</p>
 <p># look for the OpenCV version and that it was compiled with CUDA</p>
-<p><img alt="" src="../60images/media/image12.png" />{width="4.613286307961505in"
-height="3.35744750656168in"}</p>
-<p><img alt="" src="../60images/media/image9.png" />{width="7.5in" height="0.375in"}</p>
-<h2 id="lets-make-sure-python3-finds-opencv-cv2"># Let's make sure Python3 finds OpenCV (CV2)</h2>
+<p><img src="./60imagesfinal/media/image12.png"
+style="width:4.61329in;height:3.35745in" /></p>
+<p><img src="./60imagesfinal/media/image9.png"
+style="width:7.5in;height:0.375in" /></p>
+<h2 id="lets-make-sure-python3-finds-opencv-cv2"># Let’s make sure Python3 finds OpenCV (CV2)</h2>
 <p># Need to adapt this for the python and OpenCV versions that you are
 using</p>
 <blockquote>
-<p>python3 -c \'import cv2 as cv; print(cv.__version__)\'</p>
-<h1 id="traceback-most-recent-call-last">Traceback (most recent call last):</h1>
-<h1 id="file-string-line-1-in-module">File \"\&lt;string&gt;\", line 1, in \&lt;module&gt;</h1>
-<h1 id="modulenotfounderror-no-module-named-cv2">ModuleNotFoundError: No module named \'cv2\'</h1>
+<p>python3 -c 'import cv2 as cv; print(cv.__version__)'</p>
+<p>#Traceback (most recent call last):</p>
+<p>#File "\&lt;string&gt;", line 1, in \&lt;module&gt;</p>
+<p>#ModuleNotFoundError: No module named 'cv2'</p>
 </blockquote>
-<p># If you don't see the version of the OpenCV that you built listed, it
+<p># If you don’t see the version of the OpenCV that you built listed, it
 is because you forgot to delete the previous</p>
-<p># OpenCV version that was installed, go back to this document "Removing
-old version of OpenCV" and then</p>
+<p># OpenCV version that was installed, go back to this document “Removing
+old version of OpenCV” and then</p>
 <p># build and install OpenCV again.</p>
 <p># What version of python3 do you have?</p>
 <p>python3</p>
-<h1 id="python-3810-default-may-26-2023-140508">Python 3.8.10 (default, May 26 2023, 14:05:08)</h1>
-<h1 id="gcc-940-on-linux">[GCC 9.4.0] on linux</h1>
-<h1 id="type-help-copyright-credits-or-license-for-more">Type \"help\", \"copyright\", \"credits\" or \"license\" for more</h1>
-<p>information.</p>
+<p>#Python 3.8.10 (default, May 26 2023, 14:05:08)</p>
+<p>#[GCC 9.4.0] on linux</p>
+<p>#Type "help", "copyright", "credits" or "license" for more information.</p>
 <p>&gt;&gt;&gt; exit()</p>
 <p>ex:</p>
 <p>cd /usr/local/lib/python3.6/site-packages/cv2/python-3.6</p>
@@ -1073,7 +1072,8 @@ old version of OpenCV" and then</p>
 <p># remove the previous cv2.so in case it is still there.</p>
 <p>sudo rm -rf cv2.so</p>
 <blockquote>
-<p># mv cv2.cpython-36m-[xxx]{.mark}-linux-gnu.so cv2.so</p>
+<p># mv cv2.cpython-36m-<span class="mark">xxx</span>-linux-gnu.so
+cv2.so</p>
 </blockquote>
 <p>ls cv2.*</p>
 <p># cv2.cpython-38-aarch64-linux-gnu.so</p>
@@ -1087,7 +1087,7 @@ cv2.so cv2.so</p>
 <p># sudo mv cv2.cpython-36m-aarch64-linux-gnu.so cv2.so</p>
 <p># sudo cp cv2.cpython-38-aarch64-linux-gnu.so cv2.so</p>
 <p># Lets create a link at the home directory for cv2</p>
-<p>cd \~</p>
+<p>cd ~</p>
 <p>sudo rm -rf cv2.so</p>
 <p>ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so
 cv2.so</p>
@@ -1100,28 +1100,26 @@ cv2.so</p>
 <p>cv2.__version__</p>
 <p>exit ()</p>
 <p># Resulting on something similar to this</p>
-<p><strong>jetson@ucsdrobocar-xxx-yy</strong>:<strong>\~</strong>\$ python3</p>
+<p><strong>jetson@ucsdrobocar-xxx-yy</strong>:<strong>~</strong>\$ python3</p>
 <p>Python 3.6.9 (default, Jun 29 2022, 11:45:57)</p>
 <p>[GCC 8.4.0] on linux</p>
-<p>Type \"help\", \"copyright\", \"credits\" or \"license\" for more
-information.</p>
+<p>Type "help", "copyright", "credits" or "license" for more information.</p>
 <p>&gt;&gt;&gt; import cv2</p>
 <p>&gt;&gt;&gt; cv2.__version__</p>
-<p>\'4.6.0\'</p>
+<p>'4.6.0'</p>
 <p>&gt;&gt;&gt; exit()</p>
-<p><strong>jetson@ucsdrobocar-xxx-yy</strong>:<strong>\~</strong>\$</p>
+<p><strong>jetson@ucsdrobocar-xxx-yy</strong>:<strong>~</strong>\$</p>
 <blockquote>
 <p>Python 3.8.10 (default, May 26 2023, 14:05:08)</p>
 <p>[GCC 9.4.0] on linux</p>
-<p>Type \"help\", \"copyright\", \"credits\" or \"license\" for more
-information.</p>
+<p>Type "help", "copyright", "credits" or "license" for more information.</p>
 <p>&gt;&gt;&gt; import cv2</p>
 <p>&gt;&gt;&gt; cv2.__version__</p>
-<p>\'4.8.0\'</p>
+<p>'4.8.0'</p>
 <p>&gt;&gt;&gt; exit ()</p>
 </blockquote>
 <p># Here is quicker way to test cv2 on Python 3</p>
-<p>python3 -c \'import cv2 as cv; print(cv.__version__)\'</p>
+<p>python3 -c 'import cv2 as cv; print(cv.__version__)'</p>
 <blockquote>
 <p>4.6.0</p>
 <p># or</p>
