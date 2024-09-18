@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../win23team13/">
+        <link rel="prev" href="../50-Virtual%20Machine%20and%20DonkeyCar%20AI%20Simulator/">
       
       
-        <link rel="next" href="../win23team15/">
+        <link rel="next" href="../../30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
     
     
       
-        <title>Team 14 - ECE/MAE 148</title>
+        <title>DonkeySimulator Mac - ECE/MAE 148</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9f615399.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f615399.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.649f08f9.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.649f08f9.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#setting-up-donkeysim-on-a-mac-m1-or-newer-arm-based" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -86,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="ECE/MAE 148" class="md-header__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
+    <a href="../../.." title="ECE/MAE 148" class="md-header__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Team 14
+              DonkeySimulator Mac
             
           </span>
         </div>
@@ -204,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="ECE/MAE 148" class="md-nav__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
+    <a href="../../.." title="ECE/MAE 148" class="md-nav__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -219,17 +224,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
@@ -242,7 +249,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -255,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/50-Virtual%20Machine%20with%20DonkeyCar%20AI%20Simulator/50-Virtual%20Machine%20and%20DonkeyCar%20AI%20Simulator/" class="md-nav__link">
+      <a href="../50-Virtual%20Machine%20and%20DonkeyCar%20AI%20Simulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -273,9 +280,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../markdown-documentation/50-Virtual%20Machine%20with%20DonkeyCar%20AI%20Simulator/Donkeysim%20on%20an%20ARM%20Chip%20Mac/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -284,6 +300,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -295,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/" class="md-nav__link">
+      <a href="../../30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/30-UCSD%20Robocar%20Jetson%20Nano%20Configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -315,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/60-OpenCV%20CUDA%20Accelerated/60doc/" class="md-nav__link">
+      <a href="../../60-OpenCV%20CUDA%20Accelerated/60doc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -335,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/15-VESC%20Setup%20Instructions/15-VESC%20Setup%20Instructions/" class="md-nav__link">
+      <a href="../../15-VESC%20Setup%20Instructions/15-VESC%20Setup%20Instructions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -355,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/10-UCSD%20Robocar%20ECE%20%26%20MAE%20148/10doc/" class="md-nav__link">
+      <a href="../../10-UCSD%20Robocar%20ECE%20%26%20MAE%20148/10doc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -375,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/10-UCSD%20Robocar%20ECE%20%26%20MAE%20148/11doc/" class="md-nav__link">
+      <a href="../../10-UCSD%20Robocar%20ECE%20%26%20MAE%20148/11doc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -395,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/10-UCSD%20Robocar%20ECE%20%26%20MAE%20148/10-UCSD%20Robocar%20ECE%20%26%20MAE%20148/10UCSDRobocarECEMAE148.html" class="md-nav__link">
+      <a href="../../10-UCSD%20Robocar%20ECE%20%26%20MAE%20148/10-UCSD%20Robocar%20ECE%20%26%20MAE%20148/10UCSDRobocarECEMAE148.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -415,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/100-UCSD%20Robocar%20Framework/100-UCSD%20Robocar%20Framework/" class="md-nav__link">
+      <a href="../../100-UCSD%20Robocar%20Framework/100-UCSD%20Robocar%20Framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -435,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-documentation/ROS2_Guide_Book.pdf" class="md-nav__link">
+      <a href="../../ROS2_Guide_Book.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -455,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentation/Controller/UCSD%20Robocar%20Using%20BetaFPV%20LiteRadio%203%20Pro/" class="md-nav__link">
+      <a href="../../../documentation/Controller/UCSD%20Robocar%20Using%20BetaFPV%20LiteRadio%203%20Pro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,19 +497,17 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -505,7 +520,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Winter 23
@@ -518,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team1/" class="md-nav__link">
+      <a href="../../../win23team1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team2/" class="md-nav__link">
+      <a href="../../../win23team2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -558,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team3/" class="md-nav__link">
+      <a href="../../../win23team3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team4/" class="md-nav__link">
+      <a href="../../../win23team4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -598,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team5/" class="md-nav__link">
+      <a href="../../../win23team5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -618,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team6/" class="md-nav__link">
+      <a href="../../../win23team6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team7/" class="md-nav__link">
+      <a href="../../../win23team7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -658,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team8/" class="md-nav__link">
+      <a href="../../../win23team8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -678,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team9/" class="md-nav__link">
+      <a href="../../../win23team9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team12/" class="md-nav__link">
+      <a href="../../../win23team12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -718,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team13/" class="md-nav__link">
+      <a href="../../../win23team13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,16 +751,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../win23team14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -754,7 +762,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -766,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win23team15/" class="md-nav__link">
+      <a href="../../../win23team15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -804,6 +811,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -821,23 +830,42 @@
   
 
 
-  <h1>Team 14</h1>
-
-<p><strong>ECE - MAE 148 Team 14 Winter 2023 Repository</strong></p>
-<p><strong>Project Goal:</strong> </p>
-<p>We used the OAK-D camera to run object detection (within the camera) and track different traffic details (common signs, speed limits, etc.)</p>
-<p><strong>Software and Hardware Description:</strong></p>
-<p>The OAK-D and depthAI are AI-enabled stereo cameras that allow for depth perception and 3D mapping. They are powerful tools for computer vision applications, such as object detection and tracking. The depthAI is a board that enables faster processing of images by offloading the computational workload from the main processor to dedicated hardware. 
-YOLO (You Only Look Once) is a real-time object detection system that is capable of detecting objects in an image or video feed. It is a popular deep learning model that is used in many computer vision applications, including self-driving cars and robotics.
-PyVesc is a Python library for controlling VESC-based motor controllers. The VESC is an open-source ESC (Electronic Speed Controller) that is widely used in DIY robotics projects. PyVesc allows for easy communication with the VESC and provides an interface for setting motor parameters and reading sensor data.</p>
-<p><strong>Project Overview:</strong></p>
-<p>We first used the OAK-D and depthAI to detect stop signs in the robot's field of view. Then, we executed the deep learning model YOLO to process the camera feed and identify the stop sign(text detection can be another method to achieve the same function). Once the stop sign is detected, we implemented PyVesc to send a command to the motor controller to stop the robot and started to set up the OAK-D and depthAI cameras by installing the necessary software libraries. YOLO is capable of detecting multiple objects simultaneously, so we needed to filter out the stop sign from other detected objects. However, we needed a blob converter to take different data types and convert them into a Binary Large Object (BLOB) that could fit in our code. Finally, once the stop sign is detected, we accessed PyVesc to send a command to the motor controller to stop the robot. In summary, the integration of OAK-D, depthAI, YOLO, and PyVesc allows for efficient and accurate stop sign detection and safe stopping of the robot. This implementation can be further customized and optimized for specific robotic platforms and use cases.</p>
-<p><strong>Final Projet Presentation:</strong> </p>
-<p>https://docs.google.com/presentation/d/1BTMwfktHvDzfzYd6oSnHeaQTEBbtYg8wEMnqoWkamHE/edit?usp=sharing</p>
-<p><strong>Final Project Video:</strong></p>
-<p>https://drive.google.com/file/d/1OnO5qWczQbH_aVrgKAtejwLMw6-fFSRW/view?usp=share_link</p>
-<p><strong>Team Members: Anish Kulkarni, Manuel Abitia, Zizhe Zhang.</strong></p>
-<p><strong>Special Thanks to: Professor Silberman, Kishore, Moises, and Freddy C. the Robot.</strong></p>
+<h1 id="setting-up-donkeysim-on-a-mac-m1-or-newer-arm-based">Setting up DonkeySim on a Mac M1 or newer (ARM Based)</h1>
+<p>The class virtual machine will not run on ARM based macs, but you can install the software natively instead.<br />
+If you are on a linux or windows machine but are having issues with the virtual machine, following these instructions with the appropriate platform edits could work for you too. Installing donkeysim/donkeycar natively is more work, but it will run faster and use less space than the virtual machine. <br />
+We also have lab computers with donkeysim set up available to use, if you run into difficulties with setting up donkeysim on your computer don't hesitate to use the lab computers. We also have joysticks in the lab which make driving much more convenient.  </p>
+<p>These instructions are new for Fall 2024, and the donkey_sim app was just compiled for ARM macs by me (Alexander). Please let me know about any issues/vague things/improvements!  </p>
+<p>Download the donkeysim video game from here:<br />
+https://drive.google.com/file/d/1FRDT7DiuKDhAuoKyqt8KyMnRAYsALx5Y/view?usp=sharing 
+Note that the arm64 compiled simulator does have a known bug where there are a few invisible cones outside the track that your car can collide with. I am working on fixing it!</p>
+<p>https://docs.donkeycar.com/guide/deep_learning/simulator/ contains everything you need to set up donkeycar on your computer. For your convenience I will write out the steps here:</p>
+<ol>
+<li>Download miniconda from https://conda-forge.org/download/, and run the bash script to install it. You can open your terminal app, and <code>cd Downloads</code> and then <code>bash Miniforge3-MACOSX-arm64.sh</code></li>
+<li><code>conda create -n donkey python=3.11</code>  </li>
+<li><code>conda activate donkey</code>  </li>
+<li><code>pip install donkeycar\[pc\]</code></li>
+<li><code>pip install git+https://github.com/tawnkramer/gym-donkeycar</code></li>
+<li><code>donkey createcar --path ./mycar</code></li>
+<li><code>cd mysim</code></li>
+<li><code>nano myconfig.py</code></li>
+<li><code>python manage.py drive</code></li>
+<li><code>cd mycar</code> then <code>open myconfig.py</code></li>
+<li>Edit myconfig.py to add in the lines
+    <code>DONKEY_GYM = True</code></li>
+</ol>
+<p><code>DONKEY_SIM_PATH = "remote"</code></p>
+<p><code>DONKEY_GYM_ENV_NAME = "donkey-warren-track-v0"</code></p>
+<p><code>SIM_HOST = "127.0.0.1"</code> </p>
+<p><code>GYM_CONF = { "body_style" : "car01", "body_rgb" : (255, 205, 0), "car_name" : "UCSD-148-YourName", "font_size" : 30} # body style(donkey|bare|car01) body rgb 0-255</code></p>
+<p><code>GYM_CONF["racer_name"] = "UCSD-148-YourName"</code></p>
+<p><code>GYM_CONF["country"] = "USA"</code></p>
+<p><code>GYM_CONF["bio"] = "pls work"</code></p>
+<p>And then save and exit</p>
+<ol>
+<li>Start the donkey_sim app, and then run <code>python3 manage.py drive</code></li>
+<li>You should be able to go to http://localhost:8887 to control the car. Note, it will be easier to control the car if you hook up a joystick. Instructions to do that are in the other virtual machine document.</li>
+<li>Follow the other document for the rest of the instructions. For here on everything should work the same.</li>
+</ol>
 
 
 
@@ -875,10 +903,10 @@ PyVesc is a Python library for controlling VESC-based motor controllers. The VES
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
       
     
   </body>
