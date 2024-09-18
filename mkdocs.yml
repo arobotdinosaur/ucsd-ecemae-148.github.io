@@ -70,6 +70,7 @@ plugins:
 nav:
   - Documentation:
       - DonkeySimulator: markdown-documentation/50-Virtual Machine with DonkeyCar AI Simulator/50-Virtual Machine and DonkeyCar AI Simulator.md
+      - DonkeySimulator Mac: markdown-documentation/50-Virtual Machine with DonkeyCar AI Simulator/Donkeysim on an ARM Chip Mac.md
       - Jetson Initial Setup: markdown-documentation/30-UCSD Robocar Jetson Nano Configuration/30-UCSD Robocar Jetson Nano Configuration.md
       - OpenCV With CUDA Acceleration: markdown-documentation/60-OpenCV CUDA Accelerated/60doc.md
       - VESC Setup: markdown-documentation/15-VESC Setup Instructions/15-VESC Setup Instructions.md
