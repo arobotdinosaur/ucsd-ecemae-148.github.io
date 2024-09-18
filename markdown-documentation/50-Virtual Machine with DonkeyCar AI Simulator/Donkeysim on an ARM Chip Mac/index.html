@@ -20,7 +20,7 @@
     
     
       
-        <title>DonkeySimulator Mac - MAE/ECE 148</title>
+        <title>DonkeySimulator Mac - ECE/MAE 148</title>
       
     
     
@@ -91,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="MAE/ECE 148" class="md-header__button md-logo" aria-label="MAE/ECE 148" data-md-component="logo">
+    <a href="../../.." title="ECE/MAE 148" class="md-header__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            MAE/ECE 148
+            ECE/MAE 148
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -209,13 +209,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="MAE/ECE 148" class="md-nav__button md-logo" aria-label="MAE/ECE 148" data-md-component="logo">
+    <a href="../../.." title="ECE/MAE 148" class="md-nav__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    MAE/ECE 148
+    ECE/MAE 148
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -836,11 +836,16 @@
 <p>We also have lab computers with donkeysim set up available to use, if you run into difficulties with setting up donkeysim on your computer don't hesitate to use the lab computers. We also have joysticks in the lab which make driving much more convenient.  </p>
 <p>These instructions are new for Fall 2024, and the donkey_sim app was just compiled for ARM macs by me (Alexander). Please let me know about any issues/improvements!  </p>
 <p>Download the donkeysim video game from here:<br />
-<a href="https://drive.google.com/file/d/1FRDT7DiuKDhAuoKyqt8KyMnRAYsALx5Y/view?usp=sharing">https://drive.google.com/file/d/1FRDT7DiuKDhAuoKyqt8KyMnRAYsALx5Y/view?usp=sharing</a> 
-Note that the arm64 compiled simulator does have a known bug where there are a few invisible cones outside the track that your car can collide with. I am working on fixing it!</p>
-<p><a href="https://docs.donkeycar.com/guide/deep_learning/simulator/">https://docs.donkeycar.com/guide/deep_learning/simulator/</a> contains everything you need to set up donkeycar on your computer. For your convenience I will write out the steps here:</p>
+<a href="https://drive.google.com/file/d/1FRDT7DiuKDhAuoKyqt8KyMnRAYsALx5Y/view?usp=sharing">https://drive.google.com/file/d/1FRDT7DiuKDhAuoKyqt8KyMnRAYsALx5Y/view?usp=sharing</a><br />
+To run the app, you may need to go to your security settings and click "run anyway," although it is not from an identified developer.  <br />
+Note that the arm64 compiled simulator does have a known bug where there are a few invisible cones outside the track that your car can collide with. I am working on fixing it!  </p>
+<p><a href="https://docs.donkeycar.com/guide/deep_learning/simulator/">https://docs.donkeycar.com/guide/deep_learning/simulator/</a> is what I referenced when writing this document. For your convenience I will write out the steps here:</p>
 <ol>
-<li>Download miniconda from <a href="https://conda-forge.org/download/">https://conda-forge.org/download/</a>, and run the bash script to install it. You can open your terminal app, and <code>cd Downloads</code> and then <code>bash Miniforge3-MACOSX-arm64.sh</code></li>
+<li>Download miniconda from <a href="https://conda-forge.org/download/">https://conda-forge.org/download/</a>, and run the bash script to install it. You can open your terminal app, and <code>cd Downloads</code> and then <code>bash Miniforge3-MACOSX-arm64.sh</code>
+Note: If you get prompted asking to change your shell to zsh by the terminal, please change the shell to zsh with the suggested command.</li>
+<li>Follow all the prompts the script provides</li>
+<li>Once the script is installed, it will ask if you want to automatically start conda by default. I suggest putting no, but then note you will have to run the command <code>eval "$(/Users/YOUR_USER/miniforge3/bin/conda shell.zsh hook)"</code> to start conda every time you start the terminal. The terminal should tell you the proper path.</li>
+<li>Restart your computer to get the install to complete. Then open the terminal, and start conda with the command above.   </li>
 <li><code>conda create -n donkey python=3.11</code>  </li>
 <li><code>conda activate donkey</code>  </li>
 <li><code>pip install donkeycar\[pc\]</code></li>
