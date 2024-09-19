@@ -20,7 +20,7 @@
     
     
       
-        <title>DonkeySimulator Mac - ECE/MAE 148</title>
+        <title>DonkeySimulator Mac - ECE/MAE  148</title>
       
     
     
@@ -91,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="ECE/MAE 148" class="md-header__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
+    <a href="../../.." title="ECE/MAE  148" class="md-header__button md-logo" aria-label="ECE/MAE  148" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            ECE/MAE 148
+            ECE/MAE  148
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -209,13 +209,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="ECE/MAE 148" class="md-nav__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
+    <a href="../../.." title="ECE/MAE  148" class="md-nav__button md-logo" aria-label="ECE/MAE  148" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    ECE/MAE 148
+    ECE/MAE  148
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -336,8 +336,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-config-file" class="md-nav__link">
-    Example Config File
+  <a href="#example-config-file-make-sure-to-uncomment-the-lines-you-want-applied-you-only-should-uncomment-those-lines" class="md-nav__link">
+    Example Config File - make sure to uncomment the lines you want applied. You only should uncomment those lines,
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-that-you-can-just-copy-paste-this-file-into-the-top-of-the-myconfigpy-and-it-will-work" class="md-nav__link">
+    Note that you can just copy-paste this file into the top of the myconfig.py and it will work
   </a>
   
 </li>
@@ -961,8 +968,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-config-file" class="md-nav__link">
-    Example Config File
+  <a href="#example-config-file-make-sure-to-uncomment-the-lines-you-want-applied-you-only-should-uncomment-those-lines" class="md-nav__link">
+    Example Config File - make sure to uncomment the lines you want applied. You only should uncomment those lines,
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-that-you-can-just-copy-paste-this-file-into-the-top-of-the-myconfigpy-and-it-will-work" class="md-nav__link">
+    Note that you can just copy-paste this file into the top of the myconfig.py and it will work
   </a>
   
 </li>
@@ -1105,14 +1119,15 @@ Note: If you get prompted asking to change your shell to zsh by the terminal, pl
 <p>From a terminal, run <code>open myconfig.py</code> from the <code>~/d4_sim/</code> directory.</p>
 <p>Within the <code>myconfig.py</code> file, change the:</p>
 <ul>
-<li>car_name</li>
+<li>body style - note, you can choose between 'donkey', 'cybertruck', or 'car01', or 'bare'. By default car01 which is a sports car is selected. </li>
 <li>racer_name</li>
 <li>your country location (under "country")</li>
 <li>a fun fact (under "bio")</li>
 <li>car color (in the dictionary entry for "body_rgb")</li>
 </ul>
 <p><img alt="alt text" src="../image-14.png" /></p>
-<h4 id="example-config-file">Example Config File</h4>
+<h4 id="example-config-file-make-sure-to-uncomment-the-lines-you-want-applied-you-only-should-uncomment-those-lines">Example Config File - make sure to uncomment the lines you want applied. You only should uncomment those lines,</h4>
+<h4 id="note-that-you-can-just-copy-paste-this-file-into-the-top-of-the-myconfigpy-and-it-will-work">Note that you can just copy-paste this file into the top of the myconfig.py and it will work</h4>
 <pre><code># 04Jan22
 # UCSD mods to make easier for the UCSD students to use the Donkey-Sim
 # the following uncommented lines where copied here from the body of myconfig.py below
@@ -1158,7 +1173,9 @@ AI_THROTTLE_MULT = 1.0              # this multiplier will scale every throttle 
 <p>Replace the value of <code>SIM_ARTIFICIAL_LATENCY</code> with the average ping delay (e.g. <code>SIM_ARTIFICIAL_LATENCY=30</code>)</p>
 <h4 id="driving-using-mouse-and-keyboard">Driving using Mouse and Keyboard</h4>
 <p>Start the donkey_sim_m1.app app in the gui by clicking the icon, and then run <code>python3 manage.py drive</code> in the terminal
-You should be able to go to <a href="http://localhost:8887">http://localhost:8887</a> to control the car. </p>
+You should be able to go to <a href="http://localhost:8887">http://localhost:8887</a> to control the car. 
+Make sure to start recording! It should show that x records were recorded.
+For driving, I recommend having the web url and the donkeysim app side-by-side on your computer. Turning down the max speed for the car in the browser can be helpful (I drove it at only 10% max throttle)</p>
 <h4 id="driving-using-a-gamepad">Driving using a Gamepad</h4>
 <p>To use a physical joystick without using the web browser, edit this section in <code>myconfig.py</code>.</p>
 <pre><code># #JOYSTICK
@@ -1196,10 +1213,10 @@ You should be able to go to <a href="http://localhost:8887">http://localhost:888
 <p>Using the data in the <code>data</code> folder, we can train a model and give it a name (e.g. 8july24_sim_160x120_20_1.h5)</p>
 <p><strong>20 laps is recommended for an initial dataset.</strong></p>
 <p>To do so, run this command from the <code>d4_sim</code> folder.</p>
-<pre><code>python train.py --model=models/YOUR_MODEL_NAME.h5 --type=linear --tubs=data/
+<pre><code>python3 train.py --model=models/YOUR_MODEL_NAME.h5 --type=linear --tubs=data/
 </code></pre>
 <p>To test the model, run:</p>
-<pre><code>python manage.py drive --model=models/YOUR_MODEL_NAME.h5 --type=linear
+<pre><code>python3 manage.py drive --model=models/YOUR_MODEL_NAME.h5 --type=linear
 </code></pre>
 <p>Enabling the model is done by pressing the change operation mode button twice. The terminal should state that the car is in AI mode.</p>
 <p>If the car does not perform well around corners, it could be that throtte and steering data is not being recorded when navigating them.</p>
@@ -1209,7 +1226,7 @@ You should be able to go to <a href="http://localhost:8887">http://localhost:888
 <p>Set this to false. Now, in order to record data, you must press the record button to begin input recording. The terminal will print out when recording is enabled and the amount of samples.</p>
 <p>If you increase the number of samples recorded after training a model, you can train a new model that uses all of the data in the <code>data</code> folder (old and new &mdash; be sure to give it a different name).</p>
 <p>To train data from a specific tub and transfer to a previous model:</p>
-<pre><code>python train.py --tub ~/projects/d4_sim/data/TUB_NAME  --transfer=models/PREVIOUS_MODEL.h5  --model=models/NEW_MODEL.h5
+<pre><code>python3 train.py --tub ~/projects/d4_sim/data/TUB_NAME  --transfer=models/PREVIOUS_MODEL.h5  --model=models/NEW_MODEL.h5
 </code></pre>
 <p>Tubs are subsections of the data folder that you may create to separate training data. To use all the data in the <code>data</code> folder, do not include a tub name after <code>~/projects/d4_sim/data/</code> in the tub argument.</p>
 <h3 id="ucsd-gpu-cluster-instructions">UCSD GPU Cluster Instructions</h3>
