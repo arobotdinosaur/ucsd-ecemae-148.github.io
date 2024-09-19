@@ -20,7 +20,7 @@
     
     
       
-        <title>DonkeySimulator Mac - ECE/MAE  148</title>
+        <title>DonkeySimulator Mac - ECE/MAE 148</title>
       
     
     
@@ -91,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="ECE/MAE  148" class="md-header__button md-logo" aria-label="ECE/MAE  148" data-md-component="logo">
+    <a href="../../.." title="ECE/MAE 148" class="md-header__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            ECE/MAE  148
+            ECE/MAE 148
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -209,13 +209,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="ECE/MAE  148" class="md-nav__button md-logo" aria-label="ECE/MAE  148" data-md-component="logo">
+    <a href="../../.." title="ECE/MAE 148" class="md-nav__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    ECE/MAE  148
+    ECE/MAE 148
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1197,7 +1197,7 @@ For driving, I recommend having the web url and the donkeysim app side-by-side o
 <li>Change operations mode (User control, AI model)</li>
 </ul>
 <p>Otherwise you may have to determine the function of each button from the terminal outputs when they are pressed.</p>
-<p><strong>~14000 images is recommended for an initial dataset. This should take about 10 minutes to record</strong></p>
+<p><strong>I recommend driving at least 15 laps or so, which corresponds to 11000 images. This should take about 10 minutes to record.</strong></p>
 <p><strong>To stop the DonkeyCar framework, use CTRL + C in the terminal</strong></p>
 <h4 id="deleting-data-not-to-be-used-in-training">Deleting Data not to be used in Training</h4>
 <p>Data for training is stored in the <code>~/projects/d4_sim/data</code> directory.</p>
@@ -1211,11 +1211,12 @@ For driving, I recommend having the web url and the donkeysim app side-by-side o
 </code></pre>
 <h3 id="training-and-testing">Training and Testing</h3>
 <p>Using the data in the <code>data</code> folder, we can train a model and give it a name (e.g. 8july24_sim_160x120_20_1.h5)</p>
-<p><strong>20 laps is recommended for an initial dataset.</strong></p>
+<p><strong>15 laps is recommended for an initial dataset.</strong></p>
 <p>To do so, run this command from the <code>d4_sim</code> folder.</p>
 <pre><code>python3 train.py --model=models/YOUR_MODEL_NAME.h5 --type=linear --tubs=data/
 </code></pre>
-<p>To test the model, run:</p>
+<p>This ran incredibly fast on my mac m1. It finished in about 10 minutes (albeit with a relatively small dataset). This command has been known to take up to 3 hours to finish on weaker computers with large datasets, so I am really impressed by the performance.
+Note that this training generates a graph of epochs vs loss that you can view in the models directory. This graph should go more steeply down at first and gradually flatten out. If it has a different shape you likely need more data. The program should also train for a minimum of ~20 epochs or so but possibly up to 70 epochs if you have a lot of data.</p>
 <pre><code>python3 manage.py drive --model=models/YOUR_MODEL_NAME.h5 --type=linear
 </code></pre>
 <p>Enabling the model is done by pressing the change operation mode button twice. The terminal should state that the car is in AI mode.</p>
