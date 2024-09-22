@@ -954,8 +954,8 @@ versions</a></p>
 <hr />
 <p><a href="https://ljvmiranda921.github.io/notebook/2018/01/31/running-a-jupyter-notebook/">https://ljvmiranda921.github.io/notebook/2018/01/31/running-a-jupyter-notebook/</a></p>
 <p>Help document for editing using Jupyter notebook:</p>
-<p>[Conifguring Jupyter Notebook on
-SSH(https://docs.google.com/document/d/1ZNACJvKmQNnN7QNMwgqnzjrs9JDdFbiqVFHAuhgillQ/edit?usp=sharing)</p>
+<p><a href="https://docs.google.com/document/d/1ZNACJvKmQNnN7QNMwgqnzjrs9JDdFbiqVFHAuhgillQ/edit?usp=sharing">Conifguring Jupyter Notebook on
+SSH</a></p>
 <h1 id="hardware-setup">Hardware Setup</h1>
 <p>You should consider breaking the work on building the robots per team
 member:</p>
@@ -1028,10 +1028,10 @@ it may take a few hours ...</p>
 <p>SSH into the Single Board Computer (SBC) e.g., RPI, JTN, JNX, etc.</p>
 <p>\ Install some packaged, some may be already installed</p>
 <pre><code>sudo apt update -y
-
-sudo apt upgrade -y
-
-sudo usermod -aG dialout jetson
+</code></pre>
+<pre><code>sudo apt upgrade -y
+</code></pre>
+<pre><code>sudo usermod -aG dialout jetson
 </code></pre>
 <p>#If packages are being held back</p>
 <pre><code> sudo apt-get \--with-new-pkgs upgrade
@@ -1043,8 +1043,9 @@ libcurl4-openssl-dev libssl-dev libpng-dev libopenblas-dev openmpi-doc
 openmpi-bin libopenmpi-dev libopenblas-dev git nano
 </code></pre>
 <p>Install RPi.GPIO clone for Jetson Nano</p>
-<p><a href="https://github.com/NVIDIA/jetson-gpio">[https://github.com/NVIDIA/jetson-gpio]{.underline}</a></p>
-<p>pip3 install Jetson.GPIO</p>
+<p><a href="https://github.com/NVIDIA/jetson-gpio">https://github.com/NVIDIA/jetson-gpio</a></p>
+<pre><code>pip3 install Jetson.GPIO
+</code></pre>
 <blockquote>
 <p>If the pip install complains about ownership of the directory*</p>
 <p>then execute the following command</p>
@@ -1093,12 +1094,18 @@ directory, make sure to be on the</p>
 <p>If you have not done so, lets create a directory to store our projects
 and one subdirectory</p>
 <p>to store virtual environments</p>
-<p>cd \~</p>
-<p>mkdir projects</p>
-<p>cd projects</p>
-<p>mkdir envs</p>
-<p>cd envs</p>
-<p>pip3 install virtualenv</p>
+<pre><code>cd \~
+</code></pre>
+<pre><code>mkdir projects
+</code></pre>
+<pre><code>cd projects
+</code></pre>
+<pre><code>mkdir envs
+</code></pre>
+<pre><code>cd envs
+</code></pre>
+<pre><code>pip3 install virtualenv
+</code></pre>
 <blockquote>
 <p>if complains about user permission</p>
 <p>pip3 install virtualenv --user</p>
@@ -1112,12 +1119,15 @@ framework is</p>
 automatically every time the user</p>
 <p>Jetson logs into the SBC. We can remove this settings later if needed
 when using ROS2</p>
-<p>echo \"source \~/projects/envs/donkey/bin/activate\" &gt;&gt; \~/.bashrc</p>
-<p>source \~/.bashrc</p>
+<pre><code>echo \&quot;source \~/projects/envs/donkey/bin/activate\&quot; \&gt;\&gt; \~/.bashrc
+</code></pre>
+<pre><code>source \~/.bashrc
+</code></pre>
 <p>When a virtual environment is active, you should see
 (name_of_virtual_enviroment) in front of the terminal prompt.</p>
 <p>ex:</p>
-<p>[(donkey)]{.mark} jetson@ucsdrobocar-xxx-yy:\~\$</p>
+<pre><code>(donkey)jetson@ucsdrobocar-xxx-yy:\~\$
+</code></pre>
 <p>At this point, using pip and pip3 should be the same as using pip3 by
 default in this virtual environment.</p>
 <p>https://docs.donkeycar.com/guide/robot_sbc/setup_jetson_nano/ 46</p>
@@ -1140,13 +1150,17 @@ folder</p>
 <p>order to properly install</p>
 <p># tensorflow, scipy and keras, and always a best practice.</p>
 </blockquote>
-<p>cd \~/projects/envs/donkey/lib/python3.6/site-packages/</p>
-<p>ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so
-cv2.so</p>
+<pre><code>cd \~/projects/envs/donkey/lib/python3.6/site-packages/
+</code></pre>
+<pre><code>ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so
+</code></pre>
+<pre><code>cv2.so
+</code></pre>
 <h3 id="_3"></h3>
 <h3 id="confirm-that-opencv-built-from-previous-steps-is-working-on-the-virtual-environment-donkey">Confirm that OpenCV built from previous steps is working on the virtual environment Donkey</h3>
 <p># Testing to see if OpenCV is installed in the virtual env.</p>
-<p>python3 -c \'import cv2 as cv; print(cv.__version__)\'</p>
+<pre><code>python3 -c \'import cv2 as cv; print(cv.\_\_version\_\_)\'
+</code></pre>
 <blockquote>
 <p>(donkey) <strong>jetson@ucsdrobocar-xxx-yy</strong>:<strong>\~/projects/envs/donkey</strong>\$
 python3 -c \'import cv2 as cv; print(cv.__version__)\'</p>
@@ -1154,26 +1168,34 @@ python3 -c \'import cv2 as cv; print(cv.__version__)\'</p>
 </blockquote>
 <p># We won\'t use Python2, but just in case one will need it for some
 reason</p>
-<p>python2 -c \'import cv2 as cv; print(cv.__version__)\'</p>
+<pre><code>python2 -c \'import cv2 as cv; print(cv.\_\_version\_\_)\'
+</code></pre>
 <p>We are not done installing software yet. We need to install more
 dependencies..</p>
 <p><strong>Make sure you have the donkey virtual environment activated</strong></p>
 <p>Remember some of these installs may take a while. It does not mean that
 the SBC is frozen, you</p>
 <p>can see that the CPU is busy with top, htop, or jtop</p>
-<p>source \~/projects/envs/donkey/bin/activate</p>
-<p>pip3 install -U pip testresources setuptools</p>
-<p>pip3 install -U futures==3.1.1 protobuf==3.12.2 pybind11==2.5.0</p>
-<p>pip3 install -U cython==0.29.21 pyserial</p>
-<p>pip3 install -U future==0.18.2 mock==4.0.2 h5py==2.10.0
-keras_preprocessing==1.1.2 keras_applications==1.0.8 gast==0.3.3</p>
-<p>pip3 install -U absl-py==0.9.0 py-cpuinfo==7.0.0 psutil==5.7.2
+<pre><code>source \~/projects/envs/donkey/bin/activate
+</code></pre>
+<pre><code>pip3 install -U pip testresources setuptools
+</code></pre>
+<pre><code>pip3 install -U futures==3.1.1 protobuf==3.12.2 pybind11==2.5.0
+</code></pre>
+<pre><code>pip3 install -U cython==0.29.21 pyserial
+</code></pre>
+<pre><code>pip3 install -U future==0.18.2 mock==4.0.2 h5py==2.10.0
+keras_preprocessing==1.1.2 keras_applications==1.0.8 gast==0.3.3
+</code></pre>
+<pre><code>pip3 install -U absl-py==0.9.0 py-cpuinfo==7.0.0 psutil==5.7.2
 portpicker==1.3.1 six requests==2.24.0 astor==0.8.1 termcolor==1.1.0
-wrapt==1.12.1 google-pasta==0.2.0</p>
-<p>pip3 install -U gdown</p>
+wrapt==1.12.1 google-pasta==0.2.0
+</code></pre>
+<pre><code>pip3 install -U gdown
+</code></pre>
 <h3 id="tensorflow">Tensorflow</h3>
 <p>Now let\'s install
-<a href="https://www.tensorflow.org/">[Tensorflow]{.underline}</a> (Artificial
+<a href="https://www.tensorflow.org/">Tensorflow</a> (Artificial
 Neural Network software).</p>
 <blockquote>
 <p>"TensorFlow is an end-to-end open source platform for machine
@@ -1185,19 +1207,19 @@ powered applications."</p>
 <p>Lets install Tensorflow enabled for GPU acceleration</p>
 <p>Another chance for you to study while software is being installed...</p>
 <p>Background information here</p>
-<p><a href="https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html">[https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html]{.underline}</a></p>
+<p><a href="https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html">https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html</a></p>
 <p>Remember you are using a low power SBC, depending on the size of the
 software it takes a while</p>
 <p>We are installing Tensorflow outside the virtual environment so it is
 available for other uses</p>
 <p>Here is another chance for you to study while software is being
 installed...</p>
-<p><a href="https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html">[Background information
-here]{.underline}</a></p>
+<p><a href="https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html">Background information
+here</a></p>
 <p>We are using JetPack 4.5 because the new DonkeyCar release was breaking
 the install with JetPack4.6.2. It requires Python 7 and newer.</p>
 <p>Let\'s stick with JetPack4.5 for now</p>
-<p><a href="https://developer.download.nvidia.com/compute/redist/jp/v45/tensorflow/">[https://developer.download.nvidia.com/compute/redist/jp/v45/tensorflow/]{.underline}</a></p>
+<p><a href="https://developer.download.nvidia.com/compute/redist/jp/v45/tensorflow/">https://developer.download.nvidia.com/compute/redist/jp/v45/tensorflow/</a></p>
 <p>As of 18Sep22</p>
 <blockquote>
 <p>tensorflow-1.15.4+nv20.12-cp36-cp36m-linux_aarch64.whl 218MB
@@ -1228,24 +1250,19 @@ the install with JetPack4.6.2. It requires Python 7 and newer.</p>
 <p># This will install the latest tensorflow compatible with the Jet Pack
 as a system package</p>
 <p>Alternatively if you want to chose a particular version:</p>
-<h1 id="pip3-install-pre-extra-index-url">pip3 install --pre --extra-index-url</h1>
-<p>https://developer.download.nvidia.com/compute/redist/jp/v45
-tensorflow==<strong>2.3.1</strong></p>
-<blockquote>
-<p>Previous versions install</p>
-<p>pip3 install --pre --extra-index-url
+<pre><code>pip3 install \--pre \--extra-index-url
 https://developer.download.nvidia.com/compute/redist/jp/v45
-tensorflow==2.3.1</p>
-<p>pip3 install --pre --extra-index-url
-https://developer.download.nvidia.com/compute/redist/jp/v45
-tensorflow==2.4.0</p>
-</blockquote>
+tensorflow==**2.3.1**
+</code></pre>
 <p>Remember you are using a low power SBC, depending on the size of the
 software it takes a while</p>
 <p>Lets verify that Tensorflow installed correctly</p>
-<p>python3</p>
-<p>import tensorflow</p>
-<p>exit()</p>
+<pre><code>python3
+</code></pre>
+<pre><code>import tensorflow
+</code></pre>
+<pre><code>exit()
+</code></pre>
 <blockquote>
 <p>No errors should be reported</p>
 <p><strong>If you get errors importing Tensorflow 2.5.0, try these</strong></p>
@@ -1283,26 +1300,36 @@ package</p>
 conflict. Here is a list of compatibility</p>
 <p><a href="https://www.tensorflow.org/install/source#gpu">[https://www.tensorflow.org/install/sourcegpu]{.underline}</a></p>
 <p>Installing pycuda - it will take a while again...</p>
-<p>pip3 install pycuda</p>
+<pre><code>pip3 install pycuda
+</code></pre>
 <p>If you are having errors installing pycuda use the following command:</p>
-<p>pip3 install pycuda==2020.1</p>
+<pre><code>pip3 install pycuda==2020.1
+</code></pre>
 <h3 id="pytorch">PyTorch</h3>
 <p>Lets install <a href="https://pytorch.org/">[PyTorch]{.underline}</a> too</p>
 <p>"An open source machine learning framework that accelerates the path
 from research prototyping to production deployment"</p>
 <p>Again, these steps will take some time. Use your time wisely</p>
-<p>cd \~/projects</p>
-<p>wget
-https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl</p>
+<pre><code>cd \~/projects
+</code></pre>
+<pre><code>wget
+https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl
+</code></pre>
 <p>cp p57jwntv436lfrd78inwl7iml6p13fzh.whl
 torch-1.8.0-cp36-cp36m-linux_aarch64.whl</p>
-<p>pip3 install torch-1.8.0-cp36-cp36m-linux_aarch64.whl</p>
-<p>sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev
-libavcodec-dev libavformat-dev libswscale-dev</p>
-<p>git clone -b v0.9.0 https://github.com/pytorch/vision torchvision</p>
-<p>cd torchvision</p>
-<p>python setup.py install</p>
-<p>cd ../</p>
+<pre><code>pip3 install torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+</code></pre>
+<pre><code>sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev
+libavcodec-dev libavformat-dev libswscale-dev
+</code></pre>
+<pre><code>git clone -b v0.9.0 https://github.com/pytorch/vision torchvision
+</code></pre>
+<pre><code>cd torchvision
+</code></pre>
+<pre><code>python setup.py install
+</code></pre>
+<pre><code>cd ../
+</code></pre>
 <p># it will take a good while again. Keep studying other things...</p>
 <p>Testing Pythorch install</p>
 <p>python</p>
@@ -1378,28 +1405,40 @@ following:</p>
 <h1 id="installing-dependencies">Installing dependencies</h1>
 <p>Navigate to the directory where you will be installing the luxonis
 libraries using cd \~/projects</p>
-<p>sudo nano install_dependencies.sh</p>
+<pre><code>sudo nano install_dependencies.sh
+</code></pre>
 <p>Copy the entire contents of the file:
-<a href="https://drive.google.com/file/d/1dA_MAeJbzDbkNlWzFMTlBraCIS2v965S/view?usp=share_link">[install_dependencies.sh]{.underline}</a></p>
-<p>bash install_dependencies.sh</p>
-<p>echo \"export OPENBLAS_CORETYPE=ARMV8\" &gt;&gt; \~/.bashrc</p>
-<p>echo \'SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"03e7\", MODE=\"0666\"\' |
-sudo tee /etc/udev/rules.d/80-movidius.rules</p>
-<p>sudo udevadm control --reload-rules &amp;&amp; sudo udevadm trigger</p>
+<a href="https://drive.google.com/file/d/1dA_MAeJbzDbkNlWzFMTlBraCIS2v965S/view?usp=share_link">install_dependencies.sh</a></p>
+<pre><code>bash install_dependencies.sh
+</code></pre>
+<pre><code>echo \&quot;export OPENBLAS_CORETYPE=ARMV8\&quot; \&gt;\&gt; \~/.bashrc
+</code></pre>
+<pre><code>echo \'SUBSYSTEM==\&quot;usb\&quot;, ATTRS{idVendor}==\&quot;03e7\&quot;, MODE=\&quot;0666\&quot;\' \|
+</code></pre>
+<pre><code>sudo tee /etc/udev/rules.d/80-movidius.rules
+</code></pre>
+<pre><code>sudo udevadm control \--reload-rules &amp;&amp; sudo udevadm trigger
+</code></pre>
 <h1 id="navigate-using-cd-to-the-folder-where-you-would-like-to-install-the">Navigate using cd to the folder where you would like to install the</h1>
 <p>camera example files and requirements</p>
-<p>cd \~/projects</p>
-<p>git clone
-<a href="https://github.com/luxonis/depthai-python.git">[https://github.com/luxonis/depthai-python.git]{.underline}</a></p>
-<p>cd depthai-python/examples</p>
-<p>python3 install_requirements.py</p>
+<pre><code>cd \~/projects
+</code></pre>
+<pre><code>git clone
+[https://github.com/luxonis/depthai-python.git](https://github.com/luxonis/depthai-python.git)
+</code></pre>
+<pre><code>cd depthai-python/examples
+</code></pre>
+<pre><code>python3 install_requirements.py
+</code></pre>
 <h1 id="if-you-want-to-test-the-camera-and-you-have-remote-desktop">If you want to test the camera and you have remote desktop</h1>
-<p><a href="https://www.nomachine.com/download">[NoMachine]{.underline}</a> already
+<p><a href="https://www.nomachine.com/download">NoMachine</a> already
 installed and the OAKD Lite is connected to JTN , run the following in
 the terminal on a NoMachine session</p>
 <h1 id="navigate-to-the-examples-folder-in-depthai-python-first-and-then">Navigate to the examples folder in depthai-python first and then</h1>
-<p>cd ColorCamera</p>
-<p>python3 rgb_preview.py</p>
+<pre><code>cd ColorCamera
+</code></pre>
+<pre><code>python3 rgb_preview.py
+</code></pre>
 <p>You should be able to see preview video on the No machine desktop</p>
 <h3 id="_5"></h3>
 <h3 id="installing-donkeycar-ai-framework">Installing Donkeycar AI Framework</h3>
@@ -1423,7 +1462,7 @@ calibration that</p>
 <p>cd donkeycar</p>
 <p>git fetch --all --tags -f</p>
 <p>git checkout 4.5.1</p>
-<p>pip install -e .[[nano]{.mark}]</p>
+<p>pip install -e .[nano]</p>
 </blockquote>
 <p>Install more dependencies</p>
 <p>sudo apt-get install python3-dev python3-numpy python-dev libsdl-dev
@@ -1447,23 +1486,16 @@ command top or htop</p>
 <p>Note I had problems installing Donkey with the latest version of pip
 (20.0.2). I had to revert</p>
 <p>to an earlier version of pip. See versions of pip here
-<a href="https://pip.pypa.io/en/stable/news/">[https://pip.pypa.io/en/stable/news/]{.underline}</a></p>
+[<a href="https://pip.pypa.io/en/stable/news/">https://pip.pypa.io/en/stable/news/</a></p>
 <p>On 28 May20, it worked. Keeping the line below for reference in case
 the problem happens again</p>
 <p># pip install --upgrade pip==18.1</p>
 </blockquote>
 <p>Install Donkey with</p>
-<h1 id="pip3-install-e-nano">pip3 install -e .[nano]</h1>
-<p>Proceed to <a href="#create-a-car">[Create a Car]{.underline}</a></p>
+<pre><code>pip3 install -e .\[nano\]
+</code></pre>
+<p>Proceed to [Create a Car]](#create-a-car)</p>
 <blockquote>
-<p># 1/30/24</p>
-<p># <a href="mailto:mlopezme@ucsd.edu">[mlopezme@ucsd.edu]{.underline}</a>
-[]{.mark}</p>
-<p># Moises, did you change the instructions to have nano45? It was
-giving problems in WI24. Does it install Donkey 4.5.1? That is what we
-need</p>
-<p># For ECE MAE 148 when we are ready for the latest version of Donkey,
-let\'s say using a docker container</p>
 <p>cd \~/projects</p>
 <p>git clone https://github.com/autorope/donkeycar</p>
 <p>cd donkeycar</p>
@@ -1510,8 +1542,7 @@ camera</p>
 <p>Lets connect to the JTN by using a web browser from your PC</p>
 <p><a href="http://ucsdrobocar01.local:8887">[http://ucsdrobocar-xxx-yy:8887]{.underline}</a></p>
 <p>You should see a screen like this</p>
-<p><img alt="" src="../10images/media/image43.png" />{width="4.6631517935258096in"
-height="3.119792213473316in"}</p>
+<p><img alt="" src="../10images/media/image43.png" /></p>
 <h1 id="we-stop-the-donkey-with-ctrl-c">We stop the Donkey with Ctrl-C</h1>
 <p>Ctrl-C</p>
 <h3 id="modifying-joystick">Modifying Joystick</h3>
@@ -1604,23 +1635,28 @@ speed</p>
 <p>(we will leave the CAMERA_TYPE = "MOCK" for now to make sure we can
 drive the car with the VESC)</p>
 <p>Download the following files</p>
-<p><a href="https://drive.google.com/drive/folders/1SBzChXK2ebzPHgZBP_AIhVXJOekVc0r3?usp=sharing">~~[https://drive.google.com/drive/folders/1SBzChXK2ebzPHgZBP_AIhVXJOekVc0r3?usp=sharing]{.underline}~~</a></p>
-<p><a href="https://drive.google.com/drive/folders/19TS3VyNXQPBSr41yiPaxpI1lnxClI2c8?usp=sharing">[https://drive.google.com/drive/folders/19TS3VyNXQPBSr41yiPaxpI1lnxClI2c8?usp=sharing]{.underline}</a></p>
+<p><a href="https://drive.google.com/drive/folders/19TS3VyNXQPBSr41yiPaxpI1lnxClI2c8?usp=sharing">https://drive.google.com/drive/folders/19TS3VyNXQPBSr41yiPaxpI1lnxClI2c8?usp=sharing</a></p>
 <p>And replace them on the Jetson in the locations shown in the images
 below. Note - to get the files on the jetson you can use SFTP (secure
 file transfer protocol):</p>
-<p>Examples on how to use SFTP:\
-sftp jetson@ucsdrobocar-148-xx.local</p>
-<p>cd To the directory you want to go to</p>
-<p>put /File/Path/On/Your/Computer</p>
+<p>Examples on how to use SFTP:\</p>
+<pre><code>sftp jetson@ucsdrobocar-148-xx.local
+</code></pre>
+<pre><code>cd To the directory you want to go to
+</code></pre>
+<pre><code>put /File/Path/On/Your/Computer
+</code></pre>
 <p>alternatively</p>
-<p>get filename /File/Location/You/Want/Them/Go/On/Your/Computer</p>
+<pre><code>get filename /File/Location/You/Want/Them/Go/On/Your/Computer
+</code></pre>
 <p>To get a directory</p>
-<p>get -rf filename /File/Location/You/Want/Them/Go/On/Your/Computer</p>
-<p>type \"exit\" to disconnect</p>
-<h2 id="width4351609798775153in-height3276042213473316inwidth4307292213473316in-height3131517935258093in"><img alt="" src="../10images/media/image18.png" />{width="4.351609798775153in" height="3.276042213473316in"}<img alt="" src="../10images/media/image24.png" />{width="4.307292213473316in" height="3.131517935258093in"}</h2>
+<pre><code>get -rf filename /File/Location/You/Want/Them/Go/On/Your/Computer
+</code></pre>
+<p>type "exit" to disconnect</p>
+<h2 id="_9"><img alt="" src="../10images/media/image18.png" /><img alt="" src="../10images/media/image24.png" /></h2>
 <p>Once these have been replaced, you should run</p>
-<p>python manage.py drive</p>
+<pre><code>python manage.py drive
+</code></pre>
 <p>It should first throw a pyvesc import error. Follow the description in
 the terminal to install the needed libraries</p>
 <p>Then run it again. It should throw a permissions error. Follow the
@@ -1630,12 +1666,12 @@ When running python manage.py drive, the intermittent \"invalid literal
 for int() with base 10: \'None\' error is from the VESC package checking
 whether the version of the VESC is below 3.0, so we can comment out that
 part since we\'re using 6.0 just do</p>
-<p>nano
-/home/jetson/projects/envs/donkey/lib/python3.6/site-packages/pyvesc/VESC/VESC.py</p>
+<pre><code>nano
+/home/jetson/projects/envs/donkey/lib/python3.6/site-packages/pyvesc/VESC/VESC.py
+</code></pre>
 <p>and put # at the beginning of lines 38-40 Then \^S to save and \^X to
 exit</p>
-<p><img alt="" src="../10images/media/image35.png" />{width="7.5in"
-height="2.0833333333333335in"}</p>
+<p><img alt="" src="../10images/media/image35.png" /></p>
 <p>Error explanation: The self.get_firmware_version() get thes version by
 requesting it from the VESC and reading the replied bytes, but sometimes
 the data is lost or incomplete so the function returns \'None\' as the
@@ -1644,23 +1680,23 @@ function.</p>
 <h2 id="oakd">OAKD</h2>
 <p>Once you have the VESC driving the car, you will need to make sure you
 have set up the document by following the instructions labeled
-Configuring OAKD Lite found <a href="#configuring-oakd-lite">[earlier in this
-document]{.underline}</a></p>
+Configuring OAKD Lite found <a href="#configuring-oakd-lite">earlier in this
+document</a></p>
 <p>Edit the myconfig.py camera type to OAKD</p>
 <p>CAMERA_TYPE = \"OAKD\"</p>
 <p>Make sure the camera is working by checking the images that are being
 saved to the /data/images directory.</p>
 <p>The easiest way to do this is to go to</p>
-<p><a href="http://localhost:8887">[http://localhost:8887]{.underline}</a> while
+<p><a href="http://localhost:8887">http://localhost:8887</a> while
 running donkeysim, and you should be able to see a livestream from the
 camera. Note - if several people are running donkeysim at the same time
 on the same wifi this interface may get buggy</p>
-<p>You can also do this by either:</p>
-<p>transferring the files to you laptop or virtual machine</p>
-<p>with scp, rsync, winscp (windows) or filezilla (mac)</p>
-<p>Or</p>
+<p>You can also do this by either:
+Transferring the files to you laptop or virtual machine</p>
+<p>with scp, sftp, rsync, winscp (windows) or filezilla (mac)</p>
+<p>or</p>
 <p>Using NoMachine by following the instructions found
-<a href="#remote-desktop-installation">[here]{.underline}</a> in this document</p>
+<a href="#remote-desktop-installation">here</a> in this document</p>
 
 
 
