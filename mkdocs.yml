@@ -67,7 +67,7 @@ plugins:
           imports: [ /Controller/*, /images/* ]
         - name: markdown-documentation
           import_url: https://github.com/UCSD-ECEMAE-148/Markdown-Instructions.git?branch=main
-          imports: [ /50-Virtual Machine with DonkeyCar AI Simulator/*, /30-UCSD Robocar Jetson Nano Configuration/*,  /60-OpenCV CUDA Accelerated/*, /100-UCSD Robocar Framework/*, /15-VESC Setup Instructions/*, /ROS2_Guide_Book.pdf, 10-UCSD Robocar ECE & MAE 148/*, /robocarportrait.jpg, /Radiomaster Setup.md ]
+          imports: [ /50-Virtual Machine with DonkeyCar AI Simulator/*, /30-UCSD Robocar Jetson Nano Configuration/*,  /60-OpenCV CUDA Accelerated/*, /100-UCSD Robocar Framework/*, /15-VESC Setup Instructions/*, /ROS2_Guide_Book.pdf, 10-UCSD Robocar ECE & MAE 148/*, /robocarportrait.jpg, /Radiomaster_Setup.md ]
 
 nav:
 #  - Documentation:
