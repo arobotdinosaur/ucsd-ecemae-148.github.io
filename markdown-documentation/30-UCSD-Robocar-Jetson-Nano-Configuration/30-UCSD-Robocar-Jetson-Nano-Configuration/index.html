@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../../50-Virtual-Machine-with-DonkeyCar-AI-Simulator/Donkeysim-on-an-ARM-Chip-Mac/">
+      
+      
+        <link rel="next" href="../../60-OpenCV-CUDA-Accelerated/60doc/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>UCSD RoboCar OpenCV CUDA Accelerated - ECE/MAE 148</title>
+        <title>Jetson Initial Setup - ECE/MAE 148</title>
       
     
     
@@ -71,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ucsd-robocar-opencv-cuda-accelerated" class="md-skip">
+        <a href="#jetson-nano-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UCSD RoboCar OpenCV CUDA Accelerated
+              Jetson Initial Setup
             
           </span>
         </div>
@@ -282,9 +286,29 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../30-UCSD-Robocar-Jetson-Nano-Configuration/30-UCSD-Robocar-Jetson-Nano-Configuration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Jetson Initial Setup
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -293,6 +317,121 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-image" class="md-nav__link">
+    Flashing Image
+  </a>
+  
+    <nav class="md-nav" aria-label="Flashing Image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-etcher-to-write-ucsd-image" class="md-nav__link">
+    Using Etcher to Write UCSD Image
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobaxterm-installation" class="md-nav__link">
+    MobaXterm Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="MobaXterm Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powering-jetson-nano" class="md-nav__link">
+    Powering Jetson Nano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jetson-nano-ssh-configuration" class="md-nav__link">
+    Jetson Nano SSH Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Jetson Nano SSH Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wire-ssh-communication" class="md-nav__link">
+    Wire SSH Communication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-configuration" class="md-nav__link">
+    Wifi Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-power-saving-settings" class="md-nav__link">
+    Wifi Power Saving Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-wifi-ssh-communication" class="md-nav__link">
+    Testing Wifi SSH Communication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-hostname-and-password" class="md-nav__link">
+    Configuring Hostname and Password
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fan-configuration" class="md-nav__link">
+    Fan Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -303,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../60doc/" class="md-nav__link">
+      <a href="../../60-OpenCV-CUDA-Accelerated/60doc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,6 +871,109 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-image" class="md-nav__link">
+    Flashing Image
+  </a>
+  
+    <nav class="md-nav" aria-label="Flashing Image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-etcher-to-write-ucsd-image" class="md-nav__link">
+    Using Etcher to Write UCSD Image
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobaxterm-installation" class="md-nav__link">
+    MobaXterm Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="MobaXterm Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powering-jetson-nano" class="md-nav__link">
+    Powering Jetson Nano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jetson-nano-ssh-configuration" class="md-nav__link">
+    Jetson Nano SSH Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Jetson Nano SSH Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wire-ssh-communication" class="md-nav__link">
+    Wire SSH Communication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-configuration" class="md-nav__link">
+    Wifi Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-power-saving-settings" class="md-nav__link">
+    Wifi Power Saving Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-wifi-ssh-communication" class="md-nav__link">
+    Testing Wifi SSH Communication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-hostname-and-password" class="md-nav__link">
+    Configuring Hostname and Password
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fan-configuration" class="md-nav__link">
+    Fan Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -748,263 +990,64 @@
   
 
 
-<h1 id="ucsd-robocar-opencv-cuda-accelerated"><strong>UCSD RoboCar OpenCV CUDA Accelerated</strong></h1>
-<p>Version 1.8 - 26Nov2022</p>
-<p>Prepared by<br />
-Dr. Jack Silberman<br />
-Department of Electrical and Computer Engineering<br />
-and <br />
-Dominic Nightingale<br />
-Department of Mechanical and Aerospace Engineering<br />
-University of California, San Diego<br />
-9500 Gilman Dr, La Jolla, CA 92093</p>
-<p># Installing an Open Source Computer Vision (OpenCV) package  with CUDA Support<br />
-# As of Jan 2020, NVIDIA is not providing OpenCV optimized to use CUDA (GPU acceleration).<br />
-# Search the web if you are curious why.<br />
-# <a href="https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902">https://forums.developer.nvidia.com/t/opencv-cuda-python-with-jetson-nano/72902</a></p>
-<p>Interesting youtube video:
-<a href="https://www.youtube.com/watch?v=art0-99fFa8">https://www.youtube.com/watch?v=art0-99fFa8</a></p>
-<h1 id="checking-opencv-build-information">Checking openCV build information</h1>
-<p># ssh to the Single Board Computer (SBC)<br />
-# Check to see if OpenCV for CUDA is available, search on the terminal output for CUDA),<br />
-# if not,  we build OpenCV from source to use CUDA Acceleration</p>
-<p># From a terminal:  </p>
-<pre><code>python  
-\&gt;\&gt;import cv2  
-\&gt;\&gt;print cv2.getBuildInformation()   
-\&gt;\&gt;exit ()
-</code></pre>
-<p># ex:</p>
-<pre><code>NVIDIA CUDA:                   YES (ver 10.2, CUFFT CUBLAS FAST\_MATH)  
-NVIDIA GPU arch:             53 62 72  
-NVIDIA PTX archs:
-</code></pre>
-<p>cuDNN:                         YES (ver 8.0)</p>
-<p>OpenCL:                        YES (no extra features)<br />
-    Include path:                /tmp/build_opencv/opencv/3rdparty/include/opencl/1.2<br />
-    Link libraries:              Dynamic load</p>
-<p>You can also use jtop to check if OpenCV was compiled with CUDA.<br />
-jtop<br />
-6</p>
-<p>![][image4]</p>
-<p># If OpenCV is not using CUDA acceleration, let's build and install the latest OpenCV optimized<br />
-# for CUDA</p>
-<p># As of 03Apr2022, I have not seen NVIDIA supplying OpenCV GPU accelerated on their<br />
-# JetPack. We need to compile it from source. If you ask me, nice experience for you.<br />
-# Let’s do this</p>
-<h1 id="_1"></h1>
-<h1 id="installing-opencv-with-cuda">Installing openCV with CUDA</h1>
-<p><strong># This step may take several hours</strong> <strong>to compile and build OpenCV in a SBC such as the</strong><br />
-<strong># Jetson Nano (JTN) or Jetson Xavier NX (JNX). It took my JTN four hours to complete.</strong><br />
-<strong># For the JTN, please make sure the fan is installed including software to enable high</strong> <br />
-<strong># CPU power mode</strong></p>
-<p># Better do it overnight. Be patient, please keep in mind that you are using a low power <br />
-# single board computer (SBC)<br />
-# Make sure you are using the external power supply to power the jetson, not a USB cable.</p>
-<p># <a href="https://devtalk.nvidia.com/default/topic/1054949/process-to-install-opencv-4-1-on-nano/">https://devtalk.nvidia.com/default/topic/1054949/process-to-install-opencv-4-1-on-nano/</a><br />
-# <a href="https://github.com/mdegans/nano_build_opencv">https://github.com/mdegans/nano_build_opencv</a></p>
-<p># Please make sure your computer will not sleep so you maintain an active ssh connection<br />
-# while you are building OpenCV because you will need to type the user jetson password <br />
-# again to complete the install. <br />
-# Reconnecting on the same ssh session is not trivial</p>
-<p>![][image5]</p>
-<h2 id="using-a-linux-host-use-screen"># Using a Linux Host? Use Screen</h2>
-<p># You should consider using <a href="https://ma.ttias.be/screen-a-must-for-ssh/">screen</a> to enable you to reconnect to a previous ssh session. # Note that this is not mandatory for successfully building opencv with cuda, you can also just ssh normally<br />
-# Do you need to install screen?</p>
-<p>sudo apt-get install screen</p>
-<p># From a terminal on Linux host or on your VM:<br />
-screen<br />
-# ssh jetson@ name of IP address of your machine<br />
-ssh jetson@ucsdrobocar-xxx-yy.local</p>
-<p># If you get disconnected, open a terminal again on your computer then type<br />
-screen -r</p>
-<p># screen -r should reconnect to the previous ssh session that was open</p>
-<p># Here is some more detailed information on using screen<br />
-<a href="https://www.howtogeek.com/howto/ubuntu/keep-your-ssh-session-running-when-you-disconnect">https://www.howtogeek.com/howto/ubuntu/keep-your-ssh-session-running-when-you-disconnect</a><br />
-<em># if not installed in your host</em><br />
-<em>sudo apt-get install screen</em></p>
-<p><em>Now you can start a new screen session by just typing screen at the command line. You’ll be shown some information about screen. Hit enter, and you’ll be at a normal prompt.</em></p>
-<p><em>To disconnect (but leave the session running)</em></p>
-<p><em>Hit Ctrl + A and then Ctrl + D in immediate succession. You will see the message [detached]</em></p>
-<p><em>To reconnect to an already running session</em></p>
-<p><em>screen -r</em></p>
-<p><em>To reconnect to an existing session, or create a new one if none exists</em></p>
-<p><em>screen -D -r</em></p>
-<p># More info on using screen<br />
-<a href="https://ma.ttias.be/screen-a-must-for-ssh/">https://ma.ttias.be/screen-a-must-for-ssh/</a><br />
-<em>screen -ls</em><br />
-<em>There are screens on:</em><br />
-<em>27111.screen_untarring  (Detached)</em><br />
-<em>27097.screen_disking    (Detached)</em><br />
-<em>2 Sockets in /var/run/screen/S-root.</em><br />
-<em>This will show a list of all running screen-sessions at any given time. You can pick up a previous screen-session, by typing</em></p>
-<p><em>screen -r \&lt;name_of_session&gt;</em><br />
-<em>screen -r</em></p>
-<h2 id="_2"></h2>
-<p># Since your SBC will be busy, how can you see it is working for you?<br />
-#<br />
-# Besides htop or top, there is another cool utility called <a href="https://github.com/rbonghi/jetson_stats">jetson_stats</a><br />
-sudo apt-get install python3-pip<br />
-sudo -H pip3 install -U jetson-stats</p>
-<p># reboot<br />
-sudo reboot now<br />
-# Then you can run<br />
-jtop<br />
-4</p>
-<p>You can use jtop to add more swap space using the left and right keys and clicking the plus button<br />
-![][image6]</p>
-<p>Add 4G of swap and press \&lt;S&gt; to enable it.</p>
-<p>![][image7]</p>
-<h2 id="removing-old-version-of-opencv">Removing old version of OpenCV</h2>
-<p># First lets remove the current OpenCV version and reboot the JTN</p>
-<p>sudo sudo apt-get purge *libopencv*<br />
-sudo reboot now</p>
-<h2 id="compiling-opencv-from-source">Compiling OpenCV from source</h2>
-<p># screen then ssh back to the SBC<br />
-# If needed, create the \~/projects directory<br />
-cd\~<br />
-mkdir projects<br />
-cd projects</p>
-<p># For Jetson Nano <br />
-git clone <a href="https://github.com/mdegans/nano_build_opencv.git">https://github.com/mdegans/nano_build_opencv.git</a><br />
-cd nano_build_opencv</p>
-<p># For the Jetson Nano, lets modify the script to use 2 CPU cores vs. 1. <br />
-# Note: for the TX2 and Xaviers the script automatically uses more CPU cores.<br />
-# Need to modify the configuration for the CUDNN we are using<br />
-# First see what you have installed using jtop use option INFO press 7</p>
-<p>![][image8]<br />
-![][image9]<br />
-#Remove the 8.7 from the CUDA_ARCH_BIN version, it causes a compatibility issue<br />
-#Also, make sure the CUDNN_VERSION=’8.0’, it will fail otherwise</p>
-<p>nano build_opencv.sh</p>
-<p># modify this line to have JOBS=2<br />
-else<br />
-    JOBS=1  # you can set this to 4 if you have a swap file</p>
-<p>JOBS=2<br />
-# save the file / exit nano</p>
-<p># <a href="https://opencv.org/releases/">https://opencv.org/releases/</a><br />
-# look for the latest version</p>
-<p>![][image10]<br />
-# As of 24Nov23, <strong>4.8.0</strong> is the latest version</p>
-<p># You can use jtop to have Jetson Clocks enabled to improve the performance of the Jetson<br />
-# 6 CTRL  and then press s<br />
-# To make it enabled at boot too, press e</p>
-<p>![][image11]</p>
-<p># From a terminal<br />
-./build_opencv.sh <strong>4.8.0</strong></p>
-<p># Again, this will take a good while. You may consider doing this at night before you go to bed. It is really boring<br />
-# after a while (hours) looking that the SBC compile and build OpenCV from source<br />
-#  Please make sure the computer you are using to SSH, disable sleep, and if using a notebook computer <br />
-# have in connected to the charger <br />
-# Preferable you use screen before ssh to be able to reconnect in <br />
-# case your computer lose the SSH connection.<br />
-#  If you wish, you can see that the SBC cores of the CPU are<br />
-#  busy by opening another terminal or a new tab on the same terminal window then<br />
-#  ssh to the SBC and run the command top<br />
-#  I like better jtop (if needed, install htop or jtop).<br />
-#<br />
-# ex:<br />
-<strong>![][image12]</strong></p>
-<p># After a few hours you see that you need to enter a little information to finish the build. That is when we have<br />
-# problems if you get disconnected from your SSH</p>
-<p>#  You can leave the temporary builds in place<br />
-Do you wish to remove temporary build files in /tmp/build_opencv ? <br />
-(Doing so may make running tests on the build later impossible)<br />
-Y/N <strong>y</strong><br />
-<strong># Enter y</strong><br />
-# save some space on disc </p>
-<h1 id="checking-the-install">Checking the Install</h1>
-<p># When the installation is complete, let's check the version of OpenCV that was installed  </p>
-<p># First reboot SBC<br />
-sudo reboot now</p>
-<p># ssh back to the SBC</p>
-<p>#Using jtop to confirm the OpenCV GPU (CUDA)  compiled</p>
-<p>jtop<br />
-7 INFO</p>
-<p># look for the OpenCV version and that it was compiled with CUDA</p>
-<p>![][image13]<br />
-![][image14]</p>
-<h2 id="lets-make-sure-python3-finds-opencv-cv2"># Let’s make sure Python3 finds OpenCV (CV2)</h2>
-<p># Need to adapt this for the python and OpenCV versions that you are using</p>
-<pre><code>python3 \-c 'import cv2 as cv; print(cv.\_\_version\_\_)'
-</code></pre>
-<p>#Traceback (most recent call last):<br />
-  #File "\&lt;string&gt;", line 1, in \&lt;module&gt;<br />
-#ModuleNotFoundError: No module named 'cv2'</p>
-<p># If you don’t see the version of the OpenCV that you built listed, it might be because you forgot to delete the previous<br />
-# OpenCV version that was installed, go back to the section “Removing old version of OpenCV” and then<br />
-# build and  install OpenCV again.</p>
-<p># What version of python3 do you have?</p>
-<p>python3<br />
-#Python 3.8.10 (default, May 26 2023, 14:05:08) <br />
-#[GCC 9.4.0] on linux<br />
-#Type "help", "copyright", "credits" or "license" for more information.<br />
-&gt;&gt;&gt; exit()</p>
-<p>ex:  </p>
-<pre><code>cd /usr/local/lib/python3.6/site-packages/cv2/python-3.6  
-</code></pre>
-<p># or  </p>
-<pre><code>cd /usr/local/lib/python3.8/site-packages/cv2/python-3.8
-</code></pre>
-<p># remove the previous cv2.so  in case it is still there. </p>
-<pre><code>sudo rm \-rf cv2.so  
-\# mv cv2.cpython-36m-xxx\-linux-gnu.so cv2.so
-</code></pre>
-<pre><code>ls cv2.\*
-</code></pre>
-<pre><code>\# cv2.cpython-38-aarch64-linux-gnu.so
-</code></pre>
-<pre><code>ln \-s /usr/local/lib/python3.8/site-packages/cv2/python-3.8cv2.cpython-38-aarch64-linux-gnu.so cv2.so cv2.so
-</code></pre>
-<pre><code>sudo cp cv2.cpython-36m-aarch64-linux-gnu.so cv2.so
-</code></pre>
-<p># or  </p>
-<pre><code>sudo cp cv2.cpython-38-aarch64-linux-gnu.so cv2.so  
-</code></pre>
-<p># Alternatively you could just rename the file  </p>
-<pre><code>\# sudo mv cv2.cpython-36m-aarch64-linux-gnu.so cv2.so  
-</code></pre>
-<pre><code>\# sudo cp cv2.cpython-38-aarch64-linux-gnu.so cv2.so
-</code></pre>
-<p># Lets create a link at the home directory for cv2</p>
-<pre><code>cd \~  
-sudo rm \-rf cv2.so  
-ln \-s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so cv2.so  
-\# or   
-ln \-s /usr/local/lib/python3.8/site-packages/cv2/python-3.8/cv2.so cv2.so
-</code></pre>
-<p>Checking install for python3  </p>
-<pre><code>python3  
-import cv2  
-cv2.\_\_version\_\_  
-exit ()
-</code></pre>
-<p># Resulting on something similar to this </p>
-<p><strong>jetson@ucsdrobocar-xxx-yy</strong>:<strong>\~</strong>$ python3<br />
-Python 3.6.9 (default, Jun 29 2022, 11:45:57) <br />
-[GCC 8.4.0] on linux<br />
-Type "help", "copyright", "credits" or "license" for more information.<br />
-&gt;&gt;&gt; import cv2<br />
-&gt;&gt;&gt; cv2.__version__<br />
-'4.6.0'<br />
-&gt;&gt;&gt; exit()<br />
-<strong>jetson@ucsdrobocar-xxx-yy</strong>:<strong>\~</strong>$ </p>
-<p>Python 3.8.10 (default, May 26 2023, 14:05:08) <br />
-[GCC 9.4.0] on linux<br />
-Type "help", "copyright", "credits" or "license" for more information.<br />
-&gt;&gt;&gt; import cv2<br />
-&gt;&gt;&gt; cv2.__version__<br />
-'4.8.0'<br />
-&gt;&gt;&gt; exit ()</p>
-<p># Here is quicker way to test cv2 on Python 3</p>
-<pre><code>python3 \-c 'import cv2 as cv; print(cv.\_\_version\_\_)'
-</code></pre>
-<pre><code>4.6.0
-</code></pre>
-<p># or  </p>
-<pre><code>4.8.0
-</code></pre>
-<p><strong>end of Installing an Open Source Computer Vision (OpenCV) package  with CUDA Support</strong></p>
+<h1 id="jetson-nano-configuration">Jetson Nano Configuration</h1>
+<p>This document will take you through the process of setting up your Jetson Nano. This document is a re-written version of this document, which may have some useful information if you are ever stuck: https://docs.google.com/document/d/1TF1uGAFeDARNwbPkgg9xg4NvWPJvrsHW2I_IN9dWQH0/edit</p>
+<h3 id="flashing-image">Flashing Image</h3>
+<p>A Jetson Nano runs off of a externally mounted microSD card, which will first need an image flashed onto it. A custom UCSD Jetson Nano Developer Kit image with some pre-configured settings and files can be downloaded here: <a href="https://drive.google.com/file/d/1Ikdat_BaP3IqEYoYfjfMQJGgmAC-UGNK/view?usp=sharing">UCSD Image</a>. You will need to install a program to flash this download onto your microSD card, we recommend Etcher: <a href="https://www.balena.io/etcher/">Etcher Download</a>. </p>
+<h4 id="using-etcher-to-write-ucsd-image">Using Etcher to Write UCSD Image</h4>
+<p>1) Using an adapter, plug your mircoSD card into a computer with the zipped image file downloaded<br />
+2) Open Etcher, select the zipped file under "Flash from file" and the microSD card under "Select target", and click "Flash!" to write the image to the microSD card<br />
+3) After flashing is complete, eject the microSD card from your computer and plug it into the back of the Jetson Nano. NOTE: this is a push-in-to-lock and push-in-to-unlock the uSD card. Please do not pull the uSD card out of the slot before unlocking it, otherwise you may damage your JTN and or the uSD card  </p>
+<h2 id="mobaxterm-installation">MobaXterm Installation</h2>
+<p>A good tool for Windows machines when doing embedded programming is MobaXterm, which offers more robust SSH communication with single board computers. <a href="https://mobaxterm.mobatek.net/download-home-edition.html">Here</a> you can find the download link.</p>
+<ol>
+<li>Click on the green "MobaXterm Home Edition v24.2 (Installer Edition)" to download a zip file.  </li>
+<li>Extract the zip file and launch the installer from the file explorer (not the .dat file).  </li>
+<li>Follow the instructions in the installer.  </li>
+<li>When installation is complete, launch MobaXterm and select "Start new terminal" to be placed on the command line.  </li>
+</ol>
+<h3 id="powering-jetson-nano">Powering Jetson Nano</h3>
+<p>To power the Jetson Nano you can use the provided 5V 4A power supply. This plugs into the barrel jack port to the left of the USB ports. The Jetson is recieving power and on if there is a green LED near the microUSB port. However, you may need to give it a minute or two to boot and load software. The fan will NOT turn on until you follow the documentation below to install the proper software. If you wish to power the Jetson through a microUSB connection, remove the jumper on the J48 pins near the barrel jack port. Please keep track of the jumper by leaving in connected to only one of the J48 pins.  </p>
+<h3 id="jetson-nano-ssh-configuration">Jetson Nano SSH Configuration</h3>
+<p>Since we do not have any monitors or keyboard connected to our Jetson Nano, we will need to remotely login to the Jetson using Secure Shell (SSH) Protocol. Initially, we will need to remotely login to the Jetson Nano using a wire. While connected over the wire we will do some initial configuration and connect to the UCSDRoboCar wifi network. Once the network is configured, we will then be able to wirelessly SSH into the Jetson over the UCSDRoboCar network.  </p>
+<h4 id="wire-ssh-communication">Wire SSH Communication</h4>
+<p>1) Power your Jetson Nano using the details above. Plug a microUSB cable from your computer into the microUSB port on the Jetson Nano. Give the Jetson a minute or two to boot up. NOTE: Not all microUSB cables contain the proper wiring to transmit data. If you are sruggling to establish a connection with the Jetson Nano in the following steps, try switching to another microUSB cable.<br />
+2) Open a terminal on your computer and type in: <code>ssh jetson@192.168.55.1</code>. This command is calling ssh and asking to login to the user "jetson" on the device "192.168.55.1". This IP address is unique to the wired connection, and the network IP address will be something different.<br />
+3) You will be prompted to input a password for the user you are logging in as. The default username is <code>jetson</code>, which you specified in the ssh command in step 1. The default password is <code>jetsonucsd</code>, which you will type in after the ssh command when prompted. <br />
+4) If login is successful, you will be placed into the home directory of the Jetson Nano. If you want to return to your local device, you can enter <code>exit</code> and you will logoff the Jetson.   </p>
+<h4 id="wifi-configuration">Wifi Configuration</h4>
+<p>1) Follow the above steps to log into the Jetson over a USB cable. <br />
+2) Ensure the USB wifi adapter supplied with the kit is plugged into the Jetson Nano.<br />
+3) Once logged in and in the home directory, lets make sure the network service is running properly: <code>sudo systemctl start networking.service</code><br />
+4) List the available wifi networks: <code>sudo nmcli device wifi list</code>. If your desired wifi network is not being listed you can use <code>sudo nmcli device wifi rescan</code> to refresh the list. If needed, you can try to reboot the entire Jetson Nano with <code>sudo reboot now</code> and try scanning again. NOTE: Rebooting will take a couple minutes and will require you to re-ssh into the Jetson Nano.<br />
+5) To connect the Jetson Nano to a listed wifi network: <code>sudo nmcli device wifi connect &lt;ssid_name&gt; password &lt;password&gt;</code>. In the case of UCSDRobocar, the command would be <code>sudo nmcli device wifi connect UCSDRoboCar password UCSDrobocars2018</code>. After a few seconds the terminal should print out a success message similar to: <code>Device 'wlan0' successfully activated with 'bab49f3e-b40c-4201-84f9-972ac83ddcb7'</code> 
+6) To further ensure the Jetson Nano is connected to Wifi, try pinging google using <code>ping google.com</code>. A message should be printing every second with latency information.<br />
+7) The Jetson Nano will now have a unique IP address that identifies the machine on the wifi network. You can check what this IP address is by entering <code>ifconfig</code>, which will return the Jetson Nano's network interface configuration. Under the <code>wlan0</code> section, the Jetson Nano's network IP address should be displayed. In the case below, the network IP address is <code>192.168.113.165</code>. If an IP address is not showing up, ensure that the Wifi connection is properly configured and operating using the steps above.  </p>
+<h4 id="wifi-power-saving-settings">Wifi Power Saving Settings</h4>
+<p>If Wifi Power Saving is on, it can cause the Jetson Nano to lag and slow down. Here we show how to turn off power saving mode.</p>
+<p>1) To temporarily turn off power saving, you can use the command <code>sudo iw dev wlan0 set power_save off</code><br />
+2) If you wish to make the change persistent, you will need to edit a config file using a text editor. Ensure Nano is installed by updating pre-existing packages with <code>sudo apt-get update</code> and installing nano with <code>sudo apt-get install nano</code>. We can edit the file by entering <code>sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf</code> and changing <code>wifi.powersave = 3</code> to <code>wifi.powersave = 2</code>.   </p>
+<h4 id="testing-wifi-ssh-communication">Testing Wifi SSH Communication</h4>
+<p>We will quickly test that we can communicate and login to the Jetson Nano over the UCSDRoboCar wifi network. While testing the wifi, we can stay logged in on the wire and simply login in a different terminal on our local computer.</p>
+<p>1) Ensure your laptop is connected to the UCSDRoboCar wifi. <br />
+2) Open a new terminal on your local computer and try <code>ssh jetson@&lt;wlan0-IP-address&gt;</code>, where 'wlan0-IP-address' is the IP address you found in the previous section. The password will be the same as the wire SSH.  </p>
+<p><img alt="alt text" src="../image.png" /></p>
+<h4 id="configuring-hostname-and-password">Configuring Hostname and Password</h4>
+<p>To make the SSH process easier and more secure, we should set a unique static hostname for our Jetson Nano and change the password. This new static hostname can then replace the long IP address in the SSH command.  </p>
+<p>1) Check the current hostname by entering <code>hostnamectl</code>.<br />
+<img alt="alt text" src="../image-1.png" />
+2) Change your hostname to something unique using <code>sudo hostnamectl set-hostname &lt;new-hostname&gt;</code>. We recommend including your team name in your Jetson Nano's hostname. Confirm your changes by entering <code>hostnamectl</code> again. You must also change the hostname in /etc/hosts using a text editor: <code>sudo nano /etc/hosts</code>. Change "jetson" to the hostname you choose.  </p>
+<p><img alt="alt text" src="../image-2.png" /></p>
+<p>3) You can change the password by simply entering <code>passwd</code> and following the prompts.<br />
+4) Make sure to remember your newly selected hostname and password, you will need them to log into your Jetson Nano. <br />
+5) Now when logging into your Jetson Nano using SSH, you can replace the IP address with your static hostname. This is useful, as sometimes the network will change the IP address of the Jetson Nano, while the hostname will stay static. <code>ssh jetson@&lt;new-hostname&gt;</code>. Remember, we are just changing the devices identifier, we are still logging into the device as the "jetson" user with the password we set, which is why "jetson" remains unchanged in the SSH command. NOTE: If you are having trouble connecting, try adding a .lan or .local to the end of your hostname in the ssh command. If you are wired to the jetson, then you might end up connecting over the wire.   </p>
+<h3 id="fan-configuration">Fan Configuration</h3>
+<p>Our Jetson Nano's are outfitted with a heat sink and fan for cooling. The image should come pre-loaded with the fan drivers, but if the fan is not spinning here are the steps to download the drivers.</p>
+<p>1) Enter the projects directory from the home directory <code>cd ~/projects</code>. If a projects folder doesn't exist, make one in the home directory: <code>cd</code> to go to the home directory, then <code>mkdir projects</code> to create a directory named "projects", then enter the new directory <code>cd projects</code>. <br />
+2) In ~/projects, enter <code>git clone https://github.com/Pyrestone/jetson-fan-ctl.git</code>. This clones the github repository "jetson-fan-ctl" into your projects directory.<br />
+3) Make sure your packages are updated using <code>sudo apt-get update</code> and install python3-dev using <code>sudo apt install python3-dev</code>. 
+4) Enter "jetson-fan-ctl" using <code>cd jetson-fan-ctl</code> and enter <code>./install.sh</code> to install the fan firmware. <br />
+5) You can customize fan settings in <code>/etc/automagic-fan/config.json</code> using a text editor of your choice. The command to edit in nano is <code>sudo nano /etc/automagic-fan/config.json</code>. You can check the status of the fan by entering <code>sudo service automagic-fan status</code>.   </p>
 
 
 

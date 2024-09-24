@@ -1,0 +1,1651 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="../Donkeysim-on-an-ARM-Chip-Mac/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>DonkeySimulator - ECE/MAE 148</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#virtual-machine-with-donkeycardonkeysim-ai-simulator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ECE/MAE 148" class="md-header__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECE/MAE 148
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DonkeySimulator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/arobotdinosaur/ucsd-ecemae-148.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECE/MAE 148" class="md-nav__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECE/MAE 148
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/arobotdinosaur/ucsd-ecemae-148.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DonkeySimulator
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    DonkeySimulator
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vmware-player-installation" class="md-nav__link">
+    VMware Player Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="VMware Player Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmware-setup" class="md-nav__link">
+    VMware setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-boot-up-of-vm" class="md-nav__link">
+    Initial Boot up of VM
+  </a>
+  
+    <nav class="md-nav" aria-label="Initial Boot up of VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cutting-and-pasting" class="md-nav__link">
+    Cutting and Pasting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-game-controller" class="md-nav__link">
+    Connecting Game Controller
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting Game Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-controller-connection" class="md-nav__link">
+    Verify Controller connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-controller" class="md-nav__link">
+    Custom Controller
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#donkeycar-ai-framework" class="md-nav__link">
+    DonkeyCar AI Framework
+  </a>
+  
+    <nav class="md-nav" aria-label="DonkeyCar AI Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-simulator" class="md-nav__link">
+    Launching the Simulator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-names" class="md-nav__link">
+    Track Names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customizing-virtual-car" class="md-nav__link">
+    Customizing Virtual Car
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Virtual Car">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-config-file" class="md-nav__link">
+    Example Config File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-latency-from-remote-server" class="md-nav__link">
+    Get Latency from Remote Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collecting-data" class="md-nav__link">
+    Collecting Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Collecting Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#driving-using-mouse-and-keyboard" class="md-nav__link">
+    Driving using Mouse and Keyboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#driving-using-a-gamepad" class="md-nav__link">
+    Driving using a Gamepad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-data-not-to-be-used-in-training" class="md-nav__link">
+    Deleting Data not to be used in Training
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-and-testing" class="md-nav__link">
+    Training and Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-to-the-latest-donkey-sim-and-donkey-gym-if-needed" class="md-nav__link">
+    Upgrading to the latest Donkey-Sim and Donkey-Gym (if needed)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    Common Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slow-fps-locally" class="md-nav__link">
+    Slow FPS Locally
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ucsd-gpu-cluster-instructions" class="md-nav__link">
+    UCSD GPU Cluster Instructions
+  </a>
+  
+    <nav class="md-nav" aria-label="UCSD GPU Cluster Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transfering-data" class="md-nav__link">
+    Transfering Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-on-data" class="md-nav__link">
+    Training on Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferring-data-back-to-local-session" class="md-nav__link">
+    Transferring Data back to Local Session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-remote-server-for-the-simulator" class="md-nav__link">
+    Using a Remote Server for the Simulator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Donkeysim-on-an-ARM-Chip-Mac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DonkeySimulator Mac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../30-UCSD-Robocar-Jetson-Nano-Configuration/30-UCSD-Robocar-Jetson-Nano-Configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jetson Initial Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../60-OpenCV-CUDA-Accelerated/60doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenCV With CUDA Acceleration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-VESC-Setup-Instructions/15-VESC-Setup-Instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VESC Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-UCSD-Robocar-ECE-%26-MAE-148/10doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DonkeyCar Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-UCSD-Robocar-ECE-%26-MAE-148/11doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPS Laps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100-UCSD-Robocar-Framework/100-UCSD-Robocar-Framework/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UCSD Robocar Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROS2_Guide_Book.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS2 Guidebook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Winter 23
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Winter 23
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vmware-player-installation" class="md-nav__link">
+    VMware Player Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="VMware Player Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmware-setup" class="md-nav__link">
+    VMware setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-boot-up-of-vm" class="md-nav__link">
+    Initial Boot up of VM
+  </a>
+  
+    <nav class="md-nav" aria-label="Initial Boot up of VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cutting-and-pasting" class="md-nav__link">
+    Cutting and Pasting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-game-controller" class="md-nav__link">
+    Connecting Game Controller
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting Game Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-controller-connection" class="md-nav__link">
+    Verify Controller connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-controller" class="md-nav__link">
+    Custom Controller
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#donkeycar-ai-framework" class="md-nav__link">
+    DonkeyCar AI Framework
+  </a>
+  
+    <nav class="md-nav" aria-label="DonkeyCar AI Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-simulator" class="md-nav__link">
+    Launching the Simulator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-names" class="md-nav__link">
+    Track Names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customizing-virtual-car" class="md-nav__link">
+    Customizing Virtual Car
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Virtual Car">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-config-file" class="md-nav__link">
+    Example Config File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-latency-from-remote-server" class="md-nav__link">
+    Get Latency from Remote Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collecting-data" class="md-nav__link">
+    Collecting Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Collecting Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#driving-using-mouse-and-keyboard" class="md-nav__link">
+    Driving using Mouse and Keyboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#driving-using-a-gamepad" class="md-nav__link">
+    Driving using a Gamepad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-data-not-to-be-used-in-training" class="md-nav__link">
+    Deleting Data not to be used in Training
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-and-testing" class="md-nav__link">
+    Training and Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-to-the-latest-donkey-sim-and-donkey-gym-if-needed" class="md-nav__link">
+    Upgrading to the latest Donkey-Sim and Donkey-Gym (if needed)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    Common Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slow-fps-locally" class="md-nav__link">
+    Slow FPS Locally
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ucsd-gpu-cluster-instructions" class="md-nav__link">
+    UCSD GPU Cluster Instructions
+  </a>
+  
+    <nav class="md-nav" aria-label="UCSD GPU Cluster Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transfering-data" class="md-nav__link">
+    Transfering Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-on-data" class="md-nav__link">
+    Training on Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferring-data-back-to-local-session" class="md-nav__link">
+    Transferring Data back to Local Session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-remote-server-for-the-simulator" class="md-nav__link">
+    Using a Remote Server for the Simulator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="virtual-machine-with-donkeycardonkeysim-ai-simulator">Virtual Machine with DonkeyCar/DonkeySim AI Simulator</h1>
+<h2 id="vmware-player-installation">VMware Player Installation</h2>
+<p>Virtual machines (VMs) are essentially computers running on computers &mdash; you can simulate a different operating system than the one native to your computer.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Download the VMware Player installer depending on your OS; check <a href="https://docs.google.com/document/d/1OqC7QgtA3oHgbrH-4vJEtEJvEg3qTFuE0Jl154a9kqc/edit">this document</a> for information for additional information if necessary</li>
+<li><a href="https://drive.google.com/file/d/1h8nNZnlbZT5MN0D3sYRS0CRfspewogTQ/view?usp=drive_link"><strong>Windows</strong></a></li>
+<li>
+<p><a href="https://drive.google.com/file/d/1WNBgPevWRyrgzT6iecIRC6p06t_CHTSy/view?usp=sharing"><strong>Intel and Apple Silicon Macs, not verified yet</strong></a></p>
+</li>
+<li>
+<p>Download the Ubuntu VM image &mdash; make sure you have enough space on your disk   (~40 GB zipped, ~50 GB unzipped)</p>
+</li>
+<li>
+<p>https://drive.google.com/file/d/1aGVPzoEPYW0GxUnVGjzkiNsqqJFgZ7hb/view?usp=sharing</p>
+</li>
+<li>
+<p>Minimum 8 GB system RAM on host machine</p>
+</li>
+<li>If your system only has 8 GB of RAM, set the ammount of memory allocated to 5120 MB (5 GB)</li>
+<li>If your system has at least 16 GB of RAM, enter the VM settings for the image and increase the RAM alloted to 8 GB; the VM must not be running to do so</li>
+</ul>
+<p><img alt="alt text" src="../image-19.png" /></p>
+<h3 id="vmware-setup">VMware setup</h3>
+<p>When you install the VMware Player, you will be prompted on options for the install. As you go through the install wizard be sure that you:</p>
+<ul>
+<li>Accept the license agreement</li>
+<li>Install the WHP automatically</li>
+<li>Don't enable enhanced keyboard</li>
+<li>Set a custom file path for the Player (if you desire)</li>
+<li>Select whether or not you want to opt into the diagnostics agreement</li>
+<li>Select where you want you your shortcuts to be</li>
+<li>Then press <code>Install</code></li>
+</ul>
+<p>Open VMware Player and select <em>Open a Virtual Machine</em>
+You will be prompted to select an image to be added &mdash; select the image you downloaded with the <code>.vmx</code>
+ extension</p>
+<p>It should now appear in the list on the left of the VMware Player window &mdash; single-click the image and select <em>Edit Virtual Machine Settings</em></p>
+<p>Here you can edit the memory settings and any other settings required to run the VM</p>
+<p>If you experience an error with respect to <em>Intel-VT</em> or <em>AMD-V</em>, disable the virualization engine in the <em>Processors</em> tab </p>
+<p><img alt="alt text" src="../image-9.png" /></p>
+<p><img alt="alt text" src="../image-10.png" /></p>
+<h3 id="initial-boot-up-of-vm">Initial Boot up of VM</h3>
+<p>If necessary, enable virtualization in your BIOS/UEFI. When you are ready, start the virtual machine.</p>
+<ul>
+<li>Login Credentials</li>
+<li>User: ucsd</li>
+<li>Password: UcsdStudent </li>
+</ul>
+<h4 id="cutting-and-pasting">Cutting and Pasting</h4>
+<ul>
+<li>If cutting and pasting is not working from the host to the VM, open a terminal in the VM and run the following commands:</li>
+</ul>
+<pre><code>    sudo apt-get autoremove open-vm-tools
+    sudo apt-get install open-vm-tools-desktop
+    sudo reboot now
+</code></pre>
+<h3 id="connecting-game-controller">Connecting Game Controller</h3>
+<p>Connecting a game controller is useful in order to control the car used in the simulations you will be running and other projects (these can include Playstation or Xbox controllers, or the Logitech controller likely included in your kit).</p>
+<p>These should be connected using via a USB cable, Bluetooth, or a USB dongle.</p>
+<p>When connecting a controller, the VM should ask if the input device will be connected to the host system or the virtual machine &mdash; connect it to the VM by selecting the name of the VM.</p>
+<p><img alt="alt text" src="../image.png" /> </p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<h4 id="verify-controller-connection">Verify Controller connection</h4>
+<p>The controller will be identified as js0 (or js# if there are multiple joysticks connected to the system)</p>
+<p>Run the following command in a VM terminal:</p>
+<pre><code>ls /dev/input
+</code></pre>
+<p>If the controller is connected, it should appear as js0 in the terminal output.</p>
+<p><img alt="alt text" src="../image-11.png" /></p>
+<p>To test the joystick controls, run in a terminal:</p>
+<pre><code>sudo apt-get update
+sudo apt-get install -y jstest-gtk
+jstest /dev/input/js0
+</code></pre>
+<p><img alt="alt text" src="../image-12.png" /></p>
+<p>Then interact with the controller to see the values printed to the terminal change (analog inputs should change smoothly, while digital inputs like button presses change between on and off)</p>
+<h4 id="custom-controller">Custom Controller</h4>
+<p>If your controller is not behaving correctly, or you need to generate new controller mappings, you can generate custom controllers. </p>
+<p>See https://docs.donkeycar.com/parts/controllers/ for controller support; custom mapping is linked at the bottom of the page.</p>
+<p>To setup a new controller or modify input mappings, you can use the Joystick Wizard (described here: https://docs.donkeycar.com/utility/donkey/#joystick-wizard)</p>
+<p>The joystick wizard creates a custom controller named "my_joystick.py" in the <code>mycar</code> folder. To enable it, in the <code>myconfig.py</code> file, set <code>CONTROLLER_TYPE="custom"</code> </p>
+<p>To run the wizard, from a terminal in the PATH/TO/mycar directory, run </p>
+<pre><code>donkey createjs
+</code></pre>
+<p>To determine if the system can see the input device, jstest can be used. If it is not installed, run <code>sudo apt install joystick</code></p>
+<h2 id="donkeycar-ai-framework">DonkeyCar AI Framework</h2>
+<p>This software allows you to train an AI model to run simulated or even physical vehicles using computer vision (either virtually or in reality).</p>
+<h3 id="launching-the-simulator">Launching the Simulator</h3>
+<p>Using the file explorer in the VM, navigate to <code>~/projects/DonkeySimLinux/</code> and execute the file <code>donkey_sim.x86_64</code></p>
+<p><img alt="alt text" src="../image-13.png" /></p>
+<h3 id="track-names">Track Names</h3>
+<p>Depending on the track to be raced on, you need to change the track to train on; those include:</p>
+<ul>
+<li>donkey-circuit-launch-track-v0</li>
+<li>donkey-warren-track-v0</li>
+<li>donkey-mountain-track-v0</li>
+</ul>
+<h3 id="customizing-virtual-car">Customizing Virtual Car</h3>
+<p>From a terminal, run <code>atom myconfig.py</code> from the <code>~/projects/d4_sim/</code> directory.</p>
+<p>Within the <code>myconfig.py</code> file, change the:</p>
+<ul>
+<li>car_name</li>
+<li>racer_name</li>
+<li>your country location (under "country")</li>
+<li>a fun fact (under "bio")</li>
+<li>car color (in the dictionary entry for "body_rgb")</li>
+</ul>
+<p><img alt="alt text" src="../image-14.png" /></p>
+<h4 id="example-config-file">Example Config File</h4>
+<pre><code># 04Jan22
+# UCSD mods to make easier for the UCSD students to use the Donkey-Sim
+# the following uncommented lines where copied here from the body of myconfig.py below
+DONKEY_GYM = True
+# DONKEY_SIM_PATH = &quot;remote&quot;
+DONKEY_SIM_PATH = &quot;/home/ucsd/projects/DonkeySimLinux/donkey_sim.x86_64&quot;
+# DONKEY_GYM_ENV_NAME = &quot;donkey-warren-track-v0&quot;
+DONKEY_GYM_ENV_NAME = “donkey-mountain-track-v0”
+# UCSD yellow color in RGB = 255, 205, 0
+# UCSD blue color in RGB = 0, 106, 150
+GYM_CONF = { &quot;body_style&quot; : &quot;car01&quot;, &quot;body_rgb&quot; : (255, 205, 0), &quot;car_name&quot; : &quot;UCSD-148-YourName&quot;, &quot;font_size&quot; : 30} # body style(donkey|bare|car01) body rgb 0-255
+GYM_CONF[&quot;racer_name&quot;] = &quot;UCSD-148-YourName&quot;
+GYM_CONF[&quot;country&quot;] = &quot;USA&quot;
+GYM_CONF[&quot;bio&quot;] = &quot;Something_about_you, ex: Made in Brazil&quot;
+#
+# SIM_HOST = &quot;donkey-sim.roboticist.dev&quot;
+ SIM_ARTIFICIAL_LATENCY = 0
+SIM_HOST = &quot;127.0.0.1&quot;              # when racing on virtual-race-league use host &quot;roboticists.dev&quot;
+# SIM_ARTIFICIAL_LATENCY = 30          # Use the value when you ping roboticists.dev. When racing on virtual-race league, use 0 (zero)
+
+# When racing, to give the ai a boost, configure these values.
+AI_LAUNCH_DURATION = 3            # the ai will output throttle for this many seconds
+AI_LAUNCH_THROTTLE = 1            # the ai will output this throttle value
+AI_LAUNCH_KEEP_ENABLED = True      # when False ( default) you will need to hit the AI_LAUNCH_ENABLE_BUTTON for each use. This is safest. When this True, is active on each trip into &quot;local&quot; ai mode.
+#
+# When using a joystick modify these specially USE_JOYSTICK_AS_DEFAULT = True
+# JOYSTICK
+# USE_JOYSTICK_AS_DEFAULT = True     #when starting the manage.py, when True, will not require a --js option to use the joystick
+JOYSTICK_MAX_THROTTLE = 1.0         #this scalar is multiplied with the -1 to 1 throttle value to limit the maximum throttle. This can help if you drop the controller or just don't need the full speed available.
+JOYSTICK_STEERING_SCALE = 0.8       #some people want a steering that is less sensitve. This scalar is multiplied with the steering -1 to 1. It can be negative to reverse dir.
+AUTO_RECORD_ON_THROTTLE = True      #if true, we will record whenever throttle is not zero. if false, you must manually toggle recording with some other trigger. Usually circle button on joystick.
+JOYSTICK_DEADZONE = 0.2             # when non zero, this is the smallest throttle before recording triggered.
+# #Scale the output of the throttle of the ai pilot for all model types.
+AI_THROTTLE_MULT = 1.0              # this multiplier will scale every throttle value for all output from NN models
+#
+</code></pre>
+<h3 id="get-latency-from-remote-server">Get Latency from Remote Server</h3>
+<p>To get the latency between your computer and the server, ping it using the command </p>
+<pre><code>  ping donkey-sim.roboticist.dev
+</code></pre>
+<p><img alt="alt text" src="../image-2.png" /></p>
+<p>Since this computer is on the same network as the server, the delay is much lower than 0.5 ms. When pinging the server within the US, you should expect about 20-60 ms.</p>
+<p>Replace the value of <code>SIM_ARTIFICIAL_LATENCY</code> with the average ping delay (e.g. <code>SIM_ARTIFICIAL_LATENCY=30</code>)</p>
+<h3 id="collecting-data">Collecting Data</h3>
+<p>The AI model works via behavioral cloning. In order to collect data for it, we need to drive the car in the virtual environment.</p>
+<p>From a terminal, enter the donkey virtual environment with the command:</p>
+<pre><code>conda activate donkey
+</code></pre>
+<p>(donkey) should now appear at the beginning of the terminal prompt.</p>
+<p><img alt="alt text" src="../image-3.png" /></p>
+<p>Enter the donkeycar directory</p>
+<pre><code>cd ~/projects/d4_sim
+</code></pre>
+<p>To drive the car in order to collect data, run</p>
+<pre><code>python manage.py drive
+</code></pre>
+<p><img alt="alt text" src="../image-4.png" /></p>
+<p>Open a web browser and go to <code>http://localhost:8887</code></p>
+<h4 id="driving-using-mouse-and-keyboard">Driving using Mouse and Keyboard</h4>
+<p>From the web address above, you can control the car using a virtual joystick.</p>
+<p><img alt="alt text" src="../image-15.png" /></p>
+<p><strong>20 laps is recommended for an initial dataset.</strong></p>
+<p><strong>To stop the DonkeyCar framework, use CTRL + C in the terminal</strong></p>
+<h4 id="driving-using-a-gamepad">Driving using a Gamepad</h4>
+<p>To use a physical joystick without using the web browser, edit this section in <code>myconfig.py</code>.</p>
+<pre><code># #JOYSTICK
+# USE_JOYSTICK_AS_DEFAULT = False      #when starting the manage.py, when True, will not require a --js option to use the joystick
+# JOYSTICK_MAX_THROTTLE = 1         #this scalar is multiplied with the -1 to 1 throttle value to limit the maximum throttle. This can help if you drop the controller or just don't need the full speed available.
+# JOYSTICK_STEERING_SCALE = 1       #some people want a steering that is less sensitve. This scalar is multiplied with the steering -1 to 1. It can be negative to reverse dir.
+#AUTO_RECORD_ON_THROTTLE = True      #if true, we will record whenever throttle is not zero. if false, you must manually toggle recording with some other trigger. Usually circle button on joystick.
+# CONTROLLER_TYPE = 'ps4'            #(ps3|ps4|xbox|pigpio_rc|nimbus|wiiu|F710|rc3|MM1|custom) custom will run the my_joystick.py controller written by the `donkey createjs` command
+# USE_NETWORKED_JS = False            #should we listen for remote joystick control over the network?
+# NETWORK_JS_SERVER_IP = None         #when listening for network joystick control, which ip is serving this information
+# JOYSTICK_DEADZONE = 0.01            # when non zero, this is the smallest throttle before recording triggered.
+</code></pre>
+<p>Set <code>USE_JOYSTICK_AS_DEFAULT</code> to <code>True</code> and set the controller type <code>CONTROLLER_TYPE</code> to one from the adjacent list (ps3|ps4|...).</p>
+<p>You may have to uncomment lines in order for them to take effect.</p>
+<p>When using a controller, the face buttons can have useful functions:</p>
+<ul>
+<li>Deleting 100 data points (@20Hz == 5s)</li>
+<li>Emergency stop</li>
+<li>Change operations mode (User control, AI model)</li>
+</ul>
+<p>Otherwise you may have to determine the function of each button from the terminal outputs when they are pressed.</p>
+<p><strong>20 laps is recommended for an initial dataset.</strong></p>
+<p><strong>To stop the DonkeyCar framework, use CTRL + C in the terminal</strong></p>
+<h4 id="deleting-data-not-to-be-used-in-training">Deleting Data not to be used in Training</h4>
+<p>Data for training is stored in the <code>~/projects/d4_sim/data</code> directory.</p>
+<p><img alt="alt text" src="../image-5.png" /></p>
+<p>We can delete data by removing the <code>data</code> folder and creating a new one.</p>
+<p>Run this command in the <code>d4_sim</code> directory. <strong>Be careful &mdash; there is no undoing this if the command runs successfully.</strong></p>
+<pre><code>rm -rf data
+</code></pre>
+<p>Then create a new <code>data</code> directory with:</p>
+<pre><code>mkdir data
+</code></pre>
+<h3 id="training-and-testing">Training and Testing</h3>
+<p>Using the data in the <code>data</code> folder, we can train a model and give it a name (e.g. 8july24_sim_160x120_20_1.h5)</p>
+<p><strong>20 laps is recommended for an initial dataset.</strong></p>
+<p>To do so, run this command from the <code>d4_sim</code> folder.</p>
+<pre><code>python train.py --model=models/YOUR_MODEL_NAME.h5 --type=linear --tubs=data/
+</code></pre>
+<p>To test the model, run:</p>
+<pre><code>python manage.py drive --model=models/YOUR_MODEL_NAME.h5 --type=linear
+</code></pre>
+<p>Enabling the model is done by pressing the change operation mode button twice. The terminal should state that the car is in AI mode.</p>
+<p>If the car does not perform well around corners, it could be that throtte and steering data is not being recorded when navigating them.</p>
+<p>By default, the program records steering only when a throttle input is detected &mdash; when slowing down to corner, this means steering data may not be recorded. To fix this, you can edit in <code>myconfig.py</code>:</p>
+<pre><code>AUTO_RECORD_ON_THROTTLE = True
+</code></pre>
+<p>Set this to false. Now, in order to record data, you must press the record button to begin input recording. The terminal will print out when recording is enabled and the amount of samples.</p>
+<p>If you increase the number of samples recorded after training a model, you can train a new model that uses all of the data in the <code>data</code> folder (old and new &mdash; be sure to give it a different name).</p>
+<p>To train data from a specific tub and transfer to a previous model:</p>
+<pre><code>python train.py --tub ~/projects/d4_sim/data/TUB_NAME  --transfer=models/PREVIOUS_MODEL.h5  --model=models/NEW_MODEL.h5
+</code></pre>
+<p>Tubs are subsections of the data folder that you may create to separate training data. To use all the data in the <code>data</code> folder, do not include a tub name after <code>~/projects/d4_sim/data/</code> in the tub argument.</p>
+<h3 id="upgrading-to-the-latest-donkey-sim-and-donkey-gym-if-needed">Upgrading to the latest Donkey-Sim and Donkey-Gym (if needed)</h3>
+<h3 id="common-issues">Common Issues</h3>
+<h4 id="slow-fps-locally">Slow FPS Locally</h4>
+<h3 id="ucsd-gpu-cluster-instructions">UCSD GPU Cluster Instructions</h3>
+<p><strong>Do not use the cluster until you are told the GPU cluster is ready to use.</strong></p>
+<p><strong>Do not train on the cluster until you have demonstrated model training on your local machine.</strong></p>
+<p><a href="https://docs.google.com/document/u/1/d/e/2PACX-1vTe9sehl7izNJJNypsDNABD4wg-F-AClAi0cYV3pIIRGpCknD7SEWQPEGqy_5DBRmFQtkulLkHkLxEm/pub">Instructions from UCSD IT</a></p>
+<p>To train our models faster, we can use more powerful GPUs with higher throughputs.</p>
+<p>On the virtual machine you will be using 2 terminals:</p>
+<ol>
+<li>
+<p>Local Session: Used to interact with the virtual machine</p>
+</li>
+<li>
+<p>Remote Session: From this terminal you will ssh (secure shell) onto the GPU cluster using the proper account. </p>
+</li>
+</ol>
+<p>In the remote session terminal, ssh into the GPU cluster:</p>
+<pre><code>ssh &lt;username&gt;@dsmlp-login.ucsd.edu
+</code></pre>
+<p>You will be prompted for a password (case sensitive). No characters will be shown for security purposes.</p>
+<p><img alt="alt text" src="../image-6.png" /></p>
+<p>Your shell prompt is replaced with your user login for the GPU cluster.</p>
+<p>You will have access to two containers &mdash; one with only a CPU, and another with the GPU. The GPU clusters are limited, so only use them for training.</p>
+<p>Available hardware options:</p>
+<p>Container for transfering data: (2 CPU 4 GB RAM)</p>
+<pre><code>launch-scipy-ml.sh -i ucsdets/donkeycar-notebook:latest
+</code></pre>
+<p>Container for training models: (8 CPU, 1 GPU, 16 GB RAM)</p>
+<pre><code>launch-scipy-ml.sh -g 1 -i ucsdets/donkeycar-notebook:latest
+</code></pre>
+<p>When creating the GPU container, the terminal should look like:</p>
+<p><img alt="alt text" src="../image-7.png" /></p>
+<p>You should only have one container open at a time.</p>
+<p>When launching a container it creates a "pod"; in order to exit the pod, run in the terminal:</p>
+<pre><code>exit
+</code></pre>
+<p>To confirm that you have exited the container and the instance has successfully been deleted do</p>
+<pre><code>kubectl get pods
+</code></pre>
+<p>This should return "no resources found".</p>
+<p><img alt="alt text" src="../image-8.png" /></p>
+<p>If there is a pod, delete it with:</p>
+<pre><code>kubectl delete pod &lt;POD_NAME&gt;
+</code></pre>
+<h4 id="transfering-data">Transfering Data</h4>
+<p>In the <strong>Remote Session</strong>, prepare DonkeyCar.</p>
+<p>The donkey virtual environment should automatically be invoked for you; otherwise try </p>
+<pre><code>conda activate donkey
+</code></pre>
+<p>If donkey is not found, try </p>
+<pre><code>conda init
+</code></pre>
+<p>Relogin to the remote session and try the activate command again.</p>
+<p>Once you are in the virtual environment,</p>
+<pre><code>mkdir ~/projects
+cd ~/projects
+donkey createcar --path d4_sim
+cd d4_sim
+</code></pre>
+<p>In the <strong>Local Session</strong></p>
+<p>To copy over your <code>myconfig.py</code> file:</p>
+<pre><code>rsync -avr -e ssh myconfig.py &lt;user_name&gt;@dsmlp-login.ucsd.edu:projects/d4_sim/
+</code></pre>
+<p>To transfer data collected in the local session to the remote session:</p>
+<pre><code>rsync -avr -e ssh data/&lt;tub_name&gt; &lt;user_name&gt;@dsmlp-login.ucsd.edu:projects/d4_sim/data/
+</code></pre>
+<p>This sends specific tubs (e.g. tub_#_21-07-13 in this example) to the remote session.</p>
+<p><img alt="alt text" src="../image-16.png" /></p>
+<p>The tubs should now appear in the remote session.</p>
+<p><img alt="alt text" src="../image-17.png" /></p>
+<p>The <code>rsync</code> command syncs directories remotely from one system to another. That means it will only copy the differences between the two directories to save time and reduce load. Since the data does not exist initially on the remote system, the first use of <code>rsync</code> will copy the whole folder over to the remote system.</p>
+<p>Once the data is transferred, close the CPU pod (and verify that it is closed) and open a GPU pod to train on the data.</p>
+<h4 id="training-on-data">Training on Data</h4>
+<p>Once the data is transferred to the remote session, training a model on it is the same as on a local session.</p>
+<p>In the <strong>Remote Session</strong></p>
+<p>If you didn't use any tubs and just have your data in the data folder, this command should do the trick:</p>
+<pre><code>python train.py --model=models/yourmodelname.h5 --type=linear --tubs=data/
+</code></pre>
+<p>You can train multiple tubs at the same time with (the paths to the tubs must be separated by commas, <strong>no spaces</strong>). </p>
+<pre><code>python train.py --tub=data/tub1,data/tub2 --model=models/MODEL_NAME.h5 --type=linear
+</code></pre>
+<p>To alter a previous model with new data:</p>
+<pre><code>python train.py --tub=data/tub1 --model=models/NEW_MODEL_NAME.h5 --transfer=models/OLD_MODEL_NAME.h5
+</code></pre>
+<p><strong>Note</strong> : If "imgaug" is not availible and Donkeysim generates an error, run </p>
+<pre><code>pip install imgaug
+</code></pre>
+<p>Once your model training has completed, close the GPU pod (verifying that it has closed) and open a CPU pod to transfer the data back to your local machine.</p>
+<h4 id="transferring-data-back-to-local-session">Transferring Data back to Local Session</h4>
+<p>This is done similarly using the <code>rsync</code> command, but the source and destination are flipped since the data is going from the remote session to the local session.</p>
+<p>In the <strong>Local Session</strong></p>
+<pre><code>rsync -avr -e ssh &lt;user_name&gt;@dsmlp-login.ucsd.edu:projects/d4_sim/models/&lt;model_file&gt; models/
+</code></pre>
+<p>Now you can test the car in the local session as before.</p>
+<h3 id="using-a-remote-server-for-the-simulator">Using a Remote Server for the Simulator</h3>
+<p>The simulator for DonkeyCar (that you found in  <code>~/projects/DonkeySimLinux/</code> and executed with the file <code>donkey_sim.x86_64</code>) can be run from a remote server instead of locally on your machine.</p>
+<p>The server's name is <code>donkey-sim.roboticist.dev</code></p>
+<p>You can connect to the remote server by changing the simulator host in the <code>myconfig.py</code> file.</p>
+<p><img alt="alt text" src="../image-18.png" /></p>
+<p>Set the <code>SIM_HOST</code> from the local IP to <code>donkey-sim.roboticist.dev</code> and set the <code>SIM_ARTIFICIAL_LATENCY</code> to <code>0</code>.</p>
+<p>Don't forget to change the artificial latency, otherwise your car will experience both <em>real and virtual</em> latency and perform poorly.</p>
+<p>Since the simulator is running on a remote server, how can I view the car on the track?</p>
+<p>You can see the car on the livestream on</p>
+<p>https://www.twitch.tv/roboticists or https://www.twitch.tv/roboticists2</p>
+<p>The car should appear momentarily after you run the same command to start the car if you have configured the host properly.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>
