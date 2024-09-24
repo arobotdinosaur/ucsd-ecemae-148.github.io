@@ -1,0 +1,2623 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>100doc - ECE/MAE 148</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ECE/MAE 148" class="md-header__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECE/MAE 148
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              100doc
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/arobotdinosaur/ucsd-ecemae-148.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECE/MAE 148" class="md-nav__button md-logo" aria-label="ECE/MAE 148" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECE/MAE 148
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/arobotdinosaur/ucsd-ecemae-148.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../50-Virtual-Machine-with-DonkeyCar-AI-Simulator/50-Virtual-Machine-and-DonkeyCar-AI-Simulator.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DonkeySimulator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../50-Virtual-Machine-with-DonkeyCar-AI-Simulator/Donkeysim-on-an-ARM-Chip-Mac.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DonkeySimulator Mac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../30-UCSD-Robocar-Jetson-Nano-Configuration/30-UCSD-Robocar-Jetson-Nano-Configuration.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jetson Initial Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../60-OpenCV-CUDA-Accelerated/60doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenCV With CUDA Acceleration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-VESC-Setup-Instructions/15-VESC-Setup-Instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VESC Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-UCSD-Robocar-ECE-%26-MAE-148/10doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DonkeyCar Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-UCSD-Robocar-ECE-%26-MAE-148/11doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPS Laps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../100-UCSD-Robocar-Framework/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UCSD Robocar Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROS2_Guide_Book.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS2 Guidebook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Winter 23
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Winter 23
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../win23team15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p>Version V1.3</p>
+<p>Last updated: 08/26/2022</p>
+<p>Prepared by</p>
+<p>Dominic Nightingale</p>
+<p>Department of Mechanical and Aerospace Engineering</p>
+<p>University of California, San Diego</p>
+<p>9500 Gilman Dr, La Jolla, CA 92093</p>
+<p><img alt="" src="../100images/media/image33.png" />{width="3.1313626421697287in"
+height="0.7398272090988627in"}</p>
+<p><img alt="" src="../100images/media/image19.png" />{width="1.4010422134733158in"
+height="1.4010422134733158in"}</p>
+<p><img alt="" src="../100images/media/image15.png" />{width="3.1548917322834646in"
+height="0.6718755468066492in"}</p>
+<h1 id="_1"></h1>
+<h1 id="table-of-contentsmark">[Table of Contents]{.mark}</h1>
+<p><strong><a href="#table-of-contents">Table of Contents</a> 2</strong></p>
+<p><strong><a href="#introduction">1. Introduction</a> 5</strong></p>
+<blockquote>
+<p><a href="#about">1.1 About</a> 5</p>
+<p><a href="#whats-being-used">1.2 What\'s Being Used</a> 5</p>
+<p><a href="#embedded-computers">1.2.1 Embedded Computers</a> 5</p>
+<p><a href="#ubuntu">1.2.2 Ubuntu</a> 5</p>
+<p><a href="#gitlab">1.2.3 Gitlab</a> 6</p>
+<p><a href="#docker">1.2.4 Docker</a> 6</p>
+<p><a href="#ros">1.2.5 ROS</a> 6</p>
+<p><a href="#recommendations">1.3 Recommendations</a> 6</p>
+<p><a href="#vs-code-ide">1.3.1 VS Code IDE</a> 6</p>
+<p><a href="#virtual-machines">1.3.2 Virtual Machines</a> 6</p>
+</blockquote>
+<p><strong><a href="#ucsd-robocar-framework-breakdown">2. UCSD Robocar Framework
+Breakdown</a> 7</strong></p>
+<blockquote>
+<p><a href="#packages">2.1 Packages</a> 8</p>
+<p><a href="#nav">2.1.1 Nav</a> 8</p>
+<p><a href="#lane-detection">2.1.2 Lane Detection</a> 8</p>
+<p><a href="#sensor">2.1.3 Sensor</a> 8</p>
+<p><a href="#actuator">2.1.4 Actuator</a> 8</p>
+<p><a href="#control-coming-soon">2.1.5 Control (coming soon)</a> 9</p>
+<p><a href="#path-coming-soon">2.1.6 Path (coming soon)</a> 9</p>
+<p><a href="#basics">2.1.7 Basics</a> 9</p>
+<p><a href="#updating-all-packages">2.2 Updating All Packages</a> 9</p>
+<p><a href="#launch-files">2.2 Launch Files</a> 10</p>
+</blockquote>
+<p><strong><a href="#developer-tools">3. Developer Tools</a> 14</strong></p>
+<blockquote>
+<p><a href="#ros-guidebooks">3.1 Guidebooks</a> 14</p>
+<p><a href="#gitlab-1">3.2 Gitlab</a> 14</p>
+<p><a href="#adding-new-submodules">3.2.1 Adding new submodules:</a> 14</p>
+<p><a href="#updating-local-submodules-with-remote-submodules">3.2.2 Updating local submodules with remote
+submodules:</a> 14</p>
+<p><a href="#updating-remote-submodules-with-local-submodules">3.2.3 Updating remote submodules with local
+submodules:</a> 14</p>
+<p><a href="#removing-submodules">3.2.4 Removing submodules:</a> 14</p>
+<p><a href="#adding-an-existing-package-to-git">3.2.5 Adding an existing package to
+git</a> 15</p>
+<p><a href="#docker-1">3.3 Docker</a> 16</p>
+<p><a href="#pullingrunning">3.3.1 Pulling/running</a> 16</p>
+<p><a href="#updatingcreatingsharing">3.3.2 Updating/creating/sharing</a> 16</p>
+<p><a href="#listing">3.3.3 Listing</a> 16</p>
+<p><a href="#deleting">3.3.4 Deleting</a> 16</p>
+</blockquote>
+<p><strong><a href="#accessing-docker-images">4. Accessing Docker Images</a> 17</strong></p>
+<blockquote>
+<p><a href="#ucsd-robocar-image">4.1 UCSD Robocar Image</a> 17</p>
+<p><a href="#docker-setup">4.2 Docker Setup</a> 18</p>
+<p><a href="#enable-x_11-port-forwarding">4.2.1 Enable X_11 Port Forwarding</a> 18</p>
+<p><a href="#update-docker-daemon">4.2.2 Update Docker Daemon</a> 18</p>
+<p><a href="#running-a-container">4.2.3 Running A Container</a> 19</p>
+<p><a href="#workspaces-in-docker-container">4.3 Workspaces in Docker Container</a>
+21</p>
+<p><a href="#ros1_ws">4.3.1 ros1_ws</a> 21</p>
+<p><a href="#ros2_ws">4.3.2 ros2_ws</a> 21</p>
+<p><a href="#sensor2_ws">4.3.3 sensor2_ws</a> 21</p>
+<p><a href="#ros-bridge">4.4 ROS BRIDGE</a> 21</p>
+<p><a href="#utility-functions-in-.bashrc">4.5 Utility functions in \~/.bashrc</a>
+21</p>
+</blockquote>
+<p><strong><a href="#_nhx6a8oc85lj">5. Source ROS Version</a> 22</strong></p>
+<blockquote>
+<p><a href="#source-ros1">5.1 Source ROS1</a> 22</p>
+<p><a href="#source-ros2">5.2 Source ROS2</a> 22</p>
+<p><a href="#source-ros-bridge">5.3 Source ROS Bridge</a> 22</p>
+</blockquote>
+<p><strong><a href="#_ga29zeehbnca">6. Hardware Configuration</a> 23</strong></p>
+<blockquote>
+<p><a href="#ros1">6.1 ROS1</a> 23</p>
+<p><a href="#ros2">6.2 ROS2</a> 23</p>
+</blockquote>
+<p><strong><a href="#node-configuration">7. Node Configuration</a> 24</strong></p>
+<blockquote>
+<p><a href="#ros1-1">7.1 ROS1</a> 24</p>
+<p><a href="#ros2-1">7.2 ROS2</a> 24</p>
+</blockquote>
+<p><strong><a href="#sensor-visualization">8. Sensor Visualization</a> 25</strong></p>
+<blockquote>
+<p><a href="#ros1-2">8.1 ROS1</a> 25</p>
+<p><a href="#ros2-2">8.2 ROS2</a> 25</p>
+</blockquote>
+<p><strong><a href="#manual-control-of-robot-with-joystick">9. Manual Control of Robot with
+Joystick</a> 26</strong></p>
+<blockquote>
+<p><a href="#ros1-3">9.1 ROS1</a> 26</p>
+<p><a href="#ros2-3">9.2 ROS2</a> 26</p>
+</blockquote>
+<p><strong><a href="#integrating-new-packagescode-into-the-framework">10. Integrating New Packages/Code into the
+Framework</a> 27</strong></p>
+<blockquote>
+<p><a href="#integrating-a-ros-package">10.1 Integrating a ROS Package</a> 27</p>
+<p><a href="#integrating-supporting-files">10.2 Integrating supporting files</a> 28</p>
+<p><a href="#integrating-new-algorithms-into-the-basics-package">10.3 Integrating new algorithms into the basics
+package</a> 29</p>
+</blockquote>
+<p><strong><a href="#navigation">11. Navigation</a> 30</strong></p>
+<blockquote>
+<p><a href="#lane-detection-1">11.1 Lane Detection</a> 30</p>
+<p><a href="#calibration-process">11.1.1 Calibration Process</a> 30</p>
+<p><a href="#ros1-4">11.1.1.1 ROS1</a> 30</p>
+<p><a href="#ros2-4">11.1.1.2 ROS2</a> 30</p>
+<p><a href="#color-calibration">11.1.2 Color Calibration</a> 31</p>
+<p><a href="#linelane-calibration">11.1.3 Line/Lane Calibration</a> 35</p>
+<p><a href="#actuator-calibration">11.1.4 Actuator Calibration</a> 39</p>
+<p><a href="#clarification-on-throttle-modes">11.1.4.1 Clarification on throttle
+modes</a> 40</p>
+<p><a href="#camera-navigation">11.1.5 Camera Navigation</a> 41</p>
+<p><a href="#ros1-5">11.1.5.1 ROS1</a> 41</p>
+<p><a href="#ros2-5">11.1.5.2 ROS2</a> 41</p>
+<p><strong><a href="#tubewall-following-coming-soon">11.2 Tube/Wall Following (coming
+soon)</a> 42</strong></p>
+<p><strong><a href="#slam">11.3 SLAM</a> 43</strong></p>
+<p><a href="#requirements">11.3.1 Requirements</a> 43</p>
+<p><a href="#starting-slam">11.3.2 Starting SLAM</a> 43</p>
+<p><a href="#saving-the-map">11.3.2.1 Saving the map</a> 44</p>
+<p><a href="#map_server">11.3.2.1.1 map_server</a> 44</p>
+<p><a href="#hector_mapping">11.3.2.1.2 hector_mapping</a> 44</p>
+<p><a href="#localization-in-a-pre-made-map">11.3.3 Localization in a pre-made
+map</a> 44</p>
+</blockquote>
+<p><strong><a href="#data-collection">12. Data Collection</a> 45</strong></p>
+<p><strong><a href="#f1-tenth-simulator">13. F1 Tenth Simulator</a> 46</strong></p>
+<blockquote>
+<p><a href="#creating-a-map-with-paint-coming-soon">13.1 Creating a Map with Paint (coming
+soon)</a> 46</p>
+<p><a href="#updating-vehicle-parameters-coming-soon">13.2 Updating Vehicle Parameters (coming
+soon)</a> 46</p>
+<p><a href="#adding-multiple-vehicles-coming-soon">13.3 Adding Multiple Vehicles (coming
+soon)</a> 46</p>
+</blockquote>
+<p><strong><a href="#troubleshooting">14. Troubleshooting</a> 47</strong></p>
+<p><strong><a href="#_rs1dmk9ftl93">15. Frequently Used Linux commands</a> 48</strong></p>
+<blockquote>
+<p><a href="#wifi">15.1 WIFI</a> 48</p>
+<p><a href="#hardware-tests">15.2 Hardware Tests</a> 48</p>
+<p><a href="#file-management">15.3 File management</a> 48</p>
+<p><a href="#system-control">15.4 System Control</a> 48</p>
+</blockquote>
+<h1 id="_2"></h1>
+<h1 id="1-introduction">1. Introduction</h1>
+<p>The UCSD Robocar framework is primarily maintained and developed by
+Dominic Nightingale right here at UC San Diego.</p>
+<p>UCSD Robocar uses ROS and ROS2 for controlling our scaled robot cars
+which can vary from traditional programming or machine learning to
+achieve an objective. The framework works with a vast selection of
+sensors and actuation methods in our inventory making it a robust
+framework to use across various platforms. Has been tested on 1/16,
+1/10, 1/5 scaled robot cars and soon our go-karts.</p>
+<h2 id="11-about">1.1 About</h2>
+<p>This framework was originally developed as one of Dominic's senior
+capstone projects as an undergraduate and has been under constant
+development throughout his graduate program. The framework provides the
+ability to easily control a car-like robot as well as performing
+autonomous tasks. It is currently being used to support his thesis in
+learning-model predictive control (LMPC).</p>
+<p>The framework is also being used to teach undergraduates the
+fundamentals of using gitlab, docker, python, openCV and ROS. The
+students are given the task to use the framework with their robots to
+perform autonomous laps on a track by first going through a calibration
+process that\'s embedded into the framework. The students then have to
+come up with their own final projects for the class that can be
+supported by the framework, which can vary from car following, SLAM
+applications, path planning, city driving behaviors,
+Human-machine-interfacing and so much more.</p>
+<h2 id="12-whats-being-used">1.2 What\'s Being Used</h2>
+<h3 id="121-embedded-computers">1.2.1 Embedded Computers</h3>
+<p>There are 3 main computers that have been used to develop and test this
+framework which belong to the NVIDIA Jetson family.</p>
+<ul>
+<li>
+<p>Jetson Nano</p>
+</li>
+<li>
+<p>Jetson Xavier Nx</p>
+</li>
+<li>
+<p>Jetson AGX Xavier</p>
+</li>
+</ul>
+<h3 id="122-ubuntu">1.2.2 Ubuntu</h3>
+<p>The host OS on all the Jetson computers use Ubuntu18 which is flashed
+through NVIDIA\'s Jetpack image. However, the docker image uses Ubuntu20
+in order to use ROS2 without worrying about package installation issues</p>
+<h3 id="123-gitlab">1.2.3 Gitlab</h3>
+<p>This is where all the code for the entire framework is managed and
+developed. Gitlab provides a service similar to google drive but for
+programs! It\'s especially convenient in terms of deploying code into
+embedded computers.</p>
+<h3 id="124-docker">1.2.4 Docker</h3>
+<p>This tool is being used to expedite the setup process on the computers.
+To get the docker image working, the Jetson just needs to be flashed
+with the Jetpack 4.6 image provided by NVIDIA and then simply pull the
+UCSD Robocar docker image from docker hub onto the Jetson. This allows
+for plug-n-play capabilities as long as all the hardware is connected to
+the Jetson properly.</p>
+<h3 id="125-ros">1.2.5 ROS</h3>
+<p>The framework allows for both ROS-Noetic and ROS2-Foxy to work together
+through the ROS bridge or independently depending on the application.</p>
+<h2 id="13-recommendations">1.3 Recommendations</h2>
+<h3 id="131-vs-code-ide">1.3.1 VS Code IDE</h3>
+<p>Microsoft Visual Studio IDE is an excellent development tool for coding
+especially because of all the free plug-ins that can be added.</p>
+<p>Plug-ins recommended:</p>
+<ul>
+<li>
+<p>Python</p>
+</li>
+<li>
+<p>Docker</p>
+</li>
+<li>
+<p>Remote - SSH</p>
+</li>
+</ul>
+<h3 id="132-virtual-machines">1.3.2 Virtual Machines</h3>
+<p>If having software related issues, a virtual machine can possibly solve
+the issues and also provide a linux based interface to use with the
+jetson which is usually much smoother than with windows or mac.</p>
+<p>Below are some links to install Virtual machine software and a virtual
+machine image that runs Ubuntu20.04, has VS code (with all plug-ins
+mentioned above), docker and the UCSDrobocar docker image installed
+already.</p>
+<p><a href="https://www.vmware.com/products/workstation-player.html">[VMware
+Software]{.underline}</a></p>
+<p><a href="https://drive.google.com/file/d/1ltKrZBdA2ZTFRjKj5E08WWbZN5PNIPJL/view?usp=sharing">[UCSD Robocar VM image for
+VMware]{.underline}</a></p>
+<p>Hostname: ucsdrobocar-vm</p>
+<p>Username: robocar</p>
+<p>Password: ucsdrobocar</p>
+<h1 id="2-ucsd-robocar-framework-breakdown">2. UCSD Robocar Framework Breakdown</h1>
+<p>Below are the supporting packages to the framework. The Nav package
+operates as the \"brain\" because it is the only package that
+communicates to all the other packages which are all independent from
+one another.</p>
+<p>​</p>
+<p>Why so many packages? In practice, developing stand-alone or independent
+functionalities makes the package more robust in terms of deployability.
+Also as the robot becomes more sophisticated, the number of packages it
+will have access to would naturally increase allowing it to achieve many
+different types of tasks depending on the application of interest.</p>
+<p>So the idea is to develop a package that could in general be used on any
+car-like robot as well as being able to choose what packages your robot
+really needs without having to use the entire framework.</p>
+<p>​</p>
+<p>For example, lets say another company developed their own similar
+sensor, actuator and nav packages but they have not researched into lane
+detection. Instead of using the entire UCSD Robocar framework, they
+could easily just deploy the lane detection package and have some
+interpreter in their framework read the messages from the lane detection
+package to suit their needs.</p>
+<p>[Link to official git repo (<strong>ROS1</strong>):
+<a href="https://gitlab.com/ucsd_robocar/ucsd_robocar_hub1">[ucsd_robocar_hub1]{.underline}</a>]{.mark}</p>
+<p>[Link to official git repo (<strong>ROS2</strong>):
+<a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_hub2">[ucsd_robocar_hub2]{.underline}</a>]{.mark}</p>
+<p>[NOTE: Both hub1 and hub2 are <em>[metapackages]{.underline}</em>. For specific
+details about any individual package, click on any of the packages in
+either hub to be taken to that packages\' main repository.]{.mark}</p>
+<h2 id="21-packages">2.1 Packages</h2>
+<p><strong>[Each UCSD ROS package has a README.md that explains in detail what
+config, nodes, launch files it has as well as topic/message information.
+So if you are confused about a particular thing, ask yourself,]{.mark}</strong></p>
+<p><strong>["What is the problem I am having?" ,"What package is most likely the
+root of the concern?" Then go see the readme for that package and check
+anything relevant or even the troubleshooting section.]{.mark}</strong></p>
+<p>[In the package sections below are the links to the official README.md
+docs for each package for both ROS1 and ROS2. So any package with a 1 in
+it is for ROS-NOETIC and any package with a 2 is for ROS2-FOXY.]{.mark}</p>
+<h3 id="211-nav">2.1.1 Nav</h3>
+<p>The navigation package (nav_pkg) is the \"brain\" of the UCSD Robocar
+framework because it keeps all the launch files in its package to launch
+any node/launch file from the other packages used in the framework. This
+makes using the framework easier because you only really have to
+remember the name of the nav_pkg and what launch file you want to use
+rather than having to remember all the other package names and their own
+unique launch files.</p>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_nav2_pkg/-/blob/master/README.md">[NAV2
+README.md]{.underline}</a></p>
+<p><a href="https://gitlab.com/ucsd_robocar/ucsd_robocar_nav1_pkg/-/blob/master/README.md">[NAV1
+README.md]{.underline}</a></p>
+<h3 id="212-lane-detection">2.1.2 Lane Detection</h3>
+<p>The lane detection package is one method of navigating by identifying
+and tracking road markers. The basic principle behind this package is to
+detect road markers using openCV and then compute whats called the
+"cross-track-error" which is the difference between the center axis of
+the car and the centroid (center of "mass") of the road mark which is
+then fed into a PID controller for tracking.</p>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_lane_detection2_pkg/-/blob/master/README.md">[Lane Detection2
+README.md]{.underline}</a></p>
+<p><a href="https://gitlab.com/ucsd_robocar/ucsd_robocar_lane_detection1_pkg/-/blob/master/README.md">[Lane Detection1
+README.md]{.underline}</a></p>
+<h3 id="_3"></h3>
+<h3 id="213-sensor">2.1.3 Sensor</h3>
+<p>The sensor package contains all the required nodes/launch files needed
+to use the sensors that are equipped to the car.</p>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_sensor2_pkg/-/blob/master/README.md">[Sensor2
+README.md]{.underline}</a></p>
+<p><a href="https://gitlab.com/ucsd_robocar/ucsd_robocar_sensor1_pkg">[Sensor1
+README.md]{.underline}</a></p>
+<h3 id="214-actuator">2.1.4 Actuator</h3>
+<p>The actuator package contains all the required nodes/launch files needed
+to use the actuators that are equipped to the car.</p>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_actuator2_pkg/-/blob/master/README.md">[Actuator2
+README.md]{.underline}</a></p>
+<p><a href="https://gitlab.com/ucsd_robocar/ucsd_robocar_actuator1_pkg/-/blob/master/README.md">[Actuator1
+README.md]{.underline}</a></p>
+<h3 id="215-control-coming-soon">2.1.5 Control (coming soon)</h3>
+<p>The control package contains all the required nodes/launch files needed
+to control the car in various methods such as PID, LQR, LQG and MPC</p>
+<p>.</p>
+<h3 id="216-path-coming-soon">2.1.6 Path (coming soon)</h3>
+<p>The path package contains all the required nodes/launch files needed to
+create trajectories for the car to follow in a pre-built map as well as
+in simulations</p>
+<h3 id="217-basics">2.1.7 Basics</h3>
+<p>The path package contains all the required nodes/launch files needed to
+subscribe/publish to the sensor/actuator messages within the framework
+for fast algorithm prototyping</p>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_basics2_pkg/-/blob/master/README.md">[Basics2
+README.md]{.underline}</a></p>
+<h2 id="_4"></h2>
+<h2 id="22-updating-all-packages">2.2 Updating All Packages</h2>
+<p>A utility function was added to the \~/.bashrc script that will
+automatically update all the packages in the framework and then rebuild
+and source it so it will be ready to start using ROS2!</p>
+<p>From the terminal</p>
+<p>upd_ucsd_robocar</p>
+<h2 id="_5"></h2>
+<h2 id="22-launch-files">2.2 Launch Files</h2>
+<p>The launch file diagrams below show the very general approach of how the
+packages communicate with one another. With ROS, it just comes down to a
+combination of starting launch files and sending messages (through
+topics) to nodes. For specific details about messages types, topics,
+services and launch files used, please go to the readme for the specific
+package of interest!</p>
+<p>The nav_pkg is at the base of each of the diagrams and rooting from it
+are the launch files it calls that will launch other nodes/launch files
+from all the other packages in the framework.</p>
+<p>In ROS2, a <em>[dynamically]{.underline}</em> built launch file (at run-time)
+is used to launch all the different nodes/launch files for various
+purposes such as data collection, navigation algorithms and controllers.
+This new way of creating launch files has now been simplified by just
+adding an entry to a yaml file of where the launch file is and a
+separate yaml file to indicate to use that launch file or not. There is
+only one file to modify and all that needs to be changed is either
+putting a "0" or a "1" next to the list of nodes/launch files. To select
+the nodes that you want to use, put a "1" next to it otherwise put a "0"
+which means it will not activate. In the figures below, instead of
+including the entire ros2 launch command, you will only see the names of
+the launch files that need to be turned on in the node config file
+explained more in detail <a href="#node-configuration">[here]{.underline}</a></p>
+<p>+-----------------------------------------------------------------------+
+| <img alt="" src="../100images/media/image20.png" />{width="5.5in"                      |
+| height="3.10200021872266in"}                                          |
++=======================================================================+
+| ROS-NOETIC: roslaunch ucsd_robocar_nav1_pkg                           |
+| sensor_visualization.launch                                           |
+|                                                                       |
+| ROS2-FOXY: all_components.launch.py, sensor_visualization.launch.py   |
++-----------------------------------------------------------------------+
+| <img alt="" src="../100images/media/image3.png" />{width="5.5in"                       |
+| height="3.1133923884514436in"}                                        |
++-----------------------------------------------------------------------+
+| ROS-NOETIC: roslaunch ucsd_robocar_nav1_pkg teleop_joy_vesc.launch    |
+|                                                                       |
+| ROS2-FOXY:all_components.launch.py, teleop_joy_vesc_launch.launch.py  |
++-----------------------------------------------------------------------+
+| <img alt="" src="../100images/media/image7.png" />{width="5.5in"                       |
+| height="3.1013888888888888in"}                                        |
++-----------------------------------------------------------------------+
+| ROS-NOETIC: roslaunch ucsd_robocar_nav1_pkg                           |
+| camera_nav_calibration_launch.launch                                  |
+|                                                                       |
+| ROS2-FOXY: all_components.launch.py, camera_nav_calibration.launch.py |
++-----------------------------------------------------------------------+
+| <img alt="" src="../100images/media/image28.png" />{width="5.5in"                      |
+| height="3.1013888888888888in"}                                        |
++-----------------------------------------------------------------------+
+| ROS-NOETIC: roslaunch ucsd_robocar_nav1_pkg camera_nav_launch.launch  |
+|                                                                       |
+| ROS2-FOXY: all_components.launch.py, camera_nav.launch.py             |
++-----------------------------------------------------------------------+
+| <img alt="" src="../100images/media/image8.png" />{width="5.5in"                       |
+| height="3.1013888888888888in"}                                        |
++-----------------------------------------------------------------------+
+| ROS-NOETIC: roslaunch ucsd_robocar_nav1_pkg                           |
+| ros_racer_mapping_launch.launch                                       |
++-----------------------------------------------------------------------+
+| <img alt="" src="../100images/media/image11.png" />{width="5.5in"                      |
+| height="3.1013888888888888in"}                                        |
++-----------------------------------------------------------------------+
+| ROS-NOETIC: roslaunch ucsd_robocar_nav1_pkg                           |
+| ros_racer_nav_launch.launch                                           |
++-----------------------------------------------------------------------+</p>
+<h1 id="_6"></h1>
+<h1 id="3-developer-tools">3. Developer Tools</h1>
+<h2 id="31-ros-guidebooks">3.1 ROS Guidebooks</h2>
+<p>Links provided below are guides for ROS and ROS2 which include many
+examples, terminal commands and general concept explanations of the
+various features in ROS and ROS2</p>
+<ul>
+<li>
+<p><a href="https://docs.google.com/document/d/1u7XS7B-Rl_emK3kVKEfc0MxHtwXGYHf5HfLlnX8Ydiw/edit">[UCSD ROS
+    Guidebook]{.underline}</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/1DJgVLnu_vN-IXKD3QrQVF3W-JC6RiQPVugHeFAioB58/edit?usp=sharing">[UCSD ROS2
+    Guidebook]{.underline}</a></p>
+</li>
+</ul>
+<h2 id="32-gitlab">3.2 Gitlab</h2>
+<p>Since the framework uses a meta package (a package that contains
+multiple packages) we refer to <em>individual packages</em> as <em>submodules</em>.</p>
+<h3 id="321-adding-new-submodules">3.2.1 Adding new submodules:</h3>
+<ol>
+<li>
+<p>git submodule add \&lt;remote_url&gt;</p>
+</li>
+<li>
+<p>git commit -m \"message\"</p>
+</li>
+<li>
+<p>git push</p>
+</li>
+</ol>
+<h3 id="322-updating-local-submodules-with-remote-submodules">3.2.2 Updating <strong>local</strong> submodules with <strong>remote</strong> submodules:</h3>
+<ol>
+<li>
+<p>If local changes have been made, the update command will fail unless
+    you add, commit and push (shown in 3.2.3) or stash (git stash) them,
+    which will temporarily discard any local changes</p>
+</li>
+<li>
+<p>git submodule update --remote --merge [Pay attention to the output
+    of this command, to make sure it did not fail or
+    Abort...]{.underline}</p>
+</li>
+</ol>
+<h3 id="323-updating-remote-submodules-with-local-submodules">3.2.3 Updating <strong>remote</strong> submodules with <strong>local</strong> submodules:</h3>
+<ol>
+<li>
+<p>git add .</p>
+</li>
+<li>
+<p>git commit -m \"message\"</p>
+</li>
+<li>
+<p>git push [Pay attention to the output of this command, to make sure
+    it did not fail or Abort...]{.underline}</p>
+</li>
+</ol>
+<h3 id="324-removing-submodules">3.2.4 Removing submodules:</h3>
+<ol>
+<li>
+<p>git submodule deinit \&lt;submodule&gt;</p>
+</li>
+<li>
+<p>git rm \&lt;submodule&gt;</p>
+</li>
+</ol>
+<h3 id="_7"></h3>
+<h3 id="325-adding-an-existing-package-to-git">3.2.5 Adding an existing package to git</h3>
+<p>[From the web browser, <a href="https://docs.gitlab.com/ee/user/project/working_with_projects.html#create-a-blank-project">[create empty repo on
+gitlab]{.underline}</a>]{.mark}</p>
+<p>Now from the Jetson, start by creating a new ROS2 package</p>
+<p>ros2 pkg create --build-type ament_python pkg_name --dependencies
+rclpy</p>
+<p>build_ros2</p>
+<p>[Now proceed with merging the new package with the framework]{.mark}</p>
+<p>git init</p>
+<p>git remote add origin \&lt;remote url from step 1&gt;</p>
+<p>git add .</p>
+<p>git commit -m \"message\"</p>
+<p>git push --set-upstream origin master</p>
+<h2 id="_8"></h2>
+<h2 id="_9"></h2>
+<h2 id="33-docker">3.3 Docker</h2>
+<p>Below is a go-to list of docker commands that can be used with the
+framework.</p>
+<p>Some new lingo:</p>
+<p>Container name: <strong>NAMES</strong></p>
+<p>Image name: <strong>REPOSITORY</strong></p>
+<p>Image tag ID (comparable to branches in git): <strong>TAG</strong></p>
+<h3 id="331-pullingrunning">3.3.1 Pulling/running</h3>
+<ul>
+<li>
+<p>pulling image from docker hub: docker pull REPOSITORY:TAG</p>
+</li>
+<li>
+<p>starting a stopped container: docker start NAMES</p>
+</li>
+<li>
+<p>stopping a container: docker stop NAMES</p>
+</li>
+<li>
+<p>[Using Multiple Terminals for a Single Docker Container:]{.mark}
+    docker exec -it NAMES bash</p>
+</li>
+<li>
+<p>build docker image and give it a new name and tag docker build -t
+    REPOSITORY:TAG .</p>
+</li>
+</ul>
+<h3 id="332-updatingcreatingsharing">3.3.2 Updating/creating/sharing</h3>
+<ul>
+<li>
+<p>save changes made while in container to original image (change tag
+    to create a new image):\
+    docker commit name_of_container REPOSITORY:TAG</p>
+</li>
+<li>
+<p>create a new image from a container: docker tag NAMES REPOSITORY:TAG</p>
+</li>
+<li>
+<p>pushing image to dockerhub: docker push REPOSITORY:TAG</p>
+</li>
+<li>
+<p>Share files between host and docker container:</p>
+<ul>
+<li>
+<p>From <strong>host</strong> to docker container: docker cp foo.txt
+    container_id:/foo.txt</p>
+</li>
+<li>
+<p>From <strong>docker container</strong> to host: docker cp
+    container_id:/foo.txt foo.txt</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="333-listing">3.3.3 Listing</h3>
+<ul>
+<li>
+<p>list all images: docker images</p>
+</li>
+<li>
+<p>list all running containers: docker ps</p>
+</li>
+<li>
+<p>list all containers (including stopped): docker ps  -a</p>
+</li>
+</ul>
+<h3 id="334-deleting">3.3.4 Deleting</h3>
+<ul>
+<li>
+<p>delete specific container: docker rm NAMES</p>
+</li>
+<li>
+<p>delete specific image: docker rmi REPOSITORY:TAG</p>
+</li>
+<li>
+<p>delete ALL containers: docker rm -f \$(docker ps -a -q)</p>
+</li>
+<li>
+<p>delete ALL images: docker rmi -f \$(docker images -q)</p>
+</li>
+</ul>
+<h1 id="_10"></h1>
+<h1 id="4-accessing-docker-images">4. Accessing Docker Images</h1>
+<p>Currently there are two <strong>DIFFERENT</strong> docker images that are being
+supported by UCSD. One image was built for arm architecture computers
+(Jetson family) and the other was built for X86 architecture computers
+(most laptops and desktops). Apple M1 support will be coming soon.</p>
+<p><strong>Question:</strong> Why two images?</p>
+<p><strong>Answer:</strong> The X86 image was built to provide an environment for the
+developer to test new algorithms, packages, sensors (Yes, you can plug
+sensors into your computer just like the Jetson for testing) etc in a
+simulated environment without having to use a physical robot. Using the
+physical robot for first-time testing can lead to damaging the robot or
+something/someone in the environment due to an unforeseen behavior from
+the robot. We must practice safe autonomy if we ever hope to see our new
+ideas become a part of the industry! This leads to the ARM image, which
+was built to be used on the physical robot when ready to perform
+physical testing.</p>
+<p><strong>Question:</strong> The display wont open when in the container, how to make
+it work? (ie. images won\'t port through)</p>
+<p><strong>Answer:</strong> There could be several reasons why the display is not
+working but below are the most common solutions that can be tried</p>
+<ul>
+<li>
+<p><a href="#enable-x_11-port-forwarding">[Make sure that an X11 forwarding session was established when
+    doing an ssh connection into the
+    jetson]{.underline}</a></p>
+</li>
+<li>
+<p>[If that still doesn\'t work, then the container could have a broken
+    connection with the display so the only other thing to try is
+    <a href="#running-a-container">[creating a new container using the provided function in the
+    \~/.bashrc]{.underline}</a>]{.mark}</p>
+</li>
+</ul>
+<p><strong>NOTE:</strong> Docker is pre-installed on the Jetson computers so no need to
+install it, but in order to use the X86 image, you must install docker
+on your computer (for linux, windows or mac).</p>
+<h2 id="41-ucsd-robocar-image">4.1 UCSD Robocar Image</h2>
+<p>[Link to image on Docker Hub: <a href="https://hub.docker.com/r/djnighti/ucsd_robocar">[docker
+image]{.underline}</a>]{.mark}</p>
+<p>[Computer architecture: ARM (Jetson)]{.mark}</p>
+<p>Pulling the image from the terminal:\
+docker pull djnighti/ucsd_robocar:devel</p>
+<h2 id="_11"></h2>
+<p>[Computer architecture: X86 (Most laptops and desktops)]{.mark}</p>
+<p>Pulling the image from the terminal:</p>
+<p>docker pull djnighti/ucsd_robocar:x86</p>
+<h2 id="_12"></h2>
+<h2 id="42-docker-setup">4.2 Docker Setup</h2>
+<p>The exact \"recipe\" to build this image can be found
+<a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_hub2/-/blob/master/docker_setup/docker_files/Dockerfile">[here]{.underline}</a></p>
+<p><strong>[Note: If using the <a href="#virtual-machines">virtual machine</a>, all this is
+already completed for you!\
+]{.underline}</strong>Note: In order to connect with x-forwarding, you have to
+set stuff up.</p>
+<ol>
+<li>
+<p>One way is to ssh from a terminal inside the virtual machine to the
+    jetson</p>
+</li>
+<li>
+<p>On windows, I recommend downloading moba xterm, which should have
+    x11-forwarding set up by default
+    <a href="https://mobaxterm.mobatek.net/">[https://mobaxterm.mobatek.net/]{.underline}</a></p>
+</li>
+<li>
+<p>On mac, you can download xquartz from xquartz.org. Here is a link
+    describing how to set it up:
+    <a href="https://drive.google.com/file/d/1ozFIgeIVAWg04S_bMru95JwThPDrq6Fk/view?usp=sharing">[https://drive.google.com/file/d/1ozFIgeIVAWg04S_bMru95JwThPDrq6Fk/view?usp=sharing]{.underline}</a></p>
+</li>
+</ol>
+<h3 id="421-enable-x_11-port-forwarding">4.2.1 Enable X_11 Port Forwarding</h3>
+<ol>
+<li>On your <strong>HOST</strong> machine <strong>[(not the Jetson)]{.underline}</strong> enter
+    these commands (Will have to enter every time)</li>
+</ol>
+<blockquote>
+<p>ssh -X jetson@ip_address</p>
+</blockquote>
+<ol>
+<li>Now on the <strong>Jetson</strong>, run the following commands to obtain sudo
+    access for docker commands (only needs to be ran once)</li>
+</ol>
+<blockquote>
+<p>sudo usermod -aG docker \${USER}</p>
+<p>su \${USER}</p>
+</blockquote>
+<ol>
+<li>Now check that if X_11 forwarding is working</li>
+</ol>
+<blockquote>
+<p>xeyes</p>
+</blockquote>
+<p>If some googly eyes pop up, X_11 is ready to go. IF X_11 PORT FORWARDING
+IS NOT SETUP, follow steps
+<a href="https://gitlab.com/djnighti/ucsd_robo_car_simple_ros/-/blob/master/x11_forwarding_steps.txt">[here]{.underline}</a>
+to get it set up. Then come back here to continue the steps below.</p>
+<p>Note: xhost + is essentially disabling access control for display
+forwarding to your computer. This creates a security vulnerability since
+malicious third parties could forward stuff to your display. While
+you're on the ucsd_robocar dedicated wifi network there is pretty much
+no risk from this, but make sure to run xhost - after you are done to
+re-enable access control.\
+Xforwarding from the jetson may even work without ever running xhost +.
+Try it to see if it works for you.</p>
+<h3 id="_13"></h3>
+<h3 id="additional-troubleshooting-if-you-continue-having-issues-with-the-x_11-forwarding-you-can-try-reinstalling-the-xserver-and-regenerating-the-xauthority-files-to-fix">Additional Troubleshooting: If you continue having issues with the X_11 forwarding, you can try reinstalling the xserver and regenerating the xauthority files to fix.</h3>
+<h3 id="sudo-apt-get-install-reinstall-xserver-xorg">sudo apt-get install --reinstall xserver-xorg</h3>
+<h3 id="sudo-chmod-777-xauthority">sudo chmod 777 .Xauthority</h3>
+<h3 id="_14"></h3>
+<h3 id="422-update-docker-daemon">4.2.2 Update Docker Daemon</h3>
+<ol>
+<li>Then modify daemon.json file (just delete previous version then
+    create new one)</li>
+</ol>
+<blockquote>
+<p>sudo rm /etc/docker/daemon.json</p>
+<p>sudo nano /etc/docker/daemon.json</p>
+</blockquote>
+<ol>
+<li>copy and paste the following into that file:</li>
+</ol>
+<p>+-----------------------------------------------------------------------+
+| {                                                                     |
+|                                                                       |
+| \"runtimes\": {                                                       |
+|                                                                       |
+| \"nvidia\": {                                                         |
+|                                                                       |
+| \"path\": \"nvidia-container-runtime\",                               |
+|                                                                       |
+| \"runtimeArgs\": []                                                 |
+|                                                                       |
+| }                                                                     |
+|                                                                       |
+| },                                                                    |
+|                                                                       |
+| \"default-runtime\": \"nvidia\"                                       |
+|                                                                       |
+| }                                                                     |
++=======================================================================+
++-----------------------------------------------------------------------+</p>
+<ol>
+<li>save and quit then reboot jetson</li>
+</ol>
+<blockquote>
+<p>sudo reboot now</p>
+</blockquote>
+<h3 id="423-running-a-container">4.2.3 Running A Container</h3>
+<ol>
+<li>SSH back into the Jetson with the -X flag which enables X_11
+    Forwarding</li>
+</ol>
+<blockquote>
+<p>ssh -X jetson@ip_address</p>
+</blockquote>
+<ol>
+<li>Create a new function in the \~/.bashrc file with command line
+    arguments to easily run a container</li>
+</ol>
+<blockquote>
+<p>gedit \~/.bashrc</p>
+</blockquote>
+<ol>
+<li>Copy and paste the following into the very bottom of the file</li>
+</ol>
+<p>+-----------------------------------------------------------------------+
+| robocar_docker ()                                                     |
+|                                                                       |
+| {                                                                     |
+|                                                                       |
+| docker run \                                                         |
+|                                                                       |
+| --name \${1} \                                                      |
+|                                                                       |
+| -it \                                                                |
+|                                                                       |
+| --privileged \                                                      |
+|                                                                       |
+| --net=host \                                                        |
+|                                                                       |
+| -e DISPLAY=\$DISPLAY \                                               |
+|                                                                       |
+| -v /dev/bus/usb:/dev/bus/usb \                                       |
+|                                                                       |
+| --device-cgroup-rule=\'c 189:* rmw\' \                             |
+|                                                                       |
+| --device /dev/video0 \                                              |
+|                                                                       |
+| --volume=\"\$HOME/.Xauthority:/root/.Xauthority:rw\" \              |
+|                                                                       |
+| djnighti/ucsd_robocar:\${2:-devel}                                    |
+|                                                                       |
+| }                                                                     |
++=======================================================================+
++-----------------------------------------------------------------------+</p>
+<blockquote>
+<p>Note: you may want to replace the last line with\
+djnighti/ucsd_robocar:\${2:-ucsd_robocar} if you want to use the
+latest part of the ucsd_robocar image instead of the devel image.
+However I recommend the devel image</p>
+<p><strong>Notice the two arguments we have made:</strong></p>
+<p><strong>\${1}:</strong> This will be the name of the container, ex.
+Name_this_container</p>
+<p><strong>\${2:[devel]{.mark}}:</strong> This is the tag id of the image you want to
+launch a container from. If nothing is specified when calling at the
+command line (example shown below), the "devel" tag will be run.</p>
+<p><strong>[Don\'t modify the function, the arguments are intentional and not
+meant to be hard coded.]{.underline}</strong></p>
+</blockquote>
+<ol>
+<li>Source the \~/.bashrc script so the current terminal can see the new
+    function we just added</li>
+</ol>
+<blockquote>
+<p>source \~/.bashrc</p>
+</blockquote>
+<ol>
+<li>Run the following command to enter the docker container</li>
+</ol>
+<blockquote>
+<p>robocar_docker test_container</p>
+</blockquote>
+<ol>
+<li>To access the <strong>[same]{.underline}</strong> docker container from another
+    terminal (do this for as many terminals you want)</li>
+</ol>
+<blockquote>
+<p>docker start test_container</p>
+<p>docker exec -it test_container bash</p>
+</blockquote>
+<p>At this point the docker setup is complete but don\'t forget to refer to
+the useful <a href="#section-7">[docker commands sections]{.underline}</a> which
+includes deleting, creating and updating images locally and remotely!</p>
+<h2 id="43-workspaces-in-docker-container">4.3 Workspaces in Docker Container</h2>
+<h3 id="431-ros1_ws">4.3.1 ros1_ws</h3>
+<p>ROS version: <strong>ROS-NOETIC</strong></p>
+<p>This workspace contains source compiled packages from
+<a href="https://gitlab.com/ucsd_robocar/ucsd_robocar_hub1"><strong>[ucsd_robocar_hub1]{.underline}</strong></a></p>
+<h3 id="432-ros2_ws">4.3.2 ros2_ws</h3>
+<p>ROS version: <strong>ROS2-FOXY</strong></p>
+<p>This workspace contains source compiled packages from
+<a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_hub2"><strong>[ucsd_robocar_hub2]{.underline}</strong></a></p>
+<h3 id="433-sensor2_ws">4.3.3 sensor2_ws</h3>
+<p>ROS version: <strong>ROS2-FOXY</strong></p>
+<p>This workspace contains source compiled packages for various sensors in
+our inventory.</p>
+<h2 id="44-ros-bridge">4.4 ROS BRIDGE</h2>
+<p>The ros1_bridge package is used to enable the communication between
+nodes in ROS1 (ros1_ws) and ROS2 (ros2_ws). Reading material on how to
+use it can be found
+<a href="https://industrial-training-master.readthedocs.io/en/melodic/_source/session7/ROS1-ROS2-bridge.html#run-the-ros1-bridge">[here]{.underline}</a>
+and a video of it being used can be found
+<a href="https://www.theconstructsim.com/how-to-communicate-between-ros1-ros2-with-ros1_bridge">[here]{.underline}</a></p>
+<p><strong>REMEMBER:</strong></p>
+<p><strong>[This image has both ROS1 and ROS2 which results in having to source
+them individually and every new terminal. This also means that the
+metapackages ucsd_robocar_hub1 and ucsd_robocar_hub2 must be
+sourced!]{.underline}</strong></p>
+<p>Jetpack info for Jetson</p>
+<p><strong>REQUIREMENT</strong>: JetPack 4.6 (L4T R32.6.1)</p>
+<p>check to make sure: sudo apt-cache show nvidia-jetpack</p>
+<h2 id="45-utility-functions-in-bashrc">4.5 Utility functions in \~/.bashrc</h2>
+<ul>
+<li>
+<p><a href="#updating-all-packages">[Updating all packaging in the ucsd_robocar framework from
+    gitlab:]{.underline}</a> upd_ucsd_robocar</p>
+</li>
+<li>
+<p><a href="#source-ros1">[Source Noetic and]{.underline} <strong>[ALL]{.underline}</strong> [ROS
+    packages]{.underline} <strong>[and]{.underline}</strong> [start
+    roscore]{.underline}</a>: source_ros1_init</p>
+</li>
+<li>
+<p><a href="#source-ros1">[Source Noetic and]{.underline} <strong>[ALL]{.underline}</strong> [ROS
+    packages]{.underline}</a>: source_ros1_pkg</p>
+</li>
+<li>
+<p><a href="#source-ros1">[Source Noetic and]{.underline} <strong>[ALL]{.underline}</strong> [ROS
+    packages]{.underline} <strong>[and]{.underline}</strong> [put user in
+    ros1_ws:]{.underline}</a> source_ros1</p>
+</li>
+<li>
+<p><a href="#source-ros2">[Source foxy and]{.underline} <strong>[ALL]{.underline}</strong> [ROS2
+    packages:]{.underline}</a> source_ros2_pkg</p>
+</li>
+<li>
+<p><a href="#source-ros2">[Source foxy and]{.underline} <strong>[ALL]{.underline}</strong> [ROS2
+    packages]{.underline} <strong>[and]{.underline}</strong> [put user in
+    ros2_ws:]{.underline}</a> source_ros2</p>
+</li>
+<li>
+<p><a href="#source-ros2">[Build all packages in ucsd_robocar:]{.underline}</a>
+    build_ros2</p>
+</li>
+<li>
+<p><a href="#source-ros-bridge">[Source ROS bridge:]{.underline}</a>
+    source_ros_bridge</p>
+</li>
+</ul>
+<h1 id="5-source-ros-version">5. Source ROS Version</h1>
+<h2 id="51-source-ros1">5.1 Source ROS1</h2>
+<p>We need to source ROS Noetic, ros1_ws and activate roscore, below is an
+alias command that will do all of that automatically. <em>[This command
+only needs to be run one time in any docker container]{.underline}</em>. As
+you open new terminals in the same Docker container, another alias was
+made to source ROS Noetic and the ros1_ws as well as placing you in the
+ros1_ws. <em>[This command needs to be run in every new terminal you want
+to use ROS1 in.]{.underline}</em></p>
+<p>From the terminal (this terminal will always need to be running so
+don\'t close it!)</p>
+<p>source_ros1_init</p>
+<p>From another terminal</p>
+<p>source_ros1</p>
+<h2 id="_15"></h2>
+<h2 id="52-source-ros2">5.2 Source ROS2</h2>
+<p>We need to source ROS Foxy and the ros2_ws, below is an alias command
+that will do that automatically. The alias will also place you in the
+ros2_ws. <em>[This command needs to be run in every new terminal you want
+to use ROS2 in.]{.underline}</em> Another alias was made to rebuild the
+package if any changes were made to the source code. It will put you in
+the ros2_ws, then perform a colcon build and then source
+install/setup.bash to reflect the changes made.</p>
+<p>From the terminal</p>
+<p>source_ros2</p>
+<p>From the terminal (This is only needs to be ran in 1 terminal, the
+changes will be reflected everywhere)</p>
+<p>build_ros2</p>
+<h2 id="53-source-ros-bridge">5.3 Source ROS Bridge</h2>
+<p>We need to source ROS Noetic, ROS Foxy and the ros2_ws, below is an
+alias command that will do that and launch ros bridge automatically.
+<em>[This command only needs to be run once and will occupy a terminal
+throughout its existence.]{.underline}</em> This alias does a dynamic bridge
+between ALL topics in Noetic and Foxy.</p>
+<p>From the terminal</p>
+<p>source_ros_bridge</p>
+<h1 id="6-hardware-configuration">6. Hardware Configuration</h1>
+<p>Not all robots have the same hardware especially when it comes to their
+sensors and motors and motor controllers. This quick section shows how
+to select the hardware that is on your robot. There are differences
+between ROS1 and ROS2 on how this configuration works so please read
+accordingly. This configuration is only necessary for the UCSD Robocar
+Image and NOT UCSD Robocar Simple ROS Image.</p>
+<h2 id="61-ros1">6.1 ROS1</h2>
+<p>In ROS1, the hardware configuration is done by either modifying the
+launch files or at the command prompt as an argument to the launch
+command. There are 3 pre-made car configurations that can be launched at
+any time. If using a launch file from the nav_pkg, an example is given
+below for how to modify the launch file. All the launch files for the
+hardware can be found in the launch directory in the
+ucsd_robocar_nav1_pkg.</p>
+<ol>
+<li>
+<p>dsc_car_launch: sic lidar, intel camera (any model works), VESC</p>
+</li>
+<li>
+<p>mae_148_car_launch: ld06 lidar, webcam, adafruit</p>
+</li>
+<li>
+<p>custom_car_launch: ld06 lidar, webcam, VESC (pick any nodes needed
+    to launch all sensors/actuators on the car, by modifying the
+    "custom_car_launch.launch" file)</p>
+</li>
+</ol>
+<p><strong>NOTE</strong>: The custom car option is meant to be modified as needed for
+other types of configurations.</p>
+<p><strong>Modify "load_car_launch.launch" launch file with the car config for
+your robot. This is the line you need to modify, the 3 options are
+listed above. \&lt;arg name=\"car_type\" value=\"custom_car_launch \" /&gt;</strong></p>
+<p>From the terminal</p>
+<p>source_ros1</p>
+<p>gedit
+src/ucsd_robocar_hub1/ucsd_robocar_nav1_pkg/launch/load_car_launch.launch</p>
+<h3 id="_16"></h3>
+<h2 id="62-ros2">6.2 ROS2</h2>
+<p>In ROS2, the hardware configuration is as simple as flipping a switch.
+Since the launch files in ROS2 are now in python, we can dynamically
+build launch files! This means no more need to have several different
+"car configs" that may have different hardware on them and instead have
+a single launch file that is capable of launching any component you need
+by changing a single number (that number is explained below)! There is
+only one file to modify and all that needs to be changed is either
+putting a "0" or a "1" next to the list of hardware in the file. To
+select the hardware that your robot has and that you want to use, put a
+"1" next to it otherwise put a "0" which means it will not activate.</p>
+<p><strong>Modify and save the car config with the sensors and actuators on your
+robot [and then recompile]{.underline}.</strong></p>
+<p>From the terminal</p>
+<p>source_ros2</p>
+<p>gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/car_config.yaml</p>
+<p>build_ros2</p>
+<h1 id="7-node-configuration">7. Node Configuration</h1>
+<p>This quick section shows how to select the nodes/launch files that are
+on your robot. There are differences between ROS1 and ROS2 on how this
+configuration works so please read accordingly. This configuration is
+only necessary for the UCSD Robocar Image and NOT UCSD Robocar Simple
+ROS Image.</p>
+<h2 id="71-ros1">7.1 ROS1</h2>
+<p>In ROS1, the launch files for the various capabilities of the robot are
+written and called individually and can be found in the launch directory
+in the ucsd_robocar_nav1_pkg.</p>
+<h3 id="_17"></h3>
+<h2 id="72-ros2">7.2 ROS2</h2>
+<p>Similar to the hardware configuration in ROS2, a dynamically built
+launch file is used to launch all the different nodes/launch files for
+various purposes such as data collection, navigation algorithms and
+controllers. This new way of creating launch files has now been
+simplified by just adding an entry to a yaml file of where the launch
+file is and a separate yaml file to indicate to use that launch file or
+not. There is only one file to modify and all that needs to be changed
+is either putting a "0" or a "1" next to the list of nodes/launch files.
+To select the nodes that you want to use, put a "1" next to it otherwise
+put a "0" which means it will not activate.</p>
+<p><strong>Modify and save the node config to launch the algorithm(s) of your
+choice [and then recompile]{.underline}.</strong></p>
+<p>From the terminal</p>
+<p>source_ros2</p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_config.yaml</p>
+<p>build_ros2</p>
+<h1 id="8-sensor-visualization">8. Sensor Visualization</h1>
+<p><strong>After selecting the hardware that\'s equipped on the robot, let\'s
+visually verify that the sensors are working. The current config file
+that is launched will display laser scan and image data. If you have
+more sensors you want to visualize, feel free to add them through
+rviz.</strong></p>
+<h2 id="_18"></h2>
+<h2 id="81-ros1">8.1 ROS1</h2>
+<p><strong>Here is the list of available launch files for all the sensors in the
+<a href="https://gitlab.com/ucsd_robocar/ucsd_robocar_sensor1_pkg/-/tree/master/launch">[sensor1_pkg]{.underline}</a></strong></p>
+<p><strong>Place the robot on the class provided stand. The wheels of the robot
+should be clear to spin.</strong></p>
+<p>From terminal</p>
+<p>source_ros1</p>
+<p>roslaunch ucsd_robocar_nav1_pkg sensor_visualization.launch</p>
+<h2 id="82-ros2">8.2 ROS2</h2>
+<p><strong>Here is the list of available launch files for all the sensors in the
+<a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_sensor2_pkg/-/tree/master/launch">[sensor2_pkg]{.underline}</a></strong></p>
+<p><strong>Place the robot on the class provided stand. The wheels of the robot
+should be clear to spin.</strong></p>
+<p>From the terminal</p>
+<p>source_ros2</p>
+<p>Modify the hardware config file to turn on the <strong>sensors</strong> you have
+plugged in and want to visualize.</p>
+<p>gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/car_config.yaml</p>
+<p>Then modify the node config file to activate <strong>all_components</strong> and
+<strong>sensor_visualization</strong> launch files</p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_config.yaml</p>
+<p>Then rebuild and launch</p>
+<p>build_ros2</p>
+<p>ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py</p>
+<p><strong>NOTE: If image data does not show up automatically, un-check and check
+its box in the display panel in rviz.</strong></p>
+<p><a href="https://github.com/IntelRealSense/realsense-ros/tree/ros2#point-cloud">[Here is an example from intel showing the point cloud with any of
+their cameras in
+RVIZ!]{.underline}</a></p>
+<p>From the terminal</p>
+<p>source_ros2</p>
+<p>ros2 launch realsense2_camera demo_pointcloud_launch.py</p>
+<h1 id="9-manual-control-of-robot-with-joystick">9. Manual Control of Robot with Joystick</h1>
+<p>This feature is only supported in the UCSD Robocar Image and NOT UCSD
+Robocar Simple ROS Image</p>
+<p>If using Adafruit and not VESC, anywhere below that says vesc you can
+replace with adafruit</p>
+<p>A deadman switch is also enabled which means you <em>[must]{.underline}</em> be
+pressing the button (LB on logitech) down in order for you to send
+commands to your robots motors.</p>
+<p>The joysticks on the controller are what control the robot to move
+forwards/backwards and turn.</p>
+<p><strong>Place the robot on the class provided stand. The wheels of the robot
+should be clear to spin.</strong></p>
+<h2 id="_19"></h2>
+<h2 id="91-ros1">9.1 ROS1</h2>
+<p><strong>Place the robot on the class provided stand. The wheels of the robot
+should be clear to spin.</strong></p>
+<p>From the terminal</p>
+<p>source_ros1</p>
+<p>roslaunch ucsd_robocar_nav1_pkg teleop_joy_vesc.launch</p>
+<h2 id="92-ros2">9.2 ROS2</h2>
+<p><strong>Place the robot on the class provided stand. The wheels of the robot
+should be clear to spin.</strong></p>
+<p>From the terminal</p>
+<p>source_ros2</p>
+<p>Modify the hardware config file to turn on the <strong>vesc_with_odom</strong></p>
+<p>gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/car_config.yaml</p>
+<p>Then modify the node config file to activate <strong>all_components</strong> and
+<strong>f1tenth_vesc_joy_launch</strong> launch files</p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_config.yaml</p>
+<p>Then rebuild and launch</p>
+<p>build_ros2</p>
+<p>ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py</p>
+<h1 id="10-integrating-new-packagescode-into-the-framework">10. Integrating New Packages/Code into the Framework</h1>
+<p>Integrating a new package can be done many ways so do not take this
+approach as the best or only method but simply a method for integration.
+The example below will be in ROS2 but the general procedure is the same
+in ROS1.</p>
+<h2 id="101-integrating-a-ros-package">10.1 Integrating a ROS Package</h2>
+<ol>
+<li>While in the docker container source ros2 and move in to the src
+    directory of the ros2_ws</li>
+</ol>
+<p>source_ros2</p>
+<p>cd src/</p>
+<ol>
+<li>
+<p>Now lets create a new node by <a href="https://docs.google.com/document/d/1DJgVLnu_vN-IXKD3QrQVF3W-JC6RiQPVugHeFAioB58/edit#heading=h.z8pzj9x72ptj">[using an example node from the ros2
+    guidebook]{.underline}</a>
+    which gives all the code for the node, setup.py and launch files as
+    well as step-by-step terminal commands to create everything
+    including the package itself.</p>
+<p>a.  Package name: <strong>counter_package</strong></p>
+<p>b.  Node name: <strong>counter_publisher.py</strong></p>
+<p>c.  Launch file name: <strong>counter_package_launch_file.launch.py</strong></p>
+</li>
+<li>
+<p>After completing step 2, notice the <strong>"counter_package"</strong> package in
+    the same directory as <strong>"ucsd_robocar_hub2"</strong> package</p>
+</li>
+</ol>
+<p>ls src/</p>
+<ol>
+<li>Adding your package to the nav2 node configuration and node package
+    location lists. To do this, all we need is the name of the package
+    that we want to integrate and the name of the launch file we want to
+    use from that package. In the example node above, the package name
+    is <strong>"counter_package"</strong> and its launch file is called
+    <strong>"counter_package_launch_file.launch.py"</strong>. Lets add them to
+    "node_pkg_locations_ucsd.yaml" and to "node_config.yaml" which are
+    both in the NAV2 package</li>
+</ol>
+<p>source_ros2</p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_pkg_locations_ucsd.yaml</p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_config.yaml</p>
+<ol>
+<li>
+<p>Once added, make sure that the
+    <strong>"counter_package_launch_file.launch.py"</strong> file is set to "1" in
+    the "node_config.yaml" to make sure it\'s activated as well as any
+    other nodes that are desired to be run.</p>
+</li>
+<li>
+<p>Rebuild the workspace</p>
+</li>
+</ol>
+<p>build_ros2</p>
+<ol>
+<li>Now launch!</li>
+</ol>
+<p>ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py</p>
+<ol>
+<li>Verify the node is running (which is called <strong>"counter_publisher")</strong>
+    and echo the topic (which is called <strong>"/counter")</strong></li>
+</ol>
+<p>ros2 node list</p>
+<p>ros2 topic echo /counter</p>
+<p>That\'s it! A new package has just been integrated into the framework
+and now can be easily called with any of the framework\'s launch files.</p>
+<h2 id="102-integrating-supporting-files">10.2 Integrating supporting files</h2>
+<p>Supporting files can range from yaml files, data sets, machine learning
+models and general source code that has nothing to do with ROS but may
+be required for the node to run properly. Once these files are
+integrated into the ROS framework, they are used the same exact way as
+they would be when ROS was not being used, which basically means we need
+to tell ROS where to locate these files so it can access them. Below is
+a simple example of a ROS package structure.</p>
+<p>ros2_ws</p>
+<p>src</p>
+<p>example_package_name</p>
+<p>config</p>
+<p>launch</p>
+<p>example_package_name</p>
+<p>example_node.py</p>
+<p>setup.py</p>
+<p>Now let\'s say our node <strong>"example_node.py"</strong> requires an external class
+or method from a pure python file called <strong>"python_only.py"</strong>, Lets
+create a new directory or submodule in <strong>"example_package_name"</strong> and
+call it <strong>"example_submodule_name"</strong> and then put the pure python file
+there</p>
+<p>ros2_ws</p>
+<p>src</p>
+<p>example_package_name</p>
+<p>config</p>
+<p>launch</p>
+<p>example_package_name</p>
+<p>example_submodule_name</p>
+<p>python_only.py</p>
+<p>example_node.py</p>
+<p>setup.py</p>
+<p>This is the general idea however the submodule placement is arbitrary as
+long as you are consistent in the code where things are located. For
+example, maybe the node requires a pre-trained machine learning model
+for it to run successfully and makes more sense to have a models folder
+adjacent to the launch and config directories as shown below</p>
+<p>ros2_ws</p>
+<p>src</p>
+<p>example_package_name</p>
+<p>config</p>
+<p>launch</p>
+<p>models</p>
+<p>example_model.pt</p>
+<p>example_package_name</p>
+<p>example_node.py</p>
+<p>setup.py</p>
+<p>Again, this placement is arbitrary but it\'s good to form a convention
+so others can understand more easily. After the new external files have
+been added to the package, both the <strong>"setup.py"</strong> and
+<strong>"example_node.py"</strong> files need to be updated/modified so they can
+access the supporting files. <a href="https://docs.google.com/document/d/1DJgVLnu_vN-IXKD3QrQVF3W-JC6RiQPVugHeFAioB58/edit#heading=h.gt05lbgt1rp9">[See this example of modifying these files
+in the ROS2
+guidebook.]{.underline}</a></p>
+<h2 id="103-integrating-new-algorithms-into-the-basics-package">10.3 Integrating new algorithms into the basics package</h2>
+<p>The <a href="#basics">[basics package]{.underline}</a> was created to give a jump
+start on accessing sensor data and controlling the actuators on the
+robot without having to focus too much on the ROS implementation. The
+pre-created nodes have all the ROS-functionality completed and only
+require the algorithms to process the sensor data and/or control signals
+for moving the robot. Each node in the package (nodes described in the
+readme.md link above) has a callback function which provides the
+starting point for the user to implement their algorithms with ease.</p>
+<h1 id="11-navigation">11. Navigation</h1>
+<p>This chapter is dedicated to the various methods for the robot to
+navigate autonomously.</p>
+<h2 id="111-lane-detection">11.1 Lane Detection</h2>
+<p>Goal: Be able to identify road lines with opencv and ROS to be able to
+autonomously navigate around any given track.</p>
+<p>To achieve this, the hardware on the robot must be calibrated for the
+track environment which is explained in detail below. Once the
+calibration is complete, launch the robot in an autonomous state and
+tune the calibration parameters as needed.</p>
+<h2 id="_20"></h2>
+<h3 id="1111-calibration-process">11.1.1 Calibration Process</h3>
+<p>This section is a guide for calibrating the camera to detect road lines
+as well as for steering and speed control.</p>
+<p>While inside docker container, run the calibration script per the
+instructions found at</p>
+<p>UCSD Robocar ROS Image:
+<a href="https://gitlab.com/ucsd_robocar/ucsd_robocar_nav1_pkg#work-flow-to-use-this-repository">[ucsd_robocar_nav1_pkg]{.underline}</a>
+(ROS1) or
+<a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_nav2_pkg#work-flow-to-use-this-repository">[ucsd_robocar_nav2_pkg]{.underline}</a>
+(ROS2)</p>
+<h3 id="_21"></h3>
+<h4 id="11111-ros1">11.1.1.1 ROS1</h4>
+<p><strong>Place the robot on the class provided stand. The wheels of the robot
+should be clear to spin.</strong></p>
+<p>From the terminal</p>
+<p>roslaunch ucsd_robocar_nav1_pkg camera_nav_calibration_launch.launch</p>
+<h4 id="_22"></h4>
+<h4 id="11112-ros2">11.1.1.2 ROS2</h4>
+<p><strong>Place the robot on the class provided stand. The wheels of the robot
+should be clear to spin.</strong></p>
+<p>From the terminal</p>
+<p>source_ros2</p>
+<p>Modify the hardware config file to turn on the <strong>vesc_without_odom</strong> and
+the <strong>camera</strong> you have equipped</p>
+<p>gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/car_config.yaml</p>
+<p>Then modify the node config file to activate only <strong>all_components</strong> and
+<strong>camera_nav_calibration</strong> launch files</p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_config.yaml</p>
+<p>Then rebuild and launch</p>
+<p>build_ros2</p>
+<p>ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py</p>
+<h3 id="1112-color-calibration">11.1.2 Color Calibration</h3>
+<p>+---------------------------------+------------------------------------+
+| The camera is seeing something  | <img alt="" src="./100imag                      |
+| like this before we filter      | es/media/image4.png" />{width="3.5in" |
+|                                 | height="3.236111111111111in"}      |
+| Anything that is <strong>accepted     |                                    |
+| (true)</strong> will be passed through |                                    |
+| as <strong>white</strong>, everything else   |                                    |
+| will be <strong>black (false)</strong>. With |                                    |
+| the default values, everything  |                                    |
+| is white                        |                                    |
+|                                 |                                    |
+| #                               |                                    |
+|                                 |                                    |
+| We are going to calibrate the   |                                    |
+| camera to only keep the color   |                                    |
+| yellow (the dots in the middle  |                                    |
+| of the road). To do that we     |                                    |
+| need to understand how HSV      |                                    |
+| colors work                     |                                    |
++=================================+====================================+
++---------------------------------+------------------------------------+</p>
+<h1 id="_23"></h1>
+<h1 id="_24"></h1>
+<hr />
+<p><img alt="" src="../100images/media/image32.png" />{width="5.182292213473316in"
+  height="2.1011537620297465in"}</p>
+<hr />
+<p>The Hue is often referred to as a degree and goes between 0 and 180</p>
+<hr />
+<h1 id="_25"></h1>
+<p>+----------------------------------------+-----------------------------+
+| So if we chose an H value of 0 we      | <img alt="" src="./1                     |
+| would get something like this          | 00images/media/image5.png" />{ |
+|                                        | width="2.682292213473316in" |
+| #                                      | hei                         |
+|                                        | ght="1.9184601924759406in"} |
+| All of these values are represented by |                             |
+| the H value of 0. We would expect      |                             |
+| something similar to the above square  |                             |
+| except yellow if we put in the value   |                             |
+| of 30                                  |                             |
++========================================+=============================+
+| Because we are trying to filter out    | <img alt="" src="./100                   |
+| all images except yellow in our image, | images/media/image31.png" />{w |
+| we will set the lowH and highH to 25   | idth="2.7505752405949258in" |
+| and 35 Here is what we see with these  | hei                         |
+| values                                 | ght="2.5364588801399823in"} |
+|                                        |                             |
+| #                                      |                             |
+|                                        |                             |
+| the camera is seeing something like    |                             |
+| this before we filter                  |                             |
++----------------------------------------+-----------------------------+</p>
+<h1 id="_26"></h1>
+<hr />
+<p>We want to keep everything in the    <img alt="" src="../100images/media/image5.png" />{width="2.7552088801399823in"
+  upper right corner of these(picture  height="1.9664621609798776in"}
+  this red square is yellow). As you <br />
+  can see, if the S value gets too   <br />
+  low(left to right), we only see    <br />
+  white, and if the V value gets too <br />
+  low(up and down) we only see black <br />
+  values. There is not a problem with<br />
+  V or S being too high, as that gives 
+  us a pure color(top right). With   <br />
+  this in mind, we will keep only what 
+  is in the upper right corner by    <br />
+  leaving the highS and highV at the <br />
+  max and setting the low values to  <br />
+  about half way                       </p>
+<hr />
+<p>Oops, looks like that filters out    <img alt="" src="../100images/media/image22.png" />{width="2.8177088801399823in"
+  too much. We can adjust these values height="2.604245406824147in"}
+  until we get what we want. (also   <br />
+  notice that in the original image  <br />
+  the yellow looked pretty white so we 
+  will lower the lowS until we see   <br />
+  some good results with little noise) </p>
+<p>And there you go (while playing with <img alt="" src="../100images/media/image10.png" />{width="2.8388976377952755in"
+  these two bars (lowS and lowV) will  height="2.6406255468066493in"}
+  almost always result in a good image 
+  like this, note that paying        <br />
+  attention to the lighter and darker<br />
+  parts of the color you are filtering 
+  for will help you set your lowS and<br />
+  lowV values with a higher accuracy <br />
+  and speed)(if the bright spots are <br />
+  disappearing, allow more S, if the <br />
+  shadows aren\'t showing up, allow  <br />
+  more V)                              </p>
+<p><strong>Inverted_filter</strong> Whatever color   <img alt="" src="../100images/media/image12.png" />{width="3.2263068678915134in"
+  you selected to "track" this slider  height="1.8697922134733158in"}
+  will invert it which is basically  <br />
+  rejecting what you were originally <br />
+  tracking and now tracking the exact<br />
+  opposite. This feature is nice when<br />
+  the road color is very consistent  <br />
+  and you want to track all road     <br />
+  markers, yellow dashed lines, white<br />
+  lanes etc.                           </p>
+<hr />
+<p>+-----------------------------------+-----------------------------------+
+| If for some reason you still have | <img alt="" src="./100images/media/image18.    |
+| noise like this and don\'t want   | png" />{width="3.6041666666666665in" |
+| to change these settings, the     | height="2.611111111111111in"}     |
+| following settings can be         |                                   |
+| adjusted                          |                                   |
++===================================+===================================+
+| <strong>gray_thresh</strong> This will put a   | <img alt="" src="./100images/media/image17.    |
+| threshold on what is considered   | png" />{width="3.6041666666666665in" |
+| approximately gray such that only | height="2.2916666666666665in"}    |
+| the white pixels can pass through |                                   |
+| the filter and potentially        |                                   |
+| resulting the small noise in the  |                                   |
+| background to black pixels        |                                   |
+|                                   |                                   |
+| <strong>Kernel_size</strong> This value        |                                   |
+| represents the size of the kernel |                                   |
+| to be convolved with the image    |                                   |
+| with the two transforms, Erosion  |                                   |
+| &amp; Dilation                        |                                   |
+|                                   |                                   |
+| <strong>Erosion_itterations</strong> The       |                                   |
+| higher this value, the more times |                                   |
+| the kernel is convolved with the  |                                   |
+| image which results in shrinking  |                                   |
+| pixel noise. This means if there  |                                   |
+| is some small noise like in the   |                                   |
+| photo above, the erosion          |                                   |
+| transform will minimize that      |                                   |
+| noise further by shrinking its    |                                   |
+| distribution. The Erosion         |                                   |
+| transform not only minimizes the  |                                   |
+| noise but in general all          |                                   |
+| distributions which means that    |                                   |
+| even our detected road marker     |                                   |
+| will shrink! This issue is fixed  |                                   |
+| with the dilation transform.      |                                   |
+|                                   |                                   |
+| <strong>Dilation_itterations</strong> The      |                                   |
+| higher this value, the more times |                                   |
+| the kernel is convolved with the  |                                   |
+| image which results in enlarging  |                                   |
+| pixel values. We want to undo the |                                   |
+| effects of the erosion transform  |                                   |
+| on the road marker which is ok    |                                   |
+| because our noise has already     |                                   |
+| been filtered out so it won\'t    |                                   |
+| come back!                        |                                   |
++-----------------------------------+-----------------------------------+</p>
+<h2 id="_27"></h2>
+<h3 id="1113-linelane-calibration">11.1.3 Line/Lane Calibration</h3>
+<p>This part of the calibration is now about manipulating the image
+dimensions, the geometry of the road lines and parameters to adjust the
+steering behavior of the robot.</p>
+<hr />
+<p><strong>min_width</strong> and <strong>max_width</strong>      <img alt="" src="../100images/media/image27.png" />{width="3.2291666666666665in"
+  filter based on the size of the      height="3.3115430883639547in"}
+  dotted lines found                   </p>
+<hr />
+<p>For example we can see if we set the <img alt="" src="../100images/media/image26.png" />{width="3.2395833333333335in"
+  min to be 15 it will eliminate some  height="3.3333333333333335in"}
+  of the smaller lines in the distance 
+  because they are too thin (below15)  </p>
+<hr />
+<h1 id="_28"></h1>
+<p>+------------------------------------+---------------------------------+
+| <strong>Number_of_lines</strong> correlates to  | !                               |
+| the number of lines found in the   | <a href="./100images/media/image14.gi |
+| road to use during calculation.    | f"></a>{width="3.6041666666666665in" |
+|                                    | height="2.0277777777777777in"}  |
+| When it is set to 4, only up to 4  |                                 |
+| lines will be used                 |                                 |
++====================================+=================================+
++------------------------------------+---------------------------------+</p>
+<h1 id="_29"></h1>
+<p>+------------------------------------+---------------------------------+
+| <strong>Error_threshold</strong> Specify the    | !                               |
+| acceptable error the robot will    | <a href="./100images/media/image29.gi |
+| consider as approximately \&quot;no     | f"></a>{width="3.6168350831146108in" |
+| error\". This means that           | height="2.0364588801399823in"}  |
+| everything inside the <strong>two        |                                 |
+| vertical red bars (<em>[error         | Some intuition, if on a         |
+| bounds)]{.underline}</em></strong> will be    | <strong>curved path</strong>,                |
+| ignored and only the detected road |                                 |
+| lines outside of the error bounds  | As the distance <strong>decreases</strong>   |
+| are used when determining the      | between the error bounds, the   |
+| steering angle. The simple error   | robot will steer towards the    |
+| cost function implemented will     | roadlines that are <strong>closest</strong>  |
+| determine the minimum error        | to it (basically looking down). |
+| detected (closets road line) and   |                                 |
+| steer towards it. Again, in this   | As the distance <strong>increases</strong>,  |
+| cost function, the road lines      | the robot will start steering   |
+| within the error bars are ignored. | towards detected road lines     |
+|                                    | that are <strong>further</strong> away (will |
+| This value also plays a role in    | start looking ahead rather than |
+| determining throttle values which  | previously).                    |
+| is discussed in the <a href="#actuator-calibration">[actuator     |                                 |
+| calibration]{.                     |                                 |
+| underline}</a> |                                 |
+| section.                           |                                 |
+|                                    |                                 |
+| Some intuition, if on a <strong>straight |                                 |
+| path</strong>,                            |                                 |
+|                                    |                                 |
+| If all the detected lines fall     |                                 |
+| within the error bounds, then the  |                                 |
+| algorithm will assume an error of  |                                 |
+| zero and not change its steering   |                                 |
+| angle. So, if the error bars are   |                                 |
+| too wide, this can cause some      |                                 |
+| "drifting" (not like Tokyo         |                                 |
+| drift..) behavior to occur which   |                                 |
+| can make the car go unstable and   |                                 |
+| lose the path.                     |                                 |
++====================================+=================================+
++------------------------------------+---------------------------------+</p>
+<hr />
+<p><strong>Camera_centerline</strong> is used to    <img alt="" src="../100images/media/image6.png" />{width="3.6041666666666665in"
+  calibrate the actual center         height="3.013888888888889in"}
+  position of the camera frame.     <br />
+  Fastest way to calibrate this is to 
+  grab a ruler and align it along the 
+  center of the car and then toggle <br />
+  the slider bar such that the      <br />
+<strong>green vertical bar (true car    <br />
+  center line)</strong> is lined up directly 
+  in the middle of the ruler. The   <br />
+  value of slider represents pixel %  </p>
+<hr />
+<p><strong>Frame_width</strong> and                 <img alt="" src="../100images/media/image24.png" />{width="3.2403423009623795in"
+  <strong>rows_to_watch</strong> are used to crop  height="5.026042213473316in"}
+  the image vertically and          <br />
+  horizontally                        </p>
+<hr />
+<hr />
+<p>And <strong>rows_offset</strong> will give a     <img alt="" src="../100images/media/image25.png" />{width="3.3541666666666665in"
+  vertical pan adjustment             height="4.625in"}</p>
+<hr />
+<p>The higher rows_ofset is, the       <img alt="" src="../100images/media/image23.png" />{width="3.3541666666666665in"
+  further down it looks               height="3.3194444444444446in"}</p>
+<hr />
+<h3 id="1114-actuator-calibration">11.1.4 Actuator Calibration</h3>
+<p>This part of the calibration is now about identifying the speeds the
+robot should go in different situations and adjusting how much the car
+steers left and right.</p>
+<p>+-----------------------------------------+----------------------------+
+| A PID controller is implemented on the  | <img alt="" src="./100images/media/imag |
+| steering values to improve performance  | e16.png" />{width="2.71875in" |
+| in autonomous mode.                     | hei                        |
+|                                         | ght="5.527777777777778in"} |
+| <strong>Kp_steering</strong> is the value for the    |                            |
+| proportional error term                 |                            |
+|                                         |                            |
+| <strong>Ki_steering</strong> is the value for the    |                            |
+| integral error term                     |                            |
+|                                         |                            |
+| <strong>Kd_steering</strong> is the value for the    |                            |
+| derivative error term                   |                            |
+|                                         |                            |
+| <strong>Steering_mode</strong>                       |                            |
+|                                         |                            |
+| -   <strong>Mode_0</strong> sets <strong>max left</strong> for    |                            |
+|     fixing any offset                   |                            |
+|                                         |                            |
+| -   <strong>Mode_1</strong> sets <strong>straight</strong>        |                            |
+|     steering limit                      |                            |
+|                                         |                            |
+| -   <strong>Mode_2</strong> sets <strong>max right</strong>       |                            |
+|     steering limit                      |                            |
+|                                         |                            |
+| <strong>Steering_value</strong> is the value used to |                            |
+| visualize the steering sensitivity and  |                            |
+| setting steering constraints.           |                            |
+|                                         |                            |
+| <strong>Throttle Calibration</strong> In order to    |                            |
+| calibrate the throttle you will want to |                            |
+| set 3 separate values. See the systems  |                            |
+| response plot at the end of this        |                            |
+| section to get more intuition on how    |                            |
+| throttle scheduling works               |                            |
+|                                         |                            |
+| <strong>Throttle _mode</strong>                     |                            |
+|                                         |                            |
+| -   <strong>Mode_0</strong> sets <strong>zero_throttle</strong>   |                            |
+|     (<strong>desired throttle for neutral</strong>)  |                            |
+|                                         |                            |
+| -   <strong>Mode_1</strong> sets <strong>max_throttle</strong>    |                            |
+|     (<strong>desired throttle when there are  |                            |
+|     no errors for road line tracking</strong>) |                            |
+|                                         |                            |
+| -   <strong>Mode_2</strong> sets <strong>min_throttle</strong>    |                            |
+|     (<strong>desired throttle with errors     |                            |
+|     present for road line tracking,     |                            |
+|     [NOT REVERSE]{.underline}</strong>)        |                            |
+|                                         |                            |
+| <strong>Max RPM</strong> for those using a vesc,     |                            |
+| this sets upper limit on RPM            |                            |
+|                                         |                            |
+| <strong>Steering _polarity</strong> swaps the       |                            |
+| steering direction                      |                            |
+|                                         |                            |
+| <strong>Throttle _polarity</strong> swaps the       |                            |
+| throttle direction                      |                            |
+|                                         |                            |
+| <strong>Test_motor_control</strong> tests out the    |                            |
+| PID steering controller and the         |                            |
+| throttle scheduling values as the car   |                            |
+| will start tracking the road lines.     |                            |
+| [This test should be done on the test   |                            |
+| stand and not for actual autonomous     |                            |
+| navigation, that\'s the next            |                            |
+| section!]{.underline}                   |                            |
++=========================================+============================+
++-----------------------------------------+----------------------------+</p>
+<h4 id="11141-clarification-on-throttle-modes">11.1.4.1 Clarification on throttle modes</h4>
+<p>Again we are going to be setting 3 separate values. The default mode to
+calibrate first is throttle <strong>mode_0</strong>. When toggling the
+<strong>throttle_mode</strong> slider to different modes, whatever value that is
+currently set for the <strong>throttle_value</strong> slider will be the value that
+is taken in for that mode as the values are being saved to the
+calibration file in real time. <strong>[As long as you are on any particular
+mode, you are editing the values for that mode, whatever the last value
+you had when you were on that mode will be the value that is saved to
+that mode when you end the calibration script.]{.mark}</strong> For example, if
+the <strong>throttle_value</strong> slider is currently set to 1000 now when toggling
+the <strong>throttle_mode</strong> slider from <strong>mode_0</strong> to <strong>mode_1,</strong> the value
+for <strong>mode_0</strong> will remain at 1000 and then the process of editing
+<strong>mode_1</strong> will begin.</p>
+<p><img alt="" src="../100images/media/image9.jpg" />{width="5.838205380577428in"
+height="4.640625546806649in"}</p>
+<p>In the system response plot, it shows the relationship between the max
+throttle, min throttle and error threshold values. This is the idea of
+throttle scheduling based on the tracking error (x-axis). For example,
+let\'s say the tracking error is 0.4, based on the throttle plot, the
+throttle command will be about 0.37 and if the error is less than the
+error threshold (0.2 in the example throttle plot) then the throttle
+response will be max throttle which is 0.4 in this example.</p>
+<p>From here, exit the calibration script with <strong>ctrl+c</strong> and the chosen
+throttle mode (mode_0, mode_1 and mode_2) values (and all other
+calibration values) will be properly stored in the [<strong>calibration file
+found in the config directory of the lane_detection_pkg. <em>[Don\'t forget
+that you need to recompile after calibration.]{.underline}</em></strong>[\
+\
+]{.underline}]{.mark}</p>
+<p><strong><em>[Make sure to always build_ros2 after closing the camera calibration
+program. The reason is that on startup, the camera calibration
+overwrites the values in the ros_racer_config.yaml with whatever values
+it was compiled with. Even though the values you put in will get
+autosaved in the ros_racer_config.yaml, if they don\'t get compiled they
+will just get overwritten the next time the calibration starts
+up.]{.mark}</em></strong></p>
+<h3 id="1115-camera-navigation">11.1.5 Camera Navigation</h3>
+<p>Only proceed with this section <strong>AFTER</strong> you have gone through the
+calibration procedure above. At this point, your robot should be taken
+off of the test stand and put on to the track so it can move freely.
+Please be alert of the people around you and be ready to shutdown the
+robot if it starts drifting off the path.</p>
+<h4 id="11151-ros1">11.1.5.1 ROS1</h4>
+<p>From the terminal</p>
+<p>roslaunch ucsd_robocar_nav1_pkg camera_nav_launch.launch</p>
+<h4 id="_30"></h4>
+<h4 id="11152-ros2">11.1.5.2 ROS2</h4>
+<p><strong>Remember, if you make even a single change ANYWHERE in your code
+(which also includes .yaml files) you must rebuild the package. Check
+the <a href="#source-ros2">[Source ROS2]{.underline}</a></strong> <strong>section.</strong></p>
+<p>From the terminal</p>
+<p>source_ros2</p>
+<p>Modify the hardware config file to turn on the <strong>vesc_without_odom</strong> and
+the <strong>camera</strong> you have equipped</p>
+<p>gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/car_config.yaml</p>
+<p>Then modify the node config file to activate only <strong>all_components</strong> and
+<strong>camera_nav</strong> launch files</p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_config.yaml</p>
+<p>Then rebuild and launch</p>
+<p>build_ros2</p>
+<p>ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py</p>
+<p>If the robot is not responding the way you were expecting, turn on the
+debugger plots which will show you:</p>
+<ul>
+<li>
+<p>your black and white filter (will show how good your filtering is
+    working)</p>
+</li>
+<li>
+<p>the detected lines with bounding boxes and error bound etc. like
+    from <a href="#linelane-calibration"><strong>[calibration]{.underline}</strong></a></p>
+</li>
+</ul>
+<p>This is done easily by setting the ros parameter from the terminal.</p>
+<ul>
+<li>
+<p>1:debug on</p>
+</li>
+<li>
+<p>0:debug off</p>
+</li>
+</ul>
+<p>By default, the debugger is set to 0 (off) for performance reasons and
+is only recommended to turn on when trying to find out why the robot
+starts deviating from the expected outcome of following the track. Which
+is most likely due to changes in environment lighting.</p>
+<p>From <em>[another]{.underline}</em> terminal (turn <strong>on</strong> debugger)</p>
+<p>ros2 param set /lane_detection_node debug_cv 1</p>
+<p>From <em>[another]{.underline}</em> terminal (turn <strong>off</strong> debugger)</p>
+<p>ros2 param set /lane_detection_node debug_cv 0</p>
+<h2 id="112-tubewall-following-coming-soon">11.2 Tube/Wall Following (coming soon)</h2>
+<h2 id="113-slam">11.3 SLAM</h2>
+<p>Simultaneous Localization and Mapping (SLAM) has been completely
+integrated with our Docker image but is only currently available in ROS1
+and <strong>NOT</strong> ROS2. Below is a short tutorial of getting SLAM working on
+the robot using ROS-Bridge.</p>
+<h3 id="1131-requirements">11.3.1 Requirements</h3>
+<p>Make sure that the following hardware is plugged in and operational
+before launching the docker container</p>
+<ul>
+<li>
+<p>Lidar</p>
+</li>
+<li>
+<p>Logitech controller (for manual control while mapping)</p>
+</li>
+<li>
+<p>VESC or Adafruit PWM board</p>
+</li>
+</ul>
+<h2 id="_31"></h2>
+<h3 id="1132-starting-slam">11.3.2 Starting SLAM</h3>
+<p>We will need 3 terminals to get SLAM working, 1 for the <a href="http://wiki.ros.org/hector_slam">[Hector-SLAM
+algorithm in ROS1]{.underline}</a>,
+another for ROS-Bridge and the last one for sensors/hardware and
+control/path planning algorithms.</p>
+<p>From terminal 1</p>
+<p>source_ros2</p>
+<p>Modify the hardware config file to turn on the <strong>vesc_with_odom</strong> and
+the <strong>lidar</strong> you have equipped</p>
+<p>gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/car_config.yaml</p>
+<p>Then modify the node config file to activate only <strong>all_components,</strong>
+<strong>sensor_visualization and f1tenth_vesc_joy_launch</strong> launch files</p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_config.yaml</p>
+<p>Then rebuild</p>
+<p>build_ros2</p>
+<p>From terminal 1</p>
+<p>source_ros1</p>
+<p>roslaunch ucsd_robocar_nav1_pkg ros_racer_mapping_launch.launch</p>
+<p>From terminal 2</p>
+<p>source_ros_bridge</p>
+<p>From terminal 3</p>
+<p>ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py</p>
+<p>Notice RVIZ is launched automatically with a pre-configured setup file
+to show a URDF of your robot doing SLAM!</p>
+<p>Now depending on what the robot is trying to achieve with slam, modify
+the all_nodes.yaml file to turn on which navigation/control algorithms
+for the robot to use. If unsure, or specifically trying to create a map
+it\'s suggested to turn on all_components (<a href="#ros2">[where a lidar and actuator
+type has been selected]{.underline}</a>), manual_joy_control_launch
+to have manual control of the robot while creating the map.</p>
+<h4 id="11321-saving-the-map">11.3.2.1 Saving the map</h4>
+<p>There are a few options to do this step. The first option is from the
+map_server node and the other is from the hector_mapping node. Each
+provides different output map formats so it could be useful knowing both
+commands depending on what projects you'll be working on.</p>
+<h5 id="113211-map_server">11.3.2.1.1 map_server</h5>
+<p>For this method, the map files are created in your current working
+directory so keep that in mind. There is a maps folder in the
+ucsd_robocar_nav1_pkg that can be used to store all your maps.</p>
+<p>From another terminal</p>
+<p>source_ros1</p>
+<p>rosrun map_server map_saver -f ms_map_test</p>
+<h5 id="113212-hector_mapping">11.3.2.1.2 hector_mapping</h5>
+<p>For this method, the maps generated are saved automatically to the maps
+directory in ucsd_robocar_nav1_pkg with a generic name with some time
+stamp.</p>
+<p>From another terminal</p>
+<p>source_ros1</p>
+<p>rostopic pub syscommand std_msgs/String \"savegeotiff\"</p>
+<h3 id="_32"></h3>
+<h3 id="1133-localization-in-a-pre-made-map">11.3.3 Localization in a pre-made map</h3>
+<p>This will only load maps that were created with the map_server node! You
+will also need to modify the car_type in this launch file just as done
+previously.</p>
+<p>From terminal</p>
+<p>source_ros1</p>
+<p>roslaunch ucsd_robocar_nav1_pkg ros_racer_nav_launch.launch</p>
+<p>Notice RVIZ is launched automatically with a pre-configured setup file
+to show a URDF of your robot, your saved map and it localizing itself!</p>
+<h1 id="12-data-collection">12. Data Collection</h1>
+<p>To collect data being broadcasted over the topics that are actively
+being published, turn on whichever nodes needed to publish that topic
+information but make sure that the <strong>rosbag_launch</strong> option in the
+<a href="#ros2-1">[node_config]{.underline}</a> is also turned on which is the
+switch for data collection. This will record ALL topics to the "rosbag"
+which is a unique file type to ROS. Then a package called
+<a href="https://jmscslgroup.github.io/bagpy/index.html">[bagpy]{.underline}</a> is
+used to convert the data into csv format which is useful for
+viewing/analysis.</p>
+<p>Modify the hardware config file to turn on any sensors you have equipped
+and need for data collection/moving</p>
+<p>gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/car_config.yaml</p>
+<p>Then modify the node config file to activate only <strong>all_components,
+rosbag_launch</strong> launch files and any other launch file you need to move
+the robot around <strong>(i.e. manual control, camera_nav etc.)</strong></p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_config.yaml</p>
+<p>Then rebuild and launch</p>
+<p>build_ros2</p>
+<p>ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py</p>
+<h1 id="_33"></h1>
+<h1 id="13-f1-tenth-simulator">13. F1 Tenth Simulator</h1>
+<p>A light-weight ROS2 simulator using RVIZ can be used for various
+scenarios such as model validation, experiment repeatability and general
+experimentation. The simulator uses a 2D dynamic bicycle-car model to
+simulate how the car would actually move in an environment. There are
+several maps that are already made and can be used in the simulator or
+you can create your own map with the SLAM techniques discussed above and
+load that map into the simulator as well. Below are the steps to pick
+the following plug-ins for the simulator: a map, path planning
+technique, and a controller as an example. Feel free to change any of
+the plug-ins.</p>
+<p><strong>NOTE</strong>: For the example below, we are going to use the joystick for
+the controller so you will need a controller plugged into your computer.
+Since we will be doing manual control, we do not need a path planner
+activated.</p>
+<p><strong>NOTE: Only use the simulator on the [X86 docker image]{.underline} and
+not the Jetson.</strong></p>
+<p>Modify the hardware config file to turn off any sensors you have</p>
+<p>gedit src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/car_config.yaml</p>
+<p>Then modify the node config file to activate only the <strong>simulator</strong> and
+<strong>f1tenth_vesc_joy_launch,</strong> launch files and any other launch file you
+need to move the robot around <strong>(i.e. manual control, camera_nav etc.)</strong></p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/node_config.yaml</p>
+<p>Modify the f1 tenth simulator config file to update the map (if needed)</p>
+<p>gedit
+src/ucsd_robocar_hub2/ucsd_robocar_nav2_pkg/config/f1_tenth_sim.yaml</p>
+<p>Then rebuild and launch</p>
+<p>build_ros2</p>
+<p>ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py</p>
+<h2 id="131-creating-a-map-with-paint-coming-soon">13.1 Creating a Map with Paint (coming soon)</h2>
+<h2 id="132-updating-vehicle-parameters-coming-soon">13.2 Updating Vehicle Parameters (coming soon)</h2>
+<h2 id="133-adding-multiple-vehicles-coming-soon">13.3 Adding Multiple Vehicles (coming soon)</h2>
+<h1 id="_34"></h1>
+<h1 id="14-troubleshooting">14. Troubleshooting</h1>
+<p>Below are the links to the troubleshooting sections when using either
+ROS1 or ROS2. There are troubleshooting guides for every single package
+to potentially help solve any common problems.</p>
+<ul>
+<li>
+<p><a href="https://gitlab.com/ucsd_robocar/ucsd_robocar_nav1_pkg#troubleshooting"><strong>[ucsd_robocar_hub1 troubleshooting
+    links]{.underline}</strong></a></p>
+</li>
+<li>
+<p><a href="https://gitlab.com/ucsd_robocar2/ucsd_robocar_hub2#troubleshooting"><strong>[ucsd_robocar_hub2 troubleshooting
+    links]{.underline}</strong></a></p>
+</li>
+</ul>
+<h1 id="15-frequently-used-linux-commands">15. Frequently Used Linux commands</h1>
+<h2 id="151-wifi">15.1 WIFI</h2>
+<p>[Rescan wifi list:]{.mark} sudo nmcli device wifi rescan</p>
+<p>[Show wifi list:]{.mark} sudo nmcli device wifi list</p>
+<p>[Connect to wifi network:]{.mark} sudo nmcli device wifi connect
+\&lt;NETWORK_NAME&gt; password \&lt;NETWORK_PASSWORD&gt;</p>
+<p>Restart networking: sudo service NetworkManager restart</p>
+<p>Check network interfaces: nmcli device status</p>
+<p>Check if connected internet: ping google.com</p>
+<p>Disable power save mode for wifi: sudo iw dev wlan0 set power_save off</p>
+<p>Networking info: ifconfig</p>
+<h2 id="152-hardware-tests">15.2 Hardware Tests</h2>
+<p>List connected USB devices: lsusb</p>
+<p>Check if joystick is working: jstest /dev/input/js0</p>
+<p>Check if x_11 forwarding is working: xeyes</p>
+<h2 id="153-file-management">15.3 File management</h2>
+<p>Listing files in a directory: ls</p>
+<p>Copy file: cp old_file_name new_file_name</p>
+<p>Copy directory: cp -r old_directory_name new_directory_name</p>
+<p>Move file: mv file_name /path/to/new/file/location/file_name</p>
+<p>Move directory: mv -r directory_name
+/path/to/new/directory/location/directory_name</p>
+<p>Delete file: rm -f file_name</p>
+<p>Delete directory: rm -rf directory_name</p>
+<p>[To copy a file from B to A while logged into B:]{.mark}</p>
+<p>scp /path/to/file username@A_ip_address:/path/to/destination</p>
+<p>[To copy a file from B to A while logged into A:]{.mark}</p>
+<p>scp username@B_ip_address:/path/to/file /path/to/destination</p>
+<h2 id="154-system-control">15.4 System Control</h2>
+<p>Terminate process by PID: sudo kill -9 PID_number</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>
