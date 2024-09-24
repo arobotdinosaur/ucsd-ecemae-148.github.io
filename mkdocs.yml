@@ -1,5 +1,6 @@
 site_name: ECE/MAE 148
 repo_url: https://github.com/arobotdinosaur/ucsd-ecemae-148.github.io
+
 theme:
   name: material
   palette:
