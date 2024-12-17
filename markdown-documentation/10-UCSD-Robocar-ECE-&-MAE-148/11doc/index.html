@@ -1104,12 +1104,27 @@ We are connecting through serial. </p>
 should see lots of gps coordinates being published.</p>
 </li>
 </ol>
-<p>Troubleshooting:
-If you have version conflicts with the config.py, (specifically catkin version errors for me), try setting up the p1_tools inside of a docker container. The docker containers 
-run a newer version of ubuntu linux which can help fix these conflicts.</p>
+<h1 id="troubleshooting">Troubleshooting:</h1>
+<p>If you have version conflicts with the config.py, (specifically catkin version errors for me), try setting up the p1_tools inside of a docker container with the ucsd_robocar image. The docker containers run a newer version of ubuntu linux which can help fix these conflicts.</p>
 <p>If you have significant configuration issues, running<br />
 python3 bin/config_tool.py reset factory 
 and then reconfiguring can be a good idea to fix them.</p>
+<p>If the GPS is not responding to the configuration tool, reflashing the firmware can usually fix it.
+To do this,
+<code>git clone https://github.com/PointOneNav/firmware-tools/tree/main</code>
+Then deactivate all virtual environments, and make a new environment with the command
+<code>mamba create -n gpsfirmware python=3.11</code>
+<code>mamba activate gpsfirmware</code>
+Then download the pointone nav firmware from https://pointonenav.com/resources/ and get it on to your jetson somehow (rsync, sftp, etc.)</p>
+<pre><code>cd l69t/firmware-tools
+</code></pre>
+<pre><code>python3 firmware_tool.py --port=/dev/ttyUSB1 /Path/To/firmware
+</code></pre>
+<p>If even this doesn't work, reflashing the bootloader the bootloader as per the instructions at the above github can help.
+If you need to find a bootloader file, know that one exists in the quectel GPS repository linked above in the instructions in quectel-lg69t-am.0.15.0/sw/quectel-bootloader-1.0.2.bin 
+Please don't hesitate to ask the TA's for help with any of this (firmware or bootloader)!</p>
+<p>If you experience serious lag when running the gps laps, check your numpy version. Anything but 1.19.0 will create serious issues. 
+To fix, do <code>pip install numpy==1.19.0</code> and then create a new car with <code>donkey createcar --path ./newcar --template path_follow</code></p>
 <p>If you decide you don't need the fusion-engine-client and want fast build times, I recommend modifying the build_ros2 command in the ~./bashrc to exlude the 
 fusion-engine-driver package for faster loading time, unless you really need it. Excluding the ntrip_client can save time too. </p>
 <p>Here is the changed build_ros2 command
@@ -1119,7 +1134,7 @@ function build_ros2() {
   colcon build --packages-ignore fusion-engine-driver ntrip_client
   source install/setup.bash
 }
-make sure to source ~/.bashrc after to have the changes take effect</p>
+make sure to source ~/.bashrc after to have the changes take effect. Do all this inside a docker container</p>
 
 
 

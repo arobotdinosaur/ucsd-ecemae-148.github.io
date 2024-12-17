@@ -1011,7 +1011,7 @@ sudo nano /etc/docker/daemon.json
 <pre><code>robocar_docker ()
 {
     docker run \
-    --name ${1}\
+    --name ${1} \
     -it \
     --privileged \
     --net=host \
