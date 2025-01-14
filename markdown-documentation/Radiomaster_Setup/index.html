@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../15-VESC-Setup-Instructions/15-VESC-Setup-Instructions/">
+      
+      
+        <link rel="next" href="../10-UCSD-Robocar-ECE-%26-MAE-148/10doc/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Radiomaster Controller Setup - ECE/MAE 148</title>
+        <title>Radiomaster Setup - ECE/MAE 148</title>
       
     
     
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Radiomaster Controller Setup
+              Radiomaster Setup
             
           </span>
         </div>
@@ -339,6 +343,187 @@
       
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Radiomaster Setup
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Radiomaster Setup
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-setup" class="md-nav__link">
+    Hardware Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-hardware-includes" class="md-nav__link">
+    Required Hardware includes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flashing-the-arduino" class="md-nav__link">
+    Flashing the Arduino
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-elrs-configurator" class="md-nav__link">
+    Installing ELRS Configurator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-tx-firmware" class="md-nav__link">
+    Installing TX Firmware
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing TX Firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#firmware-settings" class="md-nav__link">
+    Firmware Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edgetx-passthrough" class="md-nav__link">
+    EdgeTX Passthrough
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-wifi" class="md-nav__link">
+    Selecting Wifi
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting Wifi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-tx-wifi" class="md-nav__link">
+    Enabling TX Wifi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-rx-firmware" class="md-nav__link">
+    Installing RX Firmware
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing RX Firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-wifi-after-first-flash" class="md-nav__link">
+    Using Wifi after first flash
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding-the-tx-and-rx" class="md-nav__link">
+    Binding the TX and RX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-configurationtroubleshooting" class="md-nav__link">
+    Input Configuration/Troubleshooting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vesc-setup" class="md-nav__link">
+    VESC Setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
     <li class="md-nav__item">
       <a href="../10-UCSD-Robocar-ECE-%26-MAE-148/10doc/" class="md-nav__link">
@@ -444,9 +629,9 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -457,8 +642,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Winter 23
           </label>
